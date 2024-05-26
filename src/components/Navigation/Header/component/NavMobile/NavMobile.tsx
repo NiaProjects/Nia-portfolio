@@ -1,12 +1,9 @@
-import React, { FC } from 'react';
-
+import React, { FC } from "react";
 
 interface NavMobileProps {}
 
 const NavMobile: FC<NavMobileProps> = () => (
-  <div>
-    NavMobile Component
-  </div>
+  <nav className="md:hidden">NavMobile Component</nav>
 );
 
 export default NavMobile;

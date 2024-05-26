@@ -1,6 +1,6 @@
 import React from "react";
 import { Outlet } from "react-router-dom";
-import Heder from "../../components/Navigation/Header/Heder";
+import { Header } from "../../components/Navigation";
 
 // interface IProps {}
 
@@ -8,7 +8,7 @@ const MasterLayout = () => {
   return (
     <>
       <main className=" overflow-hidden">
-        <Heder />
+        <Header />
         <Outlet />
       </main>
     </>
