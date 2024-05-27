@@ -1,0 +1,36 @@
+.titleSections{ position: relative;
+    /*  new lines  */
+    // max-width: 1000px;
+    margin: 100px auto;
+        text-align: center;
+        span{    
+            text-transform: capitalize;
+        }
+    &::after{
+        content:" ";
+        display: block;
+        height: .5rem;
+        width: 10rem;
+        border-radius: 20px;
+        position: absolute;
+        top: 50%;
+        left: 110%;
+        background: rgb(239,125,0);
+        background: linear-gradient(90deg, rgba(239,125,0,1) 0%, rgba(255,255,255,1) 100%);
+               
+    }
+    &::before{
+        content:" ";
+        display: block;
+        height: .5rem;
+        width: 10rem;
+        border-radius: 20px;
+        position: absolute;
+        top: 50%;
+        left: -100%;
+        background: rgb(255,255,255);
+        background: linear-gradient(90deg, rgba(255,255,255,1) 0%, rgba(239,125,0,1) 100%);
+        
+               
+    }
+}

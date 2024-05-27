@@ -1,12 +1,7 @@
-import React, { FC } from 'react';
-
+import React, { FC } from "react";
 
 interface ServicesProps {}
 
-const Services: FC<ServicesProps> = () => (
-  <div>
-    Services Component
-  </div>
-);
+const Services: FC<ServicesProps> = () => <div>Services Component</div>;
 
 export default Services;
