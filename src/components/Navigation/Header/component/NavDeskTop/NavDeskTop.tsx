@@ -9,8 +9,7 @@ interface IProp {
   isVisible: boolean;
 }
 
-const NavDeskTop: FC<IProp> = ({ isVisible }: IProp) => {
-  console.log(isVisible);
+const NavDeskTop: FC<IProp> = ({ isVisible }) => {
   return (
     <>
       <motion.nav

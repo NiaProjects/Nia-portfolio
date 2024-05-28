@@ -1,7 +1,7 @@
-import React, { FC } from "react";
+import { FC } from "react";
+import "./Title.scss";
 
 interface TitleProps {}
-import "./Title.scss";
 const Title: FC<TitleProps> = () => (
   <div className="flex items-center justify-center gap-5">
     <h2 className="titleSections text-center capitalize text-[40px]">
