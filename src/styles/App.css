@@ -147,21 +147,35 @@ position: relative;
 
 .image-slider button {
   position: absolute;
-  top: 50%;
   transform: translateY(-50%);
     color: white;
   border: none;
   padding: 10px;
   cursor: pointer;
   z-index: 1;
+  &::after{
+    content: " ";
+    z-index: -5;
+    height: 40px;
+    width: 40px;
+    border-radius: 20px;
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    background: rgb(239, 125, 0);
+  }
 }
 
 button.prev {
-  left: 10px;
+  right: 100px;
+  top: 50%;
+
 }
 
 button.next {
-  right: 10px;
+  right: 7%;
+  top: 60%;
+
 }
 
 nav{

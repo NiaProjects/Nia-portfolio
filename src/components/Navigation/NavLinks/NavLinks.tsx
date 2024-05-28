@@ -128,27 +128,12 @@ const NavItems = ({ type = "header" }) => {
       <ul
         className={` flex  ${
           type === "header"
-            ? "2xl:translate-x-[6.4%] lg:translate-x-[6.4%] lg:translate-y-[50%] 2xl:translate-y-[100%] "
+            ? "2xl:translate-x-[6.4%] lg:translate-x-[6.4%] lg:translate-y-[90%]  "
             : ""
         } items-center`}
       >
         {linkPages}
       </ul>
-      {/* <div className="bg-red-500 mx-[100px] translate-y-[100%] ">a</div> */}
-      {/* <li>
-      <motion.div whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.9 }}>
-        <a
-          href={to}
-          className={` relative text-gray-300 hover:text-white transition duration-300 ${
-            location.hash === to ? "active" : ""
-          }`}
-        >
-          {text}
-
-          <span className={`absolute -bottom-4 left-0  ${location.pathname === to ? 'active' : ""}`}></span>
-        </a>
-      </motion.div>
-    </li> */}
     </>
   );
 };

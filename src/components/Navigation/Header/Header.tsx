@@ -40,7 +40,6 @@ const Header = () => {
       window.removeEventListener("scroll", controlNavbar);
     };
   }, [lastScrollY]);
-
   return (
     <>
       {" "}
@@ -48,10 +47,10 @@ const Header = () => {
         variants={headerAnimation}
         initial="initial"
         animate="animate"
-        className=" text-center max-w-[100%] "
+        className=" text-center max-w-screen  "
       >
         <NavDeskTop isVisible={isVisible} />
-        <NavMobile />
+        <NavMobile isVisible={isVisible} setOpen={setOpen} isOpen={isOpen} />
       </motion.header>
     </>
   );
