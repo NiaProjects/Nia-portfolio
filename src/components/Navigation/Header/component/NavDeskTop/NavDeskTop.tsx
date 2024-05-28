@@ -5,7 +5,6 @@ import { motion } from "framer-motion";
 interface NavDeskTopProps {}
 
 const NavDeskTop: FC<NavDeskTopProps> = ({ isVisible }) => {
-  console.log(isVisible);
   return (
     <>
       <motion.nav

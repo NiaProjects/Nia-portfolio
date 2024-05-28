@@ -1,12 +1,13 @@
 import React, { FC } from 'react';
+import { Heading } from '@chakra-ui/react'
 
 
 interface TitleProps {}
 
 const Title: FC<TitleProps> = () => (
-  <div>
+  <Heading>
     Title Component
-  </div>
+  </Heading>
 );
 
 export default Title;
