@@ -209,5 +209,5 @@ nav{
   background-color: orange !important;
 }
 .swiper-pagination-bullet-active {
-  /* Active bullet color */
+  background-color: orange !important;
 }
