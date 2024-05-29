@@ -1,0 +1,56 @@
+#our-services{
+    position: relative;
+    background-image: url("../../../../assets/images/ourServiced6.png");
+    background-size: cover;
+    background-position:bottom center ;
+
+    background-repeat: no-repeat;
+    width: 100vw;
+    &::after{
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        // background: rgba(0, 0, 0, 50%);
+        z-index: 1;
+    }
+}
+.layerService {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Adjust opacity as needed */
+  }
+.circleService {
+    width: 33.5px;
+    height: 33.5px;
+    background-color: rgba(47, 47, 49, 0.473);
+    position: absolute;
+    right: 80px;
+    bottom: 30px;
+    border-radius: 50%;
+    transform: translate(70%, 30%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 24px;
+    z-index: 5;
+    @media (max-width: 1200px) {
+      width: 60px;
+      height: 60px;
+      right: 60px;
+      bottom: 30px;
+    }
+  
+    @media (max-width: 768px) {
+      width:38px;
+      height: 38px;
+      right: 0px;
+      bottom: 3px;
+    }
+   
+  }

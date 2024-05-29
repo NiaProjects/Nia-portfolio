@@ -73,8 +73,7 @@ const SliderImages = () => {
 
   return (
     <>
-      aaaaaaaaa
-      {/* <div className="image-slider relative  ">
+      <div className="image-slider relative  ">
         <img src={slider1} />
 
         <div className="flex flex-col bg-slate-700 lg:h-[172px] lg:w-[70px] absolute z-40 top-[50%] right-10">
@@ -85,7 +84,7 @@ const SliderImages = () => {
             <img src={VectorSlider2} />
           </button>
         </div>
-      </div> */}
+      </div>
     </>
   );
 };

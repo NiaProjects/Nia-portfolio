@@ -13,7 +13,14 @@ import dotedVector from "./images/dotedVector.png";
 import navBg from "./images/nav.png";
 import navMob from "./images/navMob.png";
 import aboutNia1 from "./images/aboutNia1.png";
-import aboutNia2 from "./images/aboutNia1.png"
-import aboutNia3 from "./images/aboutNia3.png"
+import aboutNia2 from "./images/aboutNia1.png";
+import aboutNia3 from "./images/aboutNia3.png";
+import NiarightIcone from "./images/NiarightIcone.png";
+import ourServiced6 from "./images/NiarightIcone.png";
+import serviceCard from "./images/serviceCard.png";
+import cardServicesCategory from "./images/cardServicesCategory.png";
+import arrowRight from "./images/arrowRight.png";
+import serviceCardHeaderIcon from "./images/serviceCardHeaderIcon.png";
+import cardServicesCategory2 from "./images/cardServicesCategory2.png"
 export { logo,slider1, slider2,avatarSlider1, facebook, ig,twitter ,homeHart,quote, VectorSlider1,
-    VectorSlider2,dotedVector,navBg,navMob,aboutNia1,aboutNia2,aboutNia3};
+    VectorSlider2,dotedVector,navBg,navMob,aboutNia1,aboutNia2,aboutNia3,NiarightIcone,ourServiced6,serviceCard,cardServicesCategory,arrowRight,serviceCardHeaderIcon,cardServicesCategory2};

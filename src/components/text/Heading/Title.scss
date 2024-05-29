@@ -23,7 +23,7 @@
     background: linear-gradient(
       90deg,
       rgba(239, 125, 0, 1) 0%,
-      rgba(255, 255, 255, 1) 100%
+      rgba(255, 255, 255, 0) 100%
     );
   }
 
@@ -32,7 +32,7 @@
     background: rgb(255, 255, 255);
     background: linear-gradient(
       90deg,
-      rgba(255, 255, 255, 1) 0%,
+      rgba(255, 255, 255, 0) 0%,
       rgba(239, 125, 0, 1) 100%
     );
   }
@@ -41,9 +41,11 @@
 /* Media Query for smaller screens */
 @media (max-width: 600px) {
   .titleSections::after, .titleSections::before {
-    height: 0.3rem; /* Responsive height */
-    width: 2rem; /* Responsive width */
+    height: 0.3rem; 
+    width: 4rem; 
     
+    
+   
   }
 
   .titleSections::after {
@@ -55,11 +57,10 @@
   }
 }
 
-/* Media Query for medium screens */
 @media (max-width: 900px) {
   .titleSections::after, .titleSections::before {
-    height: 0.4rem; /* Responsive height */
-    width: 80px; /* Responsive width */
+    height: 0.4rem; 
+    width: 80px; 
   }
 
   .titleSections::after {
@@ -69,4 +70,5 @@
   .titleSections::before {
     right: 100%; /* Adjusted for medium screens */
   }
+  
 }
