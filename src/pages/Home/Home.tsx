@@ -39,7 +39,6 @@ const HomePage: FC<HomeProps> = () => (
       <Hero />
     </section>
     <AboutSection />
-   
     <OurServicesSection />
     {/*
     <section id="our-works" className="py-20 bg-gray-300 h-screen">

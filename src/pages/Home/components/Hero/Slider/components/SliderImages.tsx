@@ -5,6 +5,7 @@ import {
   slider1,
   slider2,
 } from "../../../../../../assets";
+import { Text } from "@chakra-ui/react";
 
 const images = [
   {
@@ -70,15 +71,23 @@ const SliderImages = () => {
   };
   // const textStyle =
   //   " top-[40%] bottom-[50%] left-[100px] md:text-[48px] w-[517px] capitalize";
-
+  // py-6 px-[40px] sm:px-10 lg:px-[100px]
   return (
     <>
       <div className="image-slider relative  ">
+        {/* py-6 px-[40px] sm:px-10 lg:px-[100px] */}
         <img src={slider1} />
-
-        <div className="flex flex-col bg-slate-700 lg:h-[172px] lg:w-[70px] absolute z-40 top-[50%] right-10">
-          <button className="prev hover:bg-sky-900" onClick={handlePrevImage}>
-            <img src={VectorSlider1} />
+        <div className=" absolute z-50 top-[45%] md:top-[45%] lg:top-[45%] w-[240px] md:w-[352px] lg:w-[517px]  text-white capitalize  ms-[40px]  text-start h-auto  whitespace-pre-wrap ">
+          <p className="text-[24px] md:text-[32px] lg:text-[48px] font-bold ">
+            we have created all the solution and<br></br>designs{" "}
+            <span className="text-primary text-[24px] md:text-[32px] lg:text-[48px] font-bold">
+              through
+            </span>
+          </p>
+        </div>
+        <div className="flex flex-col  gap-7 justify-between bg-slate-700 h-[70px] lg:h-[120px] absolute z-40 top-[50%] right-10">
+          <button className="prev " onClick={handlePrevImage}>
+            <img src={VectorSlider1} className="" />
           </button>
           <button className="next" onClick={handleNextImage}>
             <img src={VectorSlider2} />

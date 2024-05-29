@@ -5,7 +5,7 @@ interface IProps {}
 
 const Hero = ({}: IProps) => {
   return (
-    <div className=" h-screen">
+    <div className=" h-screen ">
       <Slider />
     </div>
   );
