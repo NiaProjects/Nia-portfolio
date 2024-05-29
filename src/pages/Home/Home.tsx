@@ -27,16 +27,22 @@ const customPadding = " px-[18px] sm:px-10 lg:px-[100px]";
 const HomePage: FC<HomeProps> = () => (
   <>
     {" "}
-    <section id="section2" className={``}>
+    <section id="section2" className={`bg-red-200`}>
       <Hero />
     </section>
     <section
       id="about-us"
-      className="relative  h-[813px] flex justify-center items-center    lg:gap-[91px] overflow-hidden px-[18px] sm:px-10 lg:px-[100px] "
+      className="relative  lg:h-[813px] md:flex justify-center items-center    lg:gap-[91px] overflow-hidden py-6 px-[40px] sm:px-10 lg:px-[100px] "
     >
-      <img src={dotedVector} className="absolute -left-0 top-[10%] " />
-      <img src={dotedVector} className="absolute -right-0 bottom-[10%] " />
-      <div className="aboutText  w-1/2 ">
+      <img
+        src={dotedVector}
+        className="absolute -left-0 top-[10%] hidden lg:block "
+      />
+      <img
+        src={dotedVector}
+        className="absolute -right-0 bottom-[10%] hidden  lg:block"
+      />
+      <div className="aboutText  md:w-1/2 ">
         <HeadingTitle headerDark="why" headerOrang="nia" type="aboutUsHeader" />
         <div className="lg:w-[518px] text-center m-auto ">
           <Text
@@ -48,15 +54,17 @@ const HomePage: FC<HomeProps> = () => (
             fermentum non libero quis Lorem ipsum dolor sit
           </Text>
         </div>
-        <Text
-          fontSize={{ base: "18px", md: "20px" }}
-          fontWeight={{ base: "medium" }}
-          textAlign={"end"}
-        >
-          read more
-        </Text>
+        <div>
+          <Text
+            fontSize={{ base: "18px", md: "20px" }}
+            fontWeight={{ base: "medium" }}
+            textAlign={"end"}
+          >
+            read more
+          </Text>
+        </div>
       </div>
-      <div className="aboutImages h-[813px] w-1/2 md:flex flex-col justify-end :hidden relative">
+      <div className="aboutImages h-[813px] w-1/2 md:flex flex-col justify-end hidden relative">
         <img
           src={aboutNia3}
           className="w-[190px] h-[160px]   lg:w-[376px]  lg:h-[304px] ms-auto   absolute top-[80px] right-0    order-1 z-20	 "
@@ -71,7 +79,7 @@ const HomePage: FC<HomeProps> = () => (
         />
       </div>
     </section>
-    <section id="our-services" className=" h-screen">
+    {/* <section id="our-services" className=" h-screen">
       <HeadingTitle headerDark="our services" classes={"text-white w-fit	"} />
     </section>
     <section id="our-works" className="py-20 bg-gray-300 h-screen">
@@ -84,7 +92,7 @@ const HomePage: FC<HomeProps> = () => (
     </section>
     <section id="news" className="py-20 bg-gray-300 h-screen">
       <HeadingTitle headerDark="news" />
-    </section>
+    </section> */}
   </>
 );
 
