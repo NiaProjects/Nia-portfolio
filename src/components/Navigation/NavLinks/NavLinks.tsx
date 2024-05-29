@@ -1,18 +1,6 @@
-import React, { FC } from "react";
-
-import { motion } from "framer-motion";
-import { NavLink, useLocation } from "react-router-dom";
-import {
-  Center,
-  ChakraProvider,
-  IconButton,
-  Menu,
-  MenuButton,
-  MenuItem,
-  MenuList,
-} from "@chakra-ui/react";
-import { ChevronDownIcon, HamburgerIcon } from "@chakra-ui/icons";
-import theme from "../../../";
+import { ChevronDownIcon } from "@chakra-ui/icons";
+import { Center, Menu, MenuButton, MenuItem, MenuList } from "@chakra-ui/react";
+import { useLocation } from "react-router-dom";
 interface IProps {
   type?: "header" | "footer" | "mobile";
   classes?: string;
@@ -64,7 +52,11 @@ const NavItems = ({ type = "header" }) => {
                 <span className={`${className} text-white`}> Service</span>
                 <ChevronDownIcon color="#ffffff" />
               </MenuButton>
-              <MenuList>
+              <MenuList
+                minW={207}
+                textAlign={"center"}
+                justifyContent={"center"}
+              >
                 <MenuItem
                   sx={{
                     backgroundColor: "transparent",

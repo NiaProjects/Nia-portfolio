@@ -23,7 +23,6 @@ export default function SwiperWrapper(props) {
     includeNavigation = false,
     className = "",
   } = props;
-  console.log(props);
   return (
     <Swiper
       spaceBetween={10}

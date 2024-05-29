@@ -19,12 +19,16 @@ const baseStyle = definePartsStyle({
   //   },
   list: {
     py: "0",
+    m: "auto",
     backdropFilter: "blur(10px)",
     backgroundColor: "rgba(255, 255, 255, 0.1)",
     border: "1px solid rgba(255, 255, 255, 0.18)",
   },
   item: {
     // this will style the MenuItem and MenuItemOption components
+    justifyContent: "center",
+    textAlign: "center",
+    // fontSize: "xl",
     color: "white",
     _hover: {
       bg: "orange.400",
@@ -61,12 +65,12 @@ const baseStyle = definePartsStyle({
 
 // define custom styles
 const lg = defineStyle({
-  fontSize: "md",
+  // fontSize: "md",
   my: "1",
 });
 
 const xl = defineStyle({
-  fontSize: "lg",
+  // fontSize: "xl",
   px: "4",
   py: "2",
 });
@@ -94,6 +98,7 @@ const variants = {
     button: {
       borderRightRadius: "full",
       pr: "6",
+      textAlign: "center",
     },
   }),
 };

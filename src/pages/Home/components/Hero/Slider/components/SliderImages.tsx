@@ -2,7 +2,6 @@ import { useEffect, useRef, useState } from "react";
 import {
   VectorSlider1,
   VectorSlider2,
-  avatarSlider1,
   slider1,
   slider2,
 } from "../../../../../../assets";
@@ -69,12 +68,13 @@ const SliderImages = () => {
       setFadeProp({ fade: "fade-in" });
     }, 1000);
   };
-  const textStyle =
-    " top-[40%] bottom-[50%] left-[100px] md:text-[48px] w-[517px] capitalize";
+  // const textStyle =
+  //   " top-[40%] bottom-[50%] left-[100px] md:text-[48px] w-[517px] capitalize";
 
   return (
     <>
-      <div className="image-slider relative  ">
+      aaaaaaaaa
+      {/* <div className="image-slider relative  ">
         <img src={slider1} />
 
         <div className="flex flex-col bg-slate-700 lg:h-[172px] lg:w-[70px] absolute z-40 top-[50%] right-10">
@@ -85,7 +85,7 @@ const SliderImages = () => {
             <img src={VectorSlider2} />
           </button>
         </div>
-      </div>
+      </div> */}
     </>
   );
 };

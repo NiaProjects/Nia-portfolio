@@ -5,7 +5,7 @@ export default {
 ],
 theme: {   
   screens: {
-    'xs': '400px',
+    'xs': '375px',
     // => @media (min-width: 400px) { ... }
     'sm': '640px',
     // => @media (min-width: 640px) { ... }
@@ -24,10 +24,7 @@ theme: {
     '3xl': '1536px',
 
   },
-  container: {
-    center: true,
-    padding: "10px",
-  },
+ 
   extend: {
     colors: {
       primary: "var(--primary-color)",

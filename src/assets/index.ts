@@ -12,5 +12,8 @@ import avatarSlider1 from "./images/avatarSlider.png";
 import dotedVector from "./images/dotedVector.png";
 import navBg from "./images/nav.png";
 import navMob from "./images/navMob.png";
+import aboutNia1 from "./images/aboutNia1.png";
+import aboutNia2 from "./images/aboutNia1.png"
+import aboutNia3 from "./images/aboutNia3.png"
 export { logo,slider1, slider2,avatarSlider1, facebook, ig,twitter ,homeHart,quote, VectorSlider1,
-    VectorSlider2,dotedVector,navBg,navMob};
+    VectorSlider2,dotedVector,navBg,navMob,aboutNia1,aboutNia2,aboutNia3};

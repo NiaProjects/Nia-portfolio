@@ -1,16 +1,17 @@
 import React from "react";
 import { Outlet } from "react-router-dom";
-import { Header } from "../../components/Navigation";
+import { Footer, Header } from "../../components/Navigation";
 
 // interface IProps {}
 
 const MasterLayout = () => {
   return (
     <>
-      <main className=" overflow-hidden">
-        <Header />
+      <Header />
+      <main className=" ">
         <Outlet />
       </main>
+      <Footer />
     </>
   );
 };
