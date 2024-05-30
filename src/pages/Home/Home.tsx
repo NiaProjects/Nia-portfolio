@@ -14,6 +14,8 @@ import {
 } from "../../assets";
 import { Link } from "react-router-dom";
 import OurServicesSection from "./components/OurServicesSection";
+import Partiner from "./components/Partners";
+import Partners from "./components/Partners";
 // import "./styles.css";
 interface HomeProps {}
 // [
@@ -43,6 +45,7 @@ const HomePage: FC<HomeProps> = () => (
     </section>
     <AboutSection />
     <OurServicesSection />
+    <Partners />
     {/*
     <section id="our-works" className="py-20 bg-gray-300 h-screen">
       <HeadingTitle headerDark="our" headerOrang="partners">
