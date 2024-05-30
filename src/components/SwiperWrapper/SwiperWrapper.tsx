@@ -25,7 +25,7 @@ export default function SwiperWrapper(props) {
   } = props;
   return (
     <Swiper
-      spaceBetween={10}
+      spaceBetween={4}
       loop={isLooped}
       navigation={includeNavigation}
       autoplay={

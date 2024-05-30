@@ -29,7 +29,7 @@ const HeadingTitle: FC<ITitleProps> = ({
       >
         {headerDark}
       </span>
-      <span className="ms-2 text-[#EF7D00] font-montserrat font-semibold break-words">
+      <span className="ms-2 text-[#EF7D00] font-montserrat font-semibold break-words capitalize">
         {headerOrang}
       </span>
       {children}

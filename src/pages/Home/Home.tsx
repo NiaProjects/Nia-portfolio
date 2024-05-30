@@ -1,10 +1,9 @@
 import { FC } from "react";
 
+import { Text } from "@chakra-ui/react";
+import { Link } from "react-router-dom";
 import "swiper/css";
 import "swiper/css/navigation";
-import { HeadingTitle } from "../../components/text";
-import Hero from "./components/Hero";
-import { Text } from "@chakra-ui/react";
 import {
   NiarightIcone,
   aboutNia1,
@@ -12,10 +11,13 @@ import {
   aboutNia3,
   dotedVector,
 } from "../../assets";
-import { Link } from "react-router-dom";
+import { HeadingTitle } from "../../components/text";
+import Hero from "./components/Hero";
+import NewsSection from "./components/NewsSection";
 import OurServicesSection from "./components/OurServicesSection";
-import Partiner from "./components/Partners";
-import Partners from "./components/Partners";
+import ReviewsSection from "./components/ReviewsSection";
+import OurWorkSection from "./components/OurWorkSection";
+import PartnersSection from "./components/PartnersSection";
 // import "./styles.css";
 interface HomeProps {}
 // [
@@ -45,19 +47,10 @@ const HomePage: FC<HomeProps> = () => (
     </section>
     <AboutSection />
     <OurServicesSection />
-    <Partners />
-    {/*
-    <section id="our-works" className="py-20 bg-gray-300 h-screen">
-      <HeadingTitle headerDark="our" headerOrang="partners">
-        <span className="text-[#131312]">in success</span>
-      </HeadingTitle>
-    </section>
-    <section id="reviews" className="py-20 bg-gray-300 h-screen">
-      <HeadingTitle headerDark="reviews" />
-    </section>
-    <section id="news" className="py-20 bg-gray-300 h-screen">
-      <HeadingTitle headerDark="news" />
-    </section> */}
+    <PartnersSection />
+    <OurWorkSection />
+    <ReviewsSection />
+    <NewsSection />
   </>
 );
 

@@ -20,13 +20,16 @@ import cardServicesCategory from "./images/cardServicesCategory.png"
 import cardServicesCategory2 from "./images/cardServicesCategory2.png"
 import serviceCard from "./images/serviceCard.png";
 import serviceCardHeaderIcon from "./images/serviceCardHeaderIcon.png";
-import NiarightIcone from "./images/NiarightIcone.png"
-// import serviceCardHeaderIcon from "./images/serviceCardHeaderIcon.png"
+import NiarightIcone from "./images/NiarightIcone.png";
+import newsCardImg from "./images/newsCardImg.png";
+import ReviewUserImg from "./images/ReviewUserImg.png";
+import partnersLogos from "./images/partnersLogos.png"
+
 // import serviceCardHeaderIcon from "./images/serviceCardHeaderIcon.png"
 // import serviceCardHeaderIcon from "./images/serviceCardHeaderIcon.png"
 
 export { logo,slider1, slider2,avatarSlider1, facebook, ig,twitter ,homeHart,quoteDown, VectorSlider1,
     VectorSlider2,dotedVector,navBg,navMob,aboutNia1,aboutNia2,aboutNia3,hart,cardServicesCategory,cardServicesCategory2,serviceCard,serviceCardHeaderIcon
-,NiarightIcone
+,NiarightIcone,newsCardImg,ReviewUserImg,partnersLogos
 
 };
