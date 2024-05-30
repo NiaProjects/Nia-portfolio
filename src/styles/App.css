@@ -129,6 +129,10 @@
   object-fit: cover;
   transition: opacity 1s ease-in-out;
 }
+.commentSlider .avatar{
+width: 20px;
+}
+/*  */
 .reviewSection{
   padding: 2rem;
 }
@@ -177,7 +181,35 @@ button.next {
   bottom: 0%;
 
 }
+.commentSlider {
+ 
+  p{font-family:  "Dancing Script", cursive;}
+  .qoutes{
+    position: absolute;
+    top: -20%;
+    right: -30px;
+    width: 30px;
+    height: 30px;
+    z-index: 20;
+  }
+  .avatar{
+ width: 40px;
+ height: 40px;
+ display: block;
+ position: relative;
+ margin-bottom: 7px;
+ margin-top: 24px;
+ @media (min-width: 768px) {
+  width: 60px;
+  height:60px;
+ }
+ @media (min-width: 1024px) {
+  width: 107px;
+  height:107px;
+ }
+}}
 
+/*  */
 nav{
   background-image: url("../components/Navigation/Header/nav.png");
 }

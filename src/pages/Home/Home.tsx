@@ -35,7 +35,10 @@ const customPadding = " px-[18px] sm:px-10 lg:px-[100px]";
 const HomePage: FC<HomeProps> = () => (
   <>
     {" "}
-    <section id="section2" className={`bg-red-200`}>
+    <section
+      id="section2"
+      className={`bg-gradient-to-r from-[#B45E00] to-[#FF9D32] top-0 bottom-0 left-0 right-0`}
+    >
       <Hero />
     </section>
     <AboutSection />

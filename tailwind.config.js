@@ -26,6 +26,9 @@ theme: {
   },
  
   extend: {
+    fontFamily: {
+      'dancing-script': ['"Dancing Script"', 'cursive'],
+    },
     colors: {
       primary: "var(--primary-color)",
       secondary: "var(--secondary-color)",
