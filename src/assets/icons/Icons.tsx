@@ -4,6 +4,7 @@ interface IconProps {
   color?: string;
   size?: number | string;
 }
+
 const Icon: React.FC<IconProps> = ({ name, color, size }) => {
   const LucideIcon = icons[name];
 

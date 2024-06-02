@@ -23,8 +23,8 @@ import serviceCardHeaderIcon from "./images/serviceCardHeaderIcon.png";
 import NiarightIcone from "./images/NiarightIcone.png";
 import newsCardImg from "./images/newsCardImg.png";
 import ReviewUserImg from "./images/ReviewUserImg.png";
-import partnersLogos from "./images/partnersLogos.png"
-import footerLogo from "./images/footerLogo.png"
+import partnersLogos from "./images/partnersLogos.png";
+import footerLogo from "./images/footerLogo.png";
 // import serviceCardHeaderIcon from "./images/serviceCardHeaderIcon.png"
 // import serviceCardHeaderIcon from "./images/serviceCardHeaderIcon.png"
 
