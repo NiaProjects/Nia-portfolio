@@ -28,7 +28,7 @@ const NavDeskTop: FC<IProp> = ({ isVisible }) => {
         <div>
           <NavItems />
 
-          <div className="absolute w-[7%] h-auto  translate-x-[-50%]  translate-y-[13px]  left-1/2	top-2">
+          <div className="absolute w-[7%] h-auto  translate-x-[-50%]  translate-y-[13px]  left-1/2 	top-2">
             <img src={logo} className="w-full h-auto" alt="" />
           </div>
         </div>

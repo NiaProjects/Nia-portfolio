@@ -4,6 +4,7 @@ import { MasterLayout } from "../layout";
 import { AboutPage, HomePage } from "../pages";
 import Services from "../pages/Services";
 import News from "../pages/News";
+import SoftWareService from "../pages/Services/Software/Software";
 
 const useHandleRoutes = () => {
   const routes = useRoutes([
@@ -16,7 +17,11 @@ const useHandleRoutes = () => {
           element: <HomePage />,
         },
         { path: "about-us", element: <AboutPage /> },
-        { path: "our-services", element: <Services /> },
+        {
+          path: "our-services/software",
+          element: <SoftWareService />,
+        },
+
         { path: "news", element: <News /> },
       ],
     },
