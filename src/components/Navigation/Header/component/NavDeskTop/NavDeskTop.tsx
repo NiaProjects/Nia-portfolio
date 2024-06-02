@@ -20,7 +20,11 @@ const NavDeskTop: FC<IProp> = ({ isVisible }) => {
           isVisible ? "translate-y-0" : "-translate-y-full"
         }`}
       >
-        <img src={navBg} className="w-full min-h-[80px] absolute  " alt="" />
+        <img
+          src={navBg}
+          className="w-full min-h-[80px] max-h-[100px] absolute  "
+          alt=""
+        />
         <div>
           <NavItems />
 

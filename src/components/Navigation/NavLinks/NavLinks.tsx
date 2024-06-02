@@ -112,7 +112,7 @@ const NavItems = ({ type = "header" }) => {
       <ul
         className={` flex  ${
           type === "header"
-            ? "2xl:translate-x-[6.4%] lg:translate-x-[6.4%] lg:translate-y-[90%]  "
+            ? "2xl:translate-x-[6.4%] lg:translate-x-[6.4%] lg:translate-y-[30%]   "
             : " flex-col text-base   "
         } `}
       >
