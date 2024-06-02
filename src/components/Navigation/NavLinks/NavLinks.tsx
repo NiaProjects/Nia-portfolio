@@ -13,7 +13,7 @@ export const contactUsLinks = [
   { name: "chat pot", url: "services", icon: customIcon.rightArrowFooter },
 ];
 export const routesServiceList = [
-  { name: "software", url: "/", icon: customIcon.rightArrowFooter },
+  { name: "software", url: "software", icon: customIcon.rightArrowFooter },
   { name: "design", url: "about-us", icon: customIcon.rightArrowFooter },
   { name: "digital marketing", url: "", icon: customIcon.rightArrowFooter },
   { name: "events", url: "our-works", icon: customIcon.rightArrowFooter },
@@ -68,7 +68,10 @@ const NavItems = ({ type = "header" }) => {
                         }}
                         command=""
                       >
-                        <Link to={url}> {name}</Link>
+                        <Link to={url} className="capitalize">
+                          {" "}
+                          {name}
+                        </Link>
                       </MenuItem>
                     </>
                   );
@@ -89,18 +92,20 @@ const NavItems = ({ type = "header" }) => {
               type === "footer" && "flex items-center first:pb-[22px]"
             }`}
           >
+            {" "}
             <a
               href={"#" + url}
               className={
                 className +
-                " " +
+                "" +
                 ` text-nowrap relative text-white  transition duration-300 ${
                   isActive ? "active" : ""
                 }`
               }
             >
-              {type === "footer" && icon} {item.name}
+              {item.name}
             </a>
+            {type === "footer" && icon}
           </li>
         )}
       </>
@@ -112,7 +117,7 @@ const NavItems = ({ type = "header" }) => {
       <ul
         className={` flex  ${
           type === "header"
-            ? "2xl:translate-x-[6.4%] lg:translate-x-[6.4%] lg:translate-y-[90%]  "
+            ? "2xl:translate-x-[0%]  lg:transform lg:translate-x-[4%] lg:translate-y-[20%] 2xl:translate-y-[50%]   "
             : " flex-col text-base   "
         } `}
       >

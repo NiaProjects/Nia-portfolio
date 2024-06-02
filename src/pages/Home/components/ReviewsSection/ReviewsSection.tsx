@@ -10,7 +10,7 @@ const swiperSliedsReviews = (
   <>
     {[1, 2, 3, 4, 5, 6, 7, 8].map((index) => (
       <SwiperSlide>
-        <div className="reviewBox relative border rounded-xl mb-[100px] w-[270px] lg:w-[376px] h-[250px] lg:h-[235px]  ">
+        <div className="reviewBox relative border rounded-xl mb-[100px] w-[270px] lg:w-[376px] h-[250px] lg:h-[235px]  lg:mx-2 ">
           <div className="reviewBoxHeader py-[14px]   ">
             <div className="reviewIcon pt-[12px]"></div>
             <Heading
@@ -46,7 +46,7 @@ const swiperSliedsReviews = (
 
 const ReviewsSection = ({}: IProps) => {
   return (
-    <section className=" flex flex-col justify-center items-center m-auto mx-[100px]">
+    <section className=" flex container flex-col mx-4 justify-center items-center m-auto lg:mx-[100px]">
       <HeadingTitle headerDark="reviews" />
       <Text
         fontSize={{ base: "16px", md: "18px" }}
@@ -58,9 +58,7 @@ const ReviewsSection = ({}: IProps) => {
       {/*  */}
       <Swiper
         spaceBetween={0}
-        pagination={{
-          dynamicBullets: true,
-        }}
+        pagination={true}
         navigation={false}
         modules={[Autoplay, Pagination, Navigation]}
         className="mySwiper"

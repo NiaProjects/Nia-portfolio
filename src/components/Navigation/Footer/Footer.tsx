@@ -23,7 +23,7 @@ const socialIcons = [
 ];
 const Footer = ({}: IProps) => {
   return (
-    <footer>
+    <footer className=" bottom-0 left-0 right-0 z-50">
       <div className=" footerContainer bg-[#0E0D0D] flex flex-col  justify-center items-start  px-[18px] py-[30px]	">
         <div className="footerLogo md:hidden m-auto block justify-center items-center  pb-[55px] pt-6">
           <img src={footerLogo} className="w-[82.2px] h-[82.2px] block" />

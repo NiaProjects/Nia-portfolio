@@ -222,7 +222,6 @@ nav{
 
 .swiper {
   width: 100%;
-
 }
 
 .swiper-slide {
@@ -238,17 +237,18 @@ nav{
 
 .swiper-slide img {
   display: block;
- 
-  object-fit: cover;
+   object-fit: cover;
 }
 .swiper-pagination {
-  position: absolute;
+  /* position: absolute; */
   top: 50%;
   right: 10px;
-  /* transform: translateY(-50%); */
-  display: flex;
+  transform: translateY(-50%);
   flex-direction: row;
   align-items: center;
+  margin: auto
+
+  
 }
 
 .custom-bullet {
@@ -258,7 +258,11 @@ nav{
 }
 .swiper-pagination-bullet {
   background-color: orange !important;
+  left: 0 !important;
 }
 .swiper-pagination-bullet-active {
   background-color: orange !important;
+}
+.swiper-horizontal > .swiper-pagination-bullets.swiper-pagination-bullets-dynamic, .swiper-pagination-horizontal.swiper-pagination-bullets.swiper-pagination-bullets-dynamic{
+  left: 0 !important;
 }
