@@ -48,7 +48,7 @@ const OurServicesSection = () => {
     <>
       <section
         id="our-services"
-        className="h-[1500px]  md:h-[593px] xl:h-[1040px] py-7 px-[40px] sm:px-10 lg:px-[100px]  overflow-hidden"
+        className="h-[]  py-7 px-[40px] sm:px-10 lg:px-[100px]  overflow-hidden"
       >
         <div className="layerService"></div>
         <HeadingTitle headerDark="our services" classes={"text-white 	"} />
@@ -62,8 +62,8 @@ const OurServicesSection = () => {
             lorem ibsum donetlorem ibsum donet lorem ibsum donetlorem{" "}
           </Text>
         </div>
-        <div className="ourServicesCardsContainer mt-[32px] mb-[24px] bg-re-200">
-          <div className="ServiceCard  xl:h-[713px]  flex flex-col md:flex-row flex-wrap gap-3 xl:gap-[56px] g-2 justify-center items-center mb-2">
+        <div className="bg-red-200 ourServicesCardsContainer mt-[32px] mb-[24px] bg-re-200 ">
+          <div className="bg-sky-400 container ServiceCard pb-[300px]  flex flex-col md:flex-row flex-wrap gap-3 xl:gap-[56px]  justify-center items-center mb-2">
             {cardsData?.map((cardData, index) => {
               const { icon, header, url } = cardData;
               return (

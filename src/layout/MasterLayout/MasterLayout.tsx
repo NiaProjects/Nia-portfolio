@@ -11,7 +11,7 @@ const MasterLayout = () => {
       <main className=" ">
         <Outlet />
       </main>
-      {/* <Footer /> */}
+      <Footer />
     </>
   );
 };

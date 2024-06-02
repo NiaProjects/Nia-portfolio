@@ -23,6 +23,8 @@ theme: {
     // => @media (min-width: 1536px) { ... }
     '3xl': '1536px',
 
+  },container: {
+    center: true,
   },
  
   extend: {
