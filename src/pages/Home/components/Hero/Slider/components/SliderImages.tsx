@@ -9,6 +9,7 @@ import {
   slider2,
 } from "../../../../../../assets";
 import { FaQuoteRight } from "react-icons/fa6";
+import { customIcon } from "../../../../../../assets/icons/customIcons";
 
 const images = [
   {
@@ -27,13 +28,24 @@ const SliderImages = () => {
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
   const [fadeProp, setFadeProp] = useState({ fade: "fade-in" });
   const firstImage = useRef(true);
+  const prevButtonRef = useRef<HTMLButtonElement>(null);
+  const nextButtonRef = useRef<HTMLButtonElement>(null);
 
   useEffect(() => {
     const currentImageDelay = images[currentImageIndex].delay;
     let interval = setInterval(() => {
-      // handleNextImage();
+      handleNextImage();
     }, currentImageDelay);
-
+    // handle active class
+    if (prevButtonRef.current && nextButtonRef.current) {
+      if (currentImageIndex === 0) {
+        prevButtonRef.current.classList.add("active");
+        nextButtonRef.current.classList.remove("active");
+      } else {
+        prevButtonRef.current.classList.remove("active");
+        nextButtonRef.current.classList.add("active");
+      }
+    }
     return () => clearInterval(interval);
   }, [currentImageIndex]);
 
@@ -109,11 +121,23 @@ const SliderImages = () => {
       )}
 
       <div className="flex flex-col gap-7 justify-between h-[70px] lg:h-[120px] absolute z-40 top-[50%] right-6 -translate-x-[18px] md:-translate-x-[40px] lg:-translate-x-[100px]">
-        <button className="prev" onClick={handlePrevImage}>
-          <img src={VectorSlider1} alt="Previous" />
+        <button
+          className="prev  "
+          ref={prevButtonRef}
+          onClick={() => {
+            handlePrevImage();
+          }}
+        >
+          {customIcon.prevSliderHome}
         </button>
-        <button className="next" onClick={handleNextImage}>
-          <img src={VectorSlider2} alt="Next" />
+        <button
+          className="next"
+          ref={nextButtonRef}
+          onClick={() => {
+            handleNextImage();
+          }}
+        >
+          {customIcon.nextSliderHome}
         </button>
       </div>
     </div>

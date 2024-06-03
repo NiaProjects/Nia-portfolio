@@ -2,6 +2,8 @@ import { ChevronDownIcon } from "@chakra-ui/icons";
 import { Center, Menu, MenuButton, MenuItem, MenuList } from "@chakra-ui/react";
 import { Link, useLocation } from "react-router-dom";
 import { customIcon } from "../../../assets/icons/customIcons";
+import { v4 as uuidv4 } from "uuid";
+
 interface IProps {
   type?: "header" | "footer" | "mobile";
   classes?: string;
@@ -29,7 +31,7 @@ const routes = [
   { name: "news", url: "news", icon: customIcon.rightArrowFooter },
 ];
 const className =
-  "font-medium lg:text-sm xl:text-xl 2xl:mx-4  flex items-center lg:mx-2   capitalize hover:text-orange-400 pt-3 transition ";
+  "font-medium lg:text-sm xl:text-xl 2xl:mx-4  flex flex-row items-center lg:mx-2   capitalize hover:text-orange-400 pt-3 transition ";
 
 const NavItems = ({ type = "header" }) => {
   const location = useLocation();
@@ -37,8 +39,8 @@ const NavItems = ({ type = "header" }) => {
     const { url, name, icon } = item;
     if (name === "our services" && type === "header") {
       return (
-        <>
-          <Center key={name}>
+        <div key={uuidv4()}>
+          <Center>
             <Menu variant="roundRight">
               <MenuButton
                 px={0}
@@ -50,8 +52,10 @@ const NavItems = ({ type = "header" }) => {
                 // _expanded={{ bg: "orange.500" }}
                 _focus={{ boxShadow: "none" }}
               >
-                <span className={`${className} text-white`}> Service</span>
-                <ChevronDownIcon color="#ffffff" />
+                <span className={`${className} text-white`}>
+                  Service
+                  <ChevronDownIcon color="#ffffff" />
+                </span>
               </MenuButton>
               <MenuList
                 minW={207}
@@ -61,25 +65,24 @@ const NavItems = ({ type = "header" }) => {
                 {routesServiceList?.map((itemList, index) => {
                   const { name, url, icon } = itemList;
                   return (
-                    <>
-                      <MenuItem
-                        sx={{
-                          backgroundColor: "transparent",
-                        }}
-                        command=""
-                      >
-                        <Link to={url} className="capitalize">
-                          {" "}
-                          {name}
-                        </Link>
-                      </MenuItem>
-                    </>
+                    <MenuItem
+                      key={uuidv4()}
+                      sx={{
+                        backgroundColor: "transparent",
+                      }}
+                      command=""
+                    >
+                      <Link to={url} className="capitalize">
+                        {" "}
+                        {name}
+                      </Link>
+                    </MenuItem>
                   );
                 })}
               </MenuList>
             </Menu>
           </Center>
-        </>
+        </div>
       );
     }
     const isActive = location.pathname === url;
@@ -87,7 +90,7 @@ const NavItems = ({ type = "header" }) => {
       <>
         {name !== "our services" && (
           <li
-            key={index}
+            key={uuidv4()}
             className={` text-start ${
               type === "footer" && "flex items-center first:pb-[22px]"
             }`}
@@ -115,6 +118,7 @@ const NavItems = ({ type = "header" }) => {
   return (
     <>
       <ul
+        key={uuidv4()}
         className={` flex  ${
           type === "header"
             ? "2xl:translate-x-[6.4%] lg:translate-x-[6.4%] lg:translate-y-[30%]   "

@@ -16,13 +16,13 @@ const NavDeskTop: FC<IProp> = ({ isVisible }) => {
         initial={{ y: 0 }}
         animate={{ y: isVisible ? 0 : [-35, -50, -100, -140] }}
         transition={{ duration: 0.2, type: "spring" }}
-        className={`fixed top-0 left-0 right-0 z-50 max-lg:hidden ${
+        className={`fixed top-0 left-0 right-0 z-30 max-lg:hidden ${
           isVisible ? "translate-y-0" : "-translate-y-full"
         }`}
       >
         <img
           src={navBg}
-          className="w-full min-h-[80px] max-h-[100px] absolute  "
+          className="w-full min-h-[80px] max-h-[100px] absolute   "
           alt=""
         />
         <div>
