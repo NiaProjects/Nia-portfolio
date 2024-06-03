@@ -179,6 +179,7 @@ position: relative;
     position: absolute;
     top: -20%;
     left: -20%;
+    background-color: #2F210F;
   }
 }
 .image-slider button.active::after {

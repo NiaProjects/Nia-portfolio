@@ -68,7 +68,7 @@ const NewsSection = ({}: IProps) => {
     </>
   );
   return (
-    <section id="newsContainer" className="mx-[18px] m-auto">
+    <section id="newsContainer" className="mx-[18px] m-auto ">
       <HeadingTitle headerDark={"news"} />
       <Text
         fontSize={{ base: "18px" }}
@@ -77,7 +77,7 @@ const NewsSection = ({}: IProps) => {
       >
         Lorem ipsum dolor sit amet consectetur. Volutpat condimentum{" "}
       </Text>
-      <div className="newCardsBox mb-[70px] lg:mx-[100px] ">
+      <div className="newCardsBox mb-[70px] lg:mx-[100px]  ">
         <Swiper
           spaceBetween={2}
           pagination={{

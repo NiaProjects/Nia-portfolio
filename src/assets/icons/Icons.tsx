@@ -9,7 +9,6 @@ const Icon: React.FC<IconProps> = ({ name, color, size }) => {
   const LucideIcon = icons[name];
 
   if (!LucideIcon) {
-    // Handle the case where the icon name is not found
     return null;
   }
 

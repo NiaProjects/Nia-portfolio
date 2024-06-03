@@ -1,8 +1,6 @@
-import React, { FC } from "react";
-import { logo, navBg } from "../../../../../assets";
 import { motion } from "framer-motion";
-import NavLinks from "../../../NavLinks";
-import NavigationBar from "../../../NavLinks/NavLinks";
+import { FC } from "react";
+import { logo, navBg } from "../../../../../assets";
 import NavItems from "../../../NavLinks/NavLinks";
 
 interface IProp {
@@ -28,8 +26,8 @@ const NavDeskTop: FC<IProp> = ({ isVisible }) => {
         <div>
           <NavItems />
 
-          <div className="absolute w-[7%] h-auto  translate-x-[-50%]  translate-y-[13px]  left-1/2 	top-2">
-            <img src={logo} className="w-full h-auto" alt="" />
+          <div className="absolute w-[7%] h-auto  translate-x-[-50%] 2xl:translate-x-[-40%]  translate-y-[13px]  left-1/2 	top-2">
+            <img src={logo} className="2xl:w-[70%] h-auto" alt="" />
           </div>
         </div>
       </motion.nav>

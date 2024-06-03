@@ -54,7 +54,7 @@ const NavItems = ({ type = "header" }) => {
               >
                 <span className={`${className} text-white`}>
                   Service
-                  <ChevronDownIcon color="#ffffff" />
+                  {/* <ChevronDownIcon color="#ffffff" /> */}
                 </span>
               </MenuButton>
               <MenuList

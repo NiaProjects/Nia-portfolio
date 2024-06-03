@@ -1,14 +1,22 @@
-import React, { FC, useRef } from "react";
+import { AnimatePresence, motion } from "framer-motion";
+import React, { FC, useRef, useState } from "react";
+import { BiHomeSmile, BiUser } from "react-icons/bi";
+import { FiSettings, FiShoppingCart } from "react-icons/fi";
+import { HiOutlineChatBubbleBottomCenterText } from "react-icons/hi2";
+import { useClickAway } from "react-use";
 import { logo } from "../../../../../assets";
 import Icon from "../../../../../assets/icons/Icons";
-import { useState } from "react";
-import { GiHamburgerMenu } from "react-icons/gi";
-import { AnimatePresence, motion } from "framer-motion";
-import { useClickAway } from "react-use";
-import { AiOutlineRollback } from "react-icons/ai";
-import { BiHomeSmile, BiUser } from "react-icons/bi";
-import { HiOutlineChatBubbleBottomCenterText } from "react-icons/hi2";
-import { FiSettings, FiShoppingCart } from "react-icons/fi";
+import {
+  Accordion,
+  AccordionButton,
+  AccordionIcon,
+  AccordionItem,
+  AccordionPanel,
+  Image,
+} from "@chakra-ui/react";
+import Button from "../../../../Button";
+import { Box, ChevronDownIcon } from "lucide-react";
+import { Link } from "react-router-dom";
 
 interface NavMobileProps {
   isVisible: boolean;
@@ -16,33 +24,54 @@ interface NavMobileProps {
   isOpen: boolean;
 }
 
-const SidebarItem: FC<{ title: string; Icon: any; href?: string }> = ({
-  title,
-  Icon,
-  href,
-}) => (
-  <li className="p-2 hover:bg-gray-700 cursor-pointer">
-    <a href={href} className="flex items-center space-x-2">
-      <Icon />
-      <span>{title}</span>
-    </a>
-  </li>
-);
+const SidebarItem: FC<{
+  title: string;
+  href?: string;
+  activeAccordion: boolean;
+  toggleAccordion: any;
+}> = ({ title, href, activeAccordion, toggleSidebar }) => {
+  const mutedText = activeAccordion && "text-[#464440]";
+
+  return (
+    <li
+      className={`p-2 hover:bg-gray-700 cursor-pointer  m-auto md:text-xl font-medium capitalize ${mutedText}`}
+    >
+      <a
+        href={href}
+        className="flex items-center justify-end space-x-2 text-lg  font-medium  md:text-[22px]"
+      >
+        <span onClick={() => toggleSidebar()}>{title}</span>
+      </a>
+    </li>
+  );
+};
 
 const NavMobile: FC<NavMobileProps> = ({ isVisible, setOpen, isOpen }) => {
   const sidebarRef = useRef(null);
   useClickAway(sidebarRef, () => {
     if (isOpen) setOpen(false);
   });
-
+  const [activeAccordion, setActiveAccordion] = useState(false);
+  const toggleAccordion = () => setActiveAccordion((prev) => !prev);
   const toggleSidebar = () => setOpen((prev) => !prev);
-
   const items = [
-    { title: "Home", Icon: BiHomeSmile, href: "#" },
-    { title: "About", Icon: BiUser, href: "#" },
-    { title: "Contact", Icon: HiOutlineChatBubbleBottomCenterText, href: "#" },
-    { title: "Settings", Icon: FiSettings, href: "#" },
-    { title: "Shop", Icon: FiShoppingCart, href: "#" },
+    { title: "Home", href: "#" },
+    { title: "about us", href: "#" },
+    {
+      title: "services",
+      icon: <Icon name="ChevronLeft" size={24} color="#ffffff" />,
+      href: "#",
+    },
+    { title: "our works", href: "#" },
+    { title: "news", href: "#" },
+  ];
+  const routesServiceList = [
+    { name: "software", url: "software" },
+    { name: "design", url: "about-us" },
+    { name: "digital marketing", url: "" },
+    { name: "events", url: "our-works" },
+    { name: "photography", url: "news" },
+    { name: "advertising", url: "news" },
   ];
 
   return (
@@ -57,32 +86,86 @@ const NavMobile: FC<NavMobileProps> = ({ isVisible, setOpen, isOpen }) => {
       <div className="w-[45px] md:w-[70px] h-auto left-0 mx-10 translate-y-[5px]">
         <img src={logo} alt="Logo" />
       </div>
-      <aside className="transform bg-red-200 ">
+      <aside className="transform ">
         <button
           aria-label="toggle sidebar"
           onClick={toggleSidebar}
-          className="menuIcon mx-10 translate-y-[50%]"
+          className="menuIcon mx-10 translate-y-[50%] md:translate-y-[100%] "
         >
-          <Icon name="Menu" size={24} />
+          <Icon name="Menu" size={30} />
         </button>
         <AnimatePresence>
           {isOpen && (
             <motion.div
               ref={sidebarRef}
               initial={{ width: 0 }}
-              animate={{ width: 300 }}
+              animate={{ width: "203px" }}
               exit={{ width: 0 }}
-              className="bg-gray-800 text-white h-screen absolute top-0 right-0 shadow-lg overflow-hidden"
+              className="bg-[#0E0D0D] flex flex-col justify-between text-white h-screen absolute top-0 right-0 shadow-lg overflow-hidden"
             >
               <div className="p-4">
-                <button onClick={toggleSidebar} className="mb-4">
-                  Toggle
-                </button>
-                <ul>
-                  {items.map((item, index) => (
-                    <SidebarItem key={index} {...item} />
-                  ))}
+                <div className="flex justify-between items-center mb-[22px]">
+                  <button
+                    onClick={toggleSidebar}
+                    className=" flex items-center my-auto   "
+                  >
+                    <Icon name="X" size={30} />
+                  </button>
+                  <Image
+                    src={logo}
+                    alt="Nia logo"
+                    boxSize={{ base: "40px", md: "60px" }}
+                  />
+                </div>
+
+                <ul className="text-center first:mb-[22px]">
+                  {items.map((item, index) => {
+                    if (item.title === "services") {
+                      return (
+                        <>
+                          <li
+                            className="p-2 hover:bg-gray-700 cursor-pointer  m-auto font-medium text-lg  md:text-[22px] capitalize"
+                            onClick={() => toggleAccordion()}
+                          >
+                            <a
+                              // href={href}
+                              className="flex items-center justify-end space-x-2  "
+                            >
+                              <span className="transform -rotate-90">
+                                <Icon name="ChevronLeft" />{" "}
+                              </span>
+                              <span>services</span>
+                            </a>
+                          </li>
+                          {activeAccordion && (
+                            <>
+                              {routesServiceList?.map((item, index) => (
+                                <li
+                                  key={index}
+                                  className="my-2 text-end capitalize text-sm md:text-xl text-nowrap mb-4"
+                                  onClick={toggleSidebar}
+                                >
+                                  <Link to={item.url}>{item.name}</Link>
+                                </li>
+                              ))}
+                            </>
+                          )}
+                        </>
+                      );
+                    }
+                    return (
+                      <SidebarItem
+                        toggleSidebar={toggleSidebar}
+                        key={index}
+                        activeAccordion={activeAccordion}
+                        {...item}
+                      />
+                    );
+                  })}
                 </ul>
+              </div>
+              <div className=" text-white mb-[50px] m-auto">
+                <Button className="">contact us</Button>
               </div>
             </motion.div>
           )}

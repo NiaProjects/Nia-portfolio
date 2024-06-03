@@ -49,12 +49,16 @@ const HomePage: FC<HomeProps> = () => (
     >
       <Hero />
     </section>
-    {/* <AboutSection />
+    <AboutSection />
     <OurServicesSection />
     <PartnersSection />
     <OurWorkSection />
     <ReviewsSection />
-    <NewsSection /> */}
+    <NewsSection />
+    {/* 
+   
+   
+    */}
   </>
 );
 
