@@ -13,7 +13,7 @@ const NewsSection = ({}: IProps) => {
       {[1, 2, 3, 4, 5, 6, 7, 8].map((index) => (
         <>
           <SwiperSlide key={index}>
-            <div className="newsCard mb-16 w-[270px] xl:h-[237px] border rounded-xl lg:w-[400px] m-auto flex flex-col text-center ">
+            <div className="newsCard mb-16 w-[270px] xl:h-auto border rounded-xl lg:w-[400px] m-auto flex flex-col text-center justify-center">
               <div className="newsCardBody">
                 <img src={newsCardImg} alt="news image" className="w-100" />
                 <Heading
@@ -36,7 +36,7 @@ const NewsSection = ({}: IProps) => {
                   adipiscing id dignissim malesuada pretium mattis ut.{" "}
                 </Text>
               </div>
-              <div className="cardFooter flex justify-between items-center pb-[14px] px-4">
+              <div className="cardFooter flex justify-between items-center pb-[14px] px-4 ">
                 <Text
                   fontSize={{ base: "12px", md: "16px" }}
                   fontWeight={{ base: "400" }}
@@ -77,7 +77,7 @@ const NewsSection = ({}: IProps) => {
       >
         Lorem ipsum dolor sit amet consectetur. Volutpat condimentum{" "}
       </Text>
-      <div className="newCardsBox mb-[70px] lg:mx-[100px]  ">
+      <div className="newCardsBox mb-[70px] mx-[18px] lg:mx-[100px]  ">
         <Swiper
           spaceBetween={2}
           pagination={{

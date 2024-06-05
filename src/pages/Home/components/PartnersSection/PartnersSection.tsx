@@ -10,9 +10,9 @@ interface IProps {}
 const swiperSliedsPartnersLogos = (
   <>
     {[1, 2, 3, 4, 5, 6, 7, 8, 4, 5, 6, 7, 8].map((index) => (
-      <>
+      <div key={index}>
         {" "}
-        <SwiperSlide key={index}>
+        <SwiperSlide>
           <div className="partnerLogos ">
             <img
               src={partnersLogos}
@@ -20,7 +20,7 @@ const swiperSliedsPartnersLogos = (
             />
           </div>
         </SwiperSlide>
-      </>
+      </div>
     ))}
   </>
 );

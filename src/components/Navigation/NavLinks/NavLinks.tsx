@@ -15,7 +15,11 @@ export const contactUsLinks = [
   { name: "chat pot", url: "services", icon: customIcon.rightArrowFooter },
 ];
 export const routesServiceList = [
-  { name: "software", url: "software", icon: customIcon.rightArrowFooter },
+  {
+    name: "software",
+    url: "our-services/software",
+    icon: customIcon.rightArrowFooter,
+  },
   { name: "design", url: "about-us", icon: customIcon.rightArrowFooter },
   { name: "digital marketing", url: "", icon: customIcon.rightArrowFooter },
   { name: "events", url: "our-works", icon: customIcon.rightArrowFooter },
@@ -54,7 +58,7 @@ const NavItems = ({ type = "header" }) => {
               >
                 <span className={`${className} text-white`}>
                   Service
-                  {/* <ChevronDownIcon color="#ffffff" /> */}
+                  <ChevronDownIcon color="#ffffff" />
                 </span>
               </MenuButton>
               <MenuList

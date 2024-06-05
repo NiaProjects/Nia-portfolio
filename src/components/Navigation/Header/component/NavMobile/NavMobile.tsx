@@ -66,12 +66,12 @@ const NavMobile: FC<NavMobileProps> = ({ isVisible, setOpen, isOpen }) => {
     { title: "news", href: "#" },
   ];
   const routesServiceList = [
-    { name: "software", url: "software" },
-    { name: "design", url: "about-us" },
-    { name: "digital marketing", url: "" },
-    { name: "events", url: "our-works" },
-    { name: "photography", url: "news" },
-    { name: "advertising", url: "news" },
+    { name: "design", url: "our-services/design" },
+    { name: "software", url: "our-services/software" },
+    { name: "advertising", url: "our-services/advertising" },
+    { name: "photography", url: "our-services/photography" },
+    { name: "events", url: "our-services/events" },
+    { name: " digital marketing", url: "our-services/digital" },
   ];
 
   return (
