@@ -1,5 +1,9 @@
 import { FC } from "react";
-import { SoftwareIntroduction, heroImg } from "../../../assets";
+import {
+  SoftwareDescription,
+  SoftwareIntroduction,
+  heroImg,
+} from "../../../assets";
 import HeroImage from "../components/HeroImage";
 import ServicesIntroduction from "../components/ServicesIntroduction";
 import ServicesDescription from "../components/ServicesDescription";
@@ -15,11 +19,11 @@ const data = {
     introductionText:
       " Lorem ipsum dolor sit amet consectetur. Viverra tristique vitaerutrum dui aliquet sed at nunc convallis. Tellus facilisis adipiscing cras est Lorem ipsum dolor sit amet consectetur. Viverra tristique vitae rutrum dui aliquet sed at nunc convallis. Tellus facilisis adipiscing cras est Lorem ipsum dolor sit amet  consectetur.",
   },
-  serviceIntro: {
-    srcImg: SoftwareIntroduction,
+  description: {
+    srcImg: SoftwareDescription,
     alt: "",
-    introductionHeader: { darkHeader: "loarm", orangeHeader: "loarm" },
-    introductionText:
+    descriptionHeader: { darkHeader: "loarm", orangeHeader: "loarm" },
+    descriptionText:
       " Lorem ipsum dolor sit amet consectetur. Viverra tristique vitaerutrum dui aliquet sed at nunc convallis. Tellus facilisis adipiscing cras est Lorem ipsum dolor sit amet consectetur. Viverra tristique vitae rutrum dui aliquet sed at nunc convallis. Tellus facilisis adipiscing cras est Lorem ipsum dolor sit amet  consectetur.",
   },
   categories: {
@@ -30,8 +34,8 @@ const data = {
 };
 
 const SoftWareService: FC<SoftwareProps> = () => {
-  const { srcImg, alt, introductionHeader, introductionText } =
-    data.serviceIntro;
+  // const { srcImg, alt, introductionHeader, introductionText } =
+  //   data.serviceIntro;
   return (
     <>
       <HeroImage
@@ -42,13 +46,19 @@ const SoftWareService: FC<SoftwareProps> = () => {
         }
       />
       <ServicesIntroduction
-        srcImg={srcImg}
-        alt={alt}
-        headerText={introductionHeader}
-        paragraph={introductionText}
+        srcImg={data.introduction.srcImg}
+        alt={data.introduction.alt}
+        headerText={data.introduction.introductionHeader}
+        paragraph={data.introduction.introductionText}
       />
       <ServicesCategories />
-      <ServicesDescription />
+      <ServicesDescription
+        srcImg={data.description.srcImg}
+        alt={data.description.alt}
+        headerText={data.description.descriptionHeader}
+        paragraph={data.description.descriptionText}
+      
+      />
     </>
   );
 };

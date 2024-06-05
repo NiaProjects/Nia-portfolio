@@ -24,7 +24,7 @@ const HeadingTitle: FC<ITitleProps> = ({
         ? type === "aboutUsHeader"
           ? "lg:pb-6 pb-4"
           : "pt-6 pb-2  md:pb-6 md:pt-8"
-        : "mb-[16px]"
+        : "mb-[16px] "
     }`}
   >
     {/*   justify-center  */}
