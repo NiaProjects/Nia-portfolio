@@ -51,13 +51,12 @@ const SoftWareService: FC<SoftwareProps> = () => {
         headerText={data.introduction.introductionHeader}
         paragraph={data.introduction.introductionText}
       />
-      <ServicesCategories />
+      {/* <ServicesCategories /> */}
       <ServicesDescription
         srcImg={data.description.srcImg}
         alt={data.description.alt}
         headerText={data.description.descriptionHeader}
         paragraph={data.description.descriptionText}
-      
       />
     </>
   );

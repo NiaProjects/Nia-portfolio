@@ -16,16 +16,19 @@ const ServicesIntroduction = ({
   srcImg,
   alt,
   headerText,
-  paragraph: paragraph,
+  paragraph,
 }: IProps) => {
   return (
-    <section id="servicesIntroduction " className="container max-md:px-[18px] ">
+    <section
+      id="servicesIntroduction "
+      className=" max-md:px-[18px]   md:pe-[4.7%] mt-6 md:mt-[55px] xl:mt-24.5"
+    >
       {/* md:transform md:translate-x-[-1%] xl:translate-x-[-7.5%] 3xl:translate-x-[-10.5%]  mb-[40px] mb:mb-[90px] mt-[27px] md:mt-[57px]  xl:mt-[100px] */}
-      <div className="servicesIntroductionBox flex flex-col md:flex-row md:justify-between items-center gap-4 xl:gap-12">
-        <div className="   mx-auto w-[100%] md:w-1/2  ">
+      <div className="  servicesIntroductionBox flex flex-col md:flex-row md:justify-between items-center gap-4 xl:gap-12 ">
+        <div className="   mx-auto w-[100%] md:w-1/2  transform translate-x-[-1%] ">
           <Image
             src={srcImg}
-            className=" rounded-xl max-md:h-[12.5rem] w-full sm:h-auto  object-center "
+            className=" rounded-xl max-sm:h-[12.5rem]  w-full sm:h-auto  object-center "
             alt={alt}
           />
         </div>
