@@ -41,7 +41,7 @@ const ServicesDescription = ({ srcImg, alt }: IProps) => {
       id="ServicesDescription"
       className=" max-md:px-[18px] ps-[1.5rem] xl:ps-[5.12rem]   md:pe-[4.7%] pt-6 md:mt-[55px] xl:mt-24.5 leading-normal	"
     >
-      <div className="ServicesDescriptionBox relative -right-10 flex flex-col  md:flex-row jus md:justify-center items-center  gap-2 xl:gap-[3.31rem]">
+      <div className="ServicesDescriptionBox relative -right-10 flex flex-col  md:flex-row jus md:justify-center items-center xl:items-start  gap-2 xl:gap-[3.31rem]">
         <div className="   mx-auto w-full md:w-1/3   md:transform md:translate-x-[12%] md:order-1 ">
           <Image
             src={srcImg}
@@ -49,7 +49,7 @@ const ServicesDescription = ({ srcImg, alt }: IProps) => {
             alt={alt}
           />
         </div>
-        <div className="me-auto flex flex-col  mt-[22px]  md:w-2/3">
+        <div className="me-auto flex flex-col   md:w-2/3">
           <div className="servicesDescription ">
             {descriptionData?.map((desData) => {
               const { name, description } = desData;
@@ -61,11 +61,11 @@ const ServicesDescription = ({ srcImg, alt }: IProps) => {
                   >
                     <div
                       id="arrowIcon"
-                      className=" text-start pe-2.5 xl:pe-[22px] "
+                      className=" text-start pe-2.5 xl:pe-[22px] xl:pt-4 "
                     >
                       <Icon
                         name="MoveRight"
-                        classes=" w-[1.875rem] h-[1.875rem] xl:w-[3.125rem] xl:h-[1.875rem]"
+                        classes=" w-[1.875rem] h-[1.875rem] xl:w-[3.125rem] xl:h-[1.875rem] "
                         color="#EF7D00"
                       />
                     </div>

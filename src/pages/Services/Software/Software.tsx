@@ -20,11 +20,12 @@ const data = {
       " Lorem ipsum dolor sit amet consectetur. Viverra tristique vitaerutrum dui aliquet sed at nunc convallis. Tellus facilisis adipiscing cras est Lorem ipsum dolor sit amet consectetur. Viverra tristique vitae rutrum dui aliquet sed at nunc convallis. Tellus facilisis adipiscing cras est Lorem ipsum dolor sit amet  consectetur.",
   },
   description: {
-    srcImg: SoftwareDescription,
-    alt: "",
-    descriptionHeader: { darkHeader: "loarm", orangeHeader: "loarm" },
+    descriptionHeader: {
+      darkHeader: "type of software",
+      orangeHeader: "services",
+    },
     descriptionText:
-      " Lorem ipsum dolor sit amet consectetur. Viverra tristique vitaerutrum dui aliquet sed at nunc convallis. Tellus facilisis adipiscing cras est Lorem ipsum dolor sit amet consectetur. Viverra tristique vitae rutrum dui aliquet sed at nunc convallis. Tellus facilisis adipiscing cras est Lorem ipsum dolor sit amet  consectetur.",
+      " Tellus facilisis adipiscing cras est Lorem ipsum dolor sit amet consectetur. Viverra tristique vitae rutrum dui aliquet sed at nunc convallis. Tellus facilisis adipiscing cras est Lorem ipsum dolor sit amet consectetur. ",
   },
   categories: {
     header: { darkHeader: "loarm", orangeHeader: "loarm" },
@@ -51,13 +52,16 @@ const SoftWareService: FC<SoftwareProps> = () => {
         headerText={data.introduction.introductionHeader}
         paragraph={data.introduction.introductionText}
       />
-      {/* <ServicesCategories /> */}
-      <ServicesDescription
+      <ServicesCategories
+        headerText={data.description.descriptionHeader}
+        paragraph={data.description.descriptionText}
+      />
+      {/* <ServicesDescription
         srcImg={data.description.srcImg}
         alt={data.description.alt}
         headerText={data.description.descriptionHeader}
         paragraph={data.description.descriptionText}
-      />
+      /> */}
     </>
   );
 };
