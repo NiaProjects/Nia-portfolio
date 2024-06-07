@@ -35,7 +35,7 @@ const Footer = ({}: IProps) => {
               <img src={footerLogo} className="w-[82.2px] h-[82.2px] block" />
             </div>
             <NavItems type={"footer"} />
-
+            {/* our services */}
             <div>
               <a
                 href="#services"
@@ -88,14 +88,12 @@ const Footer = ({}: IProps) => {
                   {socialIcons?.map((socialIcon, index) => {
                     const { url, icon } = socialIcon;
                     return (
-                      <>
-                        <li
-                          key={index}
-                          className="flex mt-3 text-start text-base capitalize text-white text-[18px] text-nowrap  "
-                        >
-                          <a href={`#${url}`}>{icon}</a>
-                        </li>
-                      </>
+                      <li
+                        key={index}
+                        className="flex mt-3 text-start text-base capitalize text-white text-[18px] text-nowrap  "
+                      >
+                        <a href={`#${url}`}>{icon}</a>
+                      </li>
                     );
                   })}{" "}
                 </ul>
@@ -166,7 +164,7 @@ const Footer = ({}: IProps) => {
       {/*  */}
       <Box bg="#0E0D0D" color="white" borderTop="1px solid gold">
         <>
-          <div className="flex flex-col justify-center mb-6 text-center  md:justify-between px-[100] container">
+          <div className="flex flex-col justify-center text-center  md:justify-between px-[100] container">
             <div className="flex gap-2.5 justify-center my-4">
               <Link href="#" _hover={{ color: "gray.400" }}>
                 Privacy Policy

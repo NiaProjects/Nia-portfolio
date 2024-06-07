@@ -66,7 +66,7 @@ const NavItems = ({ type = "header" }) => {
                 textAlign={"center"}
                 justifyContent={"center"}
               >
-                {routesServiceList?.map((itemList, index) => {
+                {routesServiceList?.map((itemList) => {
                   const { name, url, icon } = itemList;
                   return (
                     <MenuItem
@@ -91,47 +91,42 @@ const NavItems = ({ type = "header" }) => {
     }
     const isActive = location.pathname === url;
     return (
-      <>
-        {name !== "our services" && (
-          <li
-            key={uuidv4()}
-            className={` text-start ${
-              type === "footer" && "flex items-center first:pb-[22px]"
-            }`}
+      name !== "our services" && (
+        <li
+          key={uuidv4()}
+          className={`text-start ${
+            type === "footer" && "flex items-center first:pb-[22px]"
+          }`}
+        >
+          {" "}
+          <a
+            href={"#" + url}
+            className={
+              className +
+              "" +
+              ` text-nowrap relative text-white transition duration-300 ${
+                isActive ? "active" : ""
+              }`
+            }
           >
-            {" "}
-            <a
-              href={"#" + url}
-              className={
-                className +
-                "" +
-                ` text-nowrap relative text-white  transition duration-300 ${
-                  isActive ? "active" : ""
-                }`
-              }
-            >
-              {item.name}
-            </a>
-            {type === "footer" && icon}
-          </li>
-        )}
-      </>
+            {type === "footer" && icon} {item.name}
+          </a>
+        </li>
+      )
     );
   });
 
   return (
-    <>
-      <ul
-        key={uuidv4()}
-        className={` flex  ${
-          type === "header"
-            ? "2xl:translate-x-[6.4%] lg:translate-x-[6.4%] lg:translate-y-[30%]   "
-            : " flex-col text-base   "
-        } `}
-      >
-        {linkPages}
-      </ul>
-    </>
+    <ul
+      key={uuidv4()}
+      className={`flex ${
+        type === "header"
+          ? "2xl:translate-x-[6.4%] lg:translate-x-[6.4%] lg:translate-y-[30%]"
+          : "flex-col text-base"
+      }`}
+    >
+      {linkPages}
+    </ul>
   );
 };
 

@@ -17,35 +17,28 @@ const data = {
     alt: "",
     introductionHeader: { darkHeader: "loarm", orangeHeader: "loarm" },
     introductionText:
-      " Lorem ipsum dolor sit amet consectetur. Viverra tristique vitaerutrum dui aliquet sed at nunc convallis. Tellus facilisis adipiscing cras est Lorem ipsum dolor sit amet consectetur. Viverra tristique vitae rutrum dui aliquet sed at nunc convallis. Tellus facilisis adipiscing cras est Lorem ipsum dolor sit amet  consectetur.",
-  },
-  description: {
-    descriptionHeader: {
-      darkHeader: "type of software",
-      orangeHeader: "services",
-    },
-    descriptionText:
-      " Tellus facilisis adipiscing cras est Lorem ipsum dolor sit amet consectetur. Viverra tristique vitae rutrum dui aliquet sed at nunc convallis. Tellus facilisis adipiscing cras est Lorem ipsum dolor sit amet consectetur. ",
+      "Lorem ipsum dolor sit amet consectetur. Viverra tristique vitaerutrum dui aliquet sed at nunc convallis. Tellus facilisis adipiscing cras est Lorem ipsum dolor sit amet consectetur. Viverra tristique vitae rutrum dui aliquet sed at nunc convallis. Tellus facilisis adipiscing cras est Lorem ipsum dolor sit amet  consectetur.",
   },
   categories: {
     header: { darkHeader: "loarm", orangeHeader: "loarm" },
     paragraph:
-      " Lorem ipsum dolor sit amet consectetur. Viverra tristique vitae rutrum dui aliquet sed at nunc convallis. Tellus facilisis adipiscing cras est Lorem ipsum dolor sit amet consectetur. Viverra tristique vitae rutrum dui aliquet sed at nunc convallis. Tellus facilisis adipiscing cras est Lorem ipsum dolor sit amet  consectetur.",
+      "Tellus facilisis adipiscing cras est Lorem ipsum dolor sit amet consectetur. Viverra tristique vitae rutrum dui aliquet sed at nunc convallis. Tellus facilisis adipiscing cras est Lorem ipsum dolor sit amet consectetur. ",
+  },
+  description: {
+    srcImg: SoftwareDescription,
+    descriptionHeader: {
+      darkHeader: "type of software",
+      orangeHeader: "Services",
+    },
+    descriptionText:
+      "Tellus facilisis adipiscing cras est Lorem ipsum dolor sit amet consectetur. Viverra tristique vitae rutrum dui aliquet sed at nunc convallis. Tellus facilisis adipiscing cras est Lorem ipsum dolor sit amet consectetur.",
   },
 };
 
 const SoftWareService: FC<SoftwareProps> = () => {
-  // const { srcImg, alt, introductionHeader, introductionText } =
-  //   data.serviceIntro;
   return (
     <>
-      <HeroImage
-        imageSection={data.imgSection}
-        headerText={"contact us"}
-        paragraph={
-          "Lorem ipsum dolor sit amet consectetur. Viverra tristique vitae rutrum dui aliquet sed at nunc convallis."
-        }
-      />
+      <HeroImage imageSection={data.imgSection} headerText={"contact us"} />
       <ServicesIntroduction
         srcImg={data.introduction.srcImg}
         alt={data.introduction.alt}
@@ -56,12 +49,12 @@ const SoftWareService: FC<SoftwareProps> = () => {
         headerText={data.description.descriptionHeader}
         paragraph={data.description.descriptionText}
       />
-      {/* <ServicesDescription
+      <ServicesDescription
         srcImg={data.description.srcImg}
         alt={data.description.alt}
         headerText={data.description.descriptionHeader}
         paragraph={data.description.descriptionText}
-      /> */}
+      />
     </>
   );
 };

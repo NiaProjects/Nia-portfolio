@@ -24,7 +24,7 @@ const HeadingTitle: FC<ITitleProps> = ({
         ? type === "aboutUsHeader"
           ? "lg:pb-6 pb-4"
           : "pt-6 pb-2  md:pb-6 md:pt-8"
-        : "mb-[16px] m-auto"
+        : "mb-[16px] mx-auto justify-center"
     }`}
   >
     {/*   justify-center  */}
@@ -38,7 +38,9 @@ const HeadingTitle: FC<ITitleProps> = ({
       >
         {headerDark}
       </span>
-      <span className="ms-2 text-[#EF7D00] font-montserrat font-semibold break-words capitalize">
+      <span
+        className={`${classes} ms-2 text-[#EF7D00] font-montserrat font-semibold break-words capitalize`}
+      >
         {headerOrang}
       </span>
       {children}

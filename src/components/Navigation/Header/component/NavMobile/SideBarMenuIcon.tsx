@@ -2,7 +2,7 @@ import React from "react";
 
 interface IProps {}
 
-const SideBarMenuIcon = ({}: IProps) => {
+const SideBarMenuIcon = ({ setOpen }: IProps) => {
   return <div></div>;
 };
 

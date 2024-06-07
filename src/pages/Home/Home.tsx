@@ -47,13 +47,13 @@ const HomePage: FC<HomeProps> = () => (
       id="section2"
       className={`bg-gradient-to-r from-[#B45E00] to-[#FF9D32] top-0 bottom-0 left-0 right-0`}
     >
-      <Hero />
+      {/* <Hero /> */}
     </section>
     <AboutSection />
     <OurServicesSection />
     <PartnersSection />
     <OurWorkSection />
-    <ReviewsSection />
+    {/* <ReviewsSection /> */}
     <NewsSection />
     {/* 
    

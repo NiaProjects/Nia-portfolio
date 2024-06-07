@@ -28,6 +28,10 @@ theme: {
   },
  
   extend: {
+    translate: {
+      '-1/2': '-50%',
+      '1/2': '50%',
+    },
     fontFamily: {
       'dancing-script': ['"Dancing Script"', 'cursive'],
     },
