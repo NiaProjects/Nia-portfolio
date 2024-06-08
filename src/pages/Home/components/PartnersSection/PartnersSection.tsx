@@ -5,12 +5,14 @@ import { partnersLogos } from "../../../../assets";
 import "swiper/css/pagination";
 import { Autoplay, Navigation, Pagination } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
+import { v4 as uuidv4 } from "uuid";
+
 interface IProps {}
 
 const swiperSliedsPartnersLogos = (
   <>
-    {[1, 2, 3, 4, 5, 6, 7, 8, 4, 5, 6, 7, 8].map((index) => (
-      <div key={index}>
+    {[1, 2, 3, 4, 5, 6, 7, 8, 4, 5, 6, 7, 8].map(() => (
+      <div key={uuidv4()}>
         {" "}
         <SwiperSlide>
           <div className="partnerLogos ">

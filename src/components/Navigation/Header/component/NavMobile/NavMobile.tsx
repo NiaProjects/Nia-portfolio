@@ -17,6 +17,7 @@ import {
 import Button from "../../../../Button";
 import { Box, ChevronDownIcon } from "lucide-react";
 import { Link } from "react-router-dom";
+import { v4 as uuidv4 } from "uuid";
 
 interface NavMobileProps {
   isVisible: boolean;
@@ -141,7 +142,7 @@ const NavMobile: FC<NavMobileProps> = ({ isVisible, setOpen, isOpen }) => {
                             <>
                               {routesServiceList?.map((item, index) => (
                                 <li
-                                  key={index}
+                                  key={uuidv4()}
                                   className="my-2 text-end capitalize text-sm md:text-xl text-nowrap mb-4"
                                   onClick={toggleSidebar}
                                 >
@@ -156,7 +157,7 @@ const NavMobile: FC<NavMobileProps> = ({ isVisible, setOpen, isOpen }) => {
                     return (
                       <SidebarItem
                         toggleSidebar={toggleSidebar}
-                        key={index}
+                        key={uuidv4()}
                         activeAccordion={activeAccordion}
                         {...item}
                       />
@@ -165,7 +166,9 @@ const NavMobile: FC<NavMobileProps> = ({ isVisible, setOpen, isOpen }) => {
                 </ul>
               </div>
               <div className=" text-white mb-[50px] m-auto">
-                <Button className="">contact us</Button>
+                <Button className="capitalize">
+                  <Link to={"contact-us"}>contact us</Link>
+                </Button>
               </div>
             </motion.div>
           )}

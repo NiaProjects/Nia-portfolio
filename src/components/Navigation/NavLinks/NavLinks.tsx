@@ -10,7 +10,7 @@ interface IProps {
 }
 
 export const contactUsLinks = [
-  { name: "contact us", url: "/", icon: "" },
+  { name: "contact us", url: "contact-us", icon: "" },
   { name: "CTA form", url: "about-us", icon: customIcon.rightArrowFooter },
   { name: "chat pot", url: "services", icon: customIcon.rightArrowFooter },
 ];

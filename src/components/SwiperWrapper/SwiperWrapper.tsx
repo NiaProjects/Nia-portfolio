@@ -4,6 +4,7 @@ import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 import { Autoplay, Navigation, Pagination } from "swiper/modules";
+import { v4 as uuidv4 } from "uuid";
 
 /**
  * SwiperWrapper component renders a container for Swiper slide elements.
@@ -64,7 +65,7 @@ export default function SwiperWrapper(props) {
       className={`mySwiper ${className}`}
     >
       {items.map((item, index) => (
-        <SwiperSlide key={index}>{item}</SwiperSlide>
+        <SwiperSlide key={uuidv4()}>{item}</SwiperSlide>
       ))}
     </Swiper>
   );

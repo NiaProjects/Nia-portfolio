@@ -38,8 +38,8 @@ const customIcon = {
           y2="32.0493"
           gradientUnits="userSpaceOnUse"
         >
-          <stop offset="0.45" stop-color="#EF7D00" />
-          <stop offset="1" stop-color="#F39A39" stop-opacity="0.35" />
+          <stop offset="0.45" stopColor="#EF7D00" />
+          <stop offset="1" stopColor="#F39A39" stopOpacity="0.35" />
         </linearGradient>
       </defs>
     </svg>
@@ -65,8 +65,8 @@ const customIcon = {
           y2="32.3353"
           gradientUnits="userSpaceOnUse"
         >
-          <stop offset="0.45" stop-color="#EF7D00" />
-          <stop offset="1" stop-color="#F39A39" stop-opacity="0.35" />
+          <stop offset="0.45" stopColor="#EF7D00" />
+          <stop offset="1" stopColor="#F39A39" stopOpacity="0.35" />
         </linearGradient>
       </defs>
     </svg>
@@ -92,8 +92,8 @@ const customIcon = {
           y2="30.2857"
           gradientUnits="userSpaceOnUse"
         >
-          <stop offset="0.45" stop-color="#EF7D00" />
-          <stop offset="1" stop-color="#F39A39" stop-opacity="0.35" />
+          <stop offset="0.45" stopColor="#EF7D00" />
+          <stop offset="1" stopColor="#F39A39" stopOpacity="0.35" />
         </linearGradient>
       </defs>
     </svg>
@@ -142,6 +142,20 @@ const customIcon = {
       />
     </svg>
   ),
+  locationPin: (
+    <svg
+      width="28"
+      height="28"
+      viewBox="0 0 28 28"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <path
+        d="M23.8772 10.0522C22.7227 4.91226 18.2377 2.61426 14.3077 2.61426C14.3077 2.61426 14.3077 2.61426 14.2966 2.61426C10.3778 2.61426 5.90392 4.91226 4.73827 10.0411C3.42829 15.7695 6.93636 20.6209 10.1114 23.6849C11.2881 24.8172 12.7979 25.3834 14.3077 25.3834C15.8175 25.3834 17.3274 24.8172 18.493 23.6849C21.668 20.6209 25.1761 15.7806 23.8772 10.0522ZM17.3607 13.4382H11.2548C10.7997 13.4382 10.4222 13.0608 10.4222 12.6056C10.4222 12.1504 10.7997 11.773 11.2548 11.773H17.3607C17.8158 11.773 18.1933 12.1504 18.1933 12.6056C18.1933 13.0608 17.8158 13.4382 17.3607 13.4382Z"
+        fill="#EF7D00"
+      />
+    </svg>
+  ),
 };
 
 //
@@ -166,8 +180,8 @@ const customIcon = {
 //           y2="32.3353"
 //           gradientUnits="userSpaceOnUse"
 //         >
-//           <stop offset="0.45" stop-color="#EF7D00" />
-//           <stop offset="1" stop-color="#F39A39" stop-opacity="0.35" />
+//           <stop offset="0.45" stopColor="#EF7D00" />
+//           <stop offset="1" stopColor="#F39A39" stopOpacity="0.35" />
 //         </linearGradient>
 //       </defs>
 //     </svg>
@@ -195,8 +209,8 @@ const customIcon = {
 //           y2="30.2857"
 //           gradientUnits="userSpaceOnUse"
 //         >
-//           <stop offset="0.45" stop-color="#EF7D00" />
-//           <stop offset="1" stop-color="#F39A39" stop-opacity="0.35" />
+//           <stop offset="0.45" stopColor="#EF7D00" />
+//           <stop offset="1" stopColor="#F39A39" stopOpacity="0.35" />
 //         </linearGradient>
 //       </defs>
 //     </svg>

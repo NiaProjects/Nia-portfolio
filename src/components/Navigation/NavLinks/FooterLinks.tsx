@@ -1,6 +1,8 @@
 import { ChevronDownIcon } from "@chakra-ui/icons";
 import { Center, Menu, MenuButton, MenuItem, MenuList } from "@chakra-ui/react";
 import { useLocation } from "react-router-dom";
+import { v4 as uuidv4 } from "uuid";
+
 interface IProps {
   type?: "header" | "footer" | "mobile";
   classes?: string;
@@ -36,8 +38,8 @@ const NavItems = ({ type = "header" }) => {
     const { url, name } = item;
     if (name === "our services") {
       return (
-        <>
-          <Center key={name}>
+        <div key={uuidv4()}>
+          <Center>
             <Menu variant="roundRight">
               <MenuButton
                 px={0}
@@ -93,12 +95,12 @@ const NavItems = ({ type = "header" }) => {
               </MenuList>
             </Menu>
           </Center>
-        </>
+        </div>
       );
     }
     const isActive = location.pathname === url;
     return (
-      <li key={index} className={` `}>
+      <li key={uuidv4()} className={` `}>
         <a
           href={"#" + url}
           className={

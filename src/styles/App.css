@@ -23,6 +23,8 @@
   
   html,
   body {
+    position: relative;
+
     scroll-behavior: smooth;
   background-color: #fafafa; 
   }
@@ -275,4 +277,10 @@ nav{
 }
 .swiper-horizontal > .swiper-pagination-bullets.swiper-pagination-bullets-dynamic, .swiper-pagination-horizontal.swiper-pagination-bullets.swiper-pagination-bullets-dynamic{
   left: 0 !important;
+}
+
+/* Card Shadow */
+.cardStyle{
+
+  box-shadow: 1px 1px 1px 0px #00000040;
 }

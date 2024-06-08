@@ -5,6 +5,7 @@ import NavItems, {
   contactUsLinks,
   routesServiceList,
 } from "../NavLinks/NavLinks";
+import { v4 as uuidv4 } from "uuid";
 
 interface IProps {}
 const socialIcons = [
@@ -23,7 +24,7 @@ const socialIcons = [
 ];
 const Footer = ({}: IProps) => {
   return (
-    <footer className=" bottom-0 left-0 right-0 z-50">
+    <footer className=" bottom-0 left-0 right-0 z-10 absolute">
       <div className=" footerContainer bg-[#0E0D0D] flex flex-col  justify-center items-start  px-[18px] py-[30px]	">
         <div className="footerLogo md:hidden m-auto block justify-center items-center  pb-[55px] pt-6">
           <img src={footerLogo} className="w-[82.2px] h-[82.2px] block" />
@@ -47,17 +48,15 @@ const Footer = ({}: IProps) => {
                 {routesServiceList?.map((itemList, index) => {
                   const { name, url, icon } = itemList;
                   return (
-                    <>
-                      <li
-                        key={index}
-                        className="flex text-start items-center text-base capitalize  text-white text-[18px] text-nowrap pt-3"
-                      >
-                        {icon}{" "}
-                        <a href={`#${url}`} className="">
-                          {name}
-                        </a>
-                      </li>
-                    </>
+                    <li
+                      key={uuidv4()}
+                      className="flex text-start items-center text-base capitalize  text-white text-[18px] text-nowrap pt-3"
+                    >
+                      {icon}{" "}
+                      <a href={`#${url}`} className="">
+                        {name}
+                      </a>
+                    </li>
                   );
                 })}
               </ul>
@@ -68,18 +67,14 @@ const Footer = ({}: IProps) => {
                   {contactUsLinks?.map((item, index) => {
                     const { url, name, icon } = item;
                     return (
-                      <>
-                        <>
-                          <li
-                            key={index}
-                            className="flex text-star  first:pb-[22px] justify-start items-center text-base capitalize text-white text-[18px] text-nowrap  "
-                          >
-                            <a href={`#${url}`} className="pt-3 flex ute">
-                              {icon} {name}
-                            </a>
-                          </li>
-                        </>
-                      </>
+                      <li
+                        key={uuidv4()}
+                        className="flex text-star  first:pb-[22px] justify-start items-center text-base capitalize text-white text-[18px] text-nowrap  "
+                      >
+                        <a href={`#${url}`} className="pt-3 flex ute">
+                          {icon} {name}
+                        </a>
+                      </li>
                     );
                   })}
                 </ul>
@@ -89,7 +84,7 @@ const Footer = ({}: IProps) => {
                     const { url, icon } = socialIcon;
                     return (
                       <li
-                        key={index}
+                        key={uuidv4()}
                         className="flex mt-3 text-start text-base capitalize text-white text-[18px] text-nowrap  "
                       >
                         <a href={`#${url}`}>{icon}</a>
@@ -126,18 +121,14 @@ const Footer = ({}: IProps) => {
                 {contactUsLinks?.map((item, index) => {
                   const { url, name, icon } = item;
                   return (
-                    <>
-                      <>
-                        <li
-                          key={index}
-                          className="flex text-star justify-start items-center text-base capitalize text-white text-[18px] text-nowrap  "
-                        >
-                          <a href={`#${url}`} className="pt-3 flex ute">
-                            {icon} {name}
-                          </a>
-                        </li>
-                      </>
-                    </>
+                    <li
+                      key={uuidv4()}
+                      className="flex text-star justify-start items-center text-base capitalize text-white text-[18px] text-nowrap  "
+                    >
+                      <a href={`#${url}`} className="pt-3 flex ute">
+                        {icon} {name}
+                      </a>
+                    </li>
                   );
                 })}
               </ul>
@@ -146,16 +137,14 @@ const Footer = ({}: IProps) => {
                 {socialIcons?.map((socialIcon, index) => {
                   const { url, icon } = socialIcon;
                   return (
-                    <>
-                      <li
-                        key={index}
-                        className="flex mt-3 text-start text-base capitalize text-white text-[18px] text-nowrap  "
-                      >
-                        <a href={`#${url}`}>{icon}</a>
-                      </li>
-                    </>
+                    <li
+                      key={uuidv4()}
+                      className="flex mt-3 text-start text-base capitalize text-white text-[18px] text-nowrap  "
+                    >
+                      <a href={`#${url}`}>{icon}</a>
+                    </li>
                   );
-                })}{" "}
+                })}
               </ul>
             </div>
           </div>
@@ -163,21 +152,19 @@ const Footer = ({}: IProps) => {
       </div>
       {/*  */}
       <Box bg="#0E0D0D" color="white" borderTop="1px solid gold">
-        <>
-          <div className="flex flex-col justify-center text-center  md:justify-between px-[100] container">
-            <div className="flex gap-2.5 justify-center my-4">
-              <Link href="#" _hover={{ color: "gray.400" }}>
-                Privacy Policy
-              </Link>
-              <Link href="#" _hover={{ color: "gray.400" }}>
-                Terms of Service
-              </Link>
-            </div>
-            <div className="text-sm text-center">
-              &copy; 2024 Nia. All rights reserved.
-            </div>
+        <div className="flex flex-col justify-center text-center  md:justify-between px-[100] container">
+          <div className="flex gap-2.5 justify-center my-4">
+            <Link href="#" _hover={{ color: "gray.400" }}>
+              Privacy Policy
+            </Link>
+            <Link href="#" _hover={{ color: "gray.400" }}>
+              Terms of Service
+            </Link>
           </div>
-        </>
+          <div className="text-sm text-center">
+            &copy; 2024 Nia. All rights reserved.
+          </div>
+        </div>
       </Box>
     </footer>
   );
