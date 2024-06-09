@@ -69,7 +69,7 @@ const AboutSection = () => {
     <>
       <section
         id="about-us"
-        className="relative  lg:h-[813px] md:flex justify-center items-center    lg:gap-[50px] overflow-hidden py-6 px-[40px] sm:px-10 lg:px-[100px] "
+        className="relative  container lg:h-[813px] md:flex justify-center items-center    lg:gap-[50px] overflow-hidden py-6 px-[40px] sm:px-10 lg:px-[100px] "
       >
         <img
           src={dotedVector}

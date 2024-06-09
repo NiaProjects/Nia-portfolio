@@ -13,7 +13,7 @@ const NewsSection = ({}: IProps) => {
     <>
       {[1, 2, 3, 4, 5, 6, 7, 8].map((index) => (
         <SwiperSlide key={uuidv4()}>
-          <div className="newsCard mb-16 w-[270px] xl:h-auto border rounded-xl lg:w-[400px] m-auto flex flex-col text-center justify-center">
+          <div className="newsCard container mb-16 w-[270px] xl:h-auto border rounded-xl lg:w-[400px] m-auto flex flex-col text-center justify-center">
             <div className="newsCardBody">
               <img src={newsCardImg} alt="news image" className="w-100" />
               <Heading
@@ -67,7 +67,7 @@ const NewsSection = ({}: IProps) => {
     </>
   );
   return (
-    <section id="newsContainer" className="mx-[18px] m-auto ">
+    <section id="newsContainer" className="mx-[18px] m-auto  container mx-auto">
       <HeadingTitle headerDark={"news"} />
       <Text
         fontSize={{ base: "18px" }}

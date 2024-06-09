@@ -72,7 +72,7 @@ const contactsData: ContactInfo[] = [
 {
   /*ContactUs component */
 }
-const ContactUs = (s) => {
+const ContactUs = () => {
   const saudiContacts = contactsData.filter(
     (contact) => contact.location === "saudi"
   );
@@ -84,34 +84,37 @@ const ContactUs = (s) => {
   const egpLocation = locations.filter((locate) => locate.zoon === "egp");
   return (
     <>
-      <section className=" bg-[#FFFDFB] container flex flex-col  items-start mb-4 ">
-        <div className="p-[10px] mt-6 mx-auto rounded-3xl w-[90.4%] bg-stone-800 ">
+      <section className=" bg-[#FFFDFB] container  flex flex-col  items-start mb-4 justify-between ">
+        {/* w-[90.4%] xl:w-[50%]  */}
+        <div className="p-[10px] mt-6 mx-auto rounded-3xl  w-full ">
           <Tabs type="location">
             <TabContent>
               <>
-                {saudiContacts.map((contact) => (
-                  <div
-                    key={contact.id}
-                    className="shadowEffect flex flex-col p-[10px] gap-4 bg-white rounded-[10px] shadowEffect mt-4"
-                  >
-                    <div className="flex flex-col gap-[18px]">
-                      <div className="flex">
-                        <span className="me-2">{contact.iconAdds}</span>{" "}
-                        <span
-                          className="address"
-                          dangerouslySetInnerHTML={{
-                            __html: contact.adds,
-                          }}
-                        ></span>
-                      </div>
-                      <div className="phone flex">
-                        <span className="me-2">{contact.iconPhone}</span>
-                        <span>{contact.phone}</span>
+                <div className="flex flex-col lg:w-[56%]">
+                  {saudiContacts.map((contact) => (
+                    <div
+                      key={contact.id}
+                      className="shadowEffect flex flex-col  md:flex-row p-[10px] gap-4 bg-white rounded-[10px] shadowEffect mt-4 "
+                    >
+                      <div className=" gap-[18px]">
+                        <div className="flex">
+                          <span className="me-2">{contact.iconAdds}</span>{" "}
+                          <span
+                            className="address"
+                            dangerouslySetInnerHTML={{
+                              __html: contact.adds,
+                            }}
+                          ></span>
+                        </div>
+                        <div className="phone flex">
+                          <span className="me-2">{contact.iconPhone}</span>
+                          <span>{contact.phone}</span>
+                        </div>
                       </div>
                     </div>
-                  </div>
-                ))}
-                <div className="w-full h-[246px] bg-slate-300 shadowEffect rounded-xl overflow-hidden mt-4">
+                  ))}
+                </div>
+                <div className="w-full xl:w-[55%] h-[246px] bg-slate-300 shadowEffect rounded-xl overflow-hidden mt-4">
                   <AddressLocation locations={soaudiLocation} />
                 </div>
               </>
@@ -148,9 +151,9 @@ const ContactUs = (s) => {
           </Tabs>
         </div>
       </section>
-      <section className="h-screen shadowEffect bg-sky-800 container flex flex-col  items-start mb-4">
-        <div className="w-[90.4%]  flex flex-col bg-white mx-auto items-start  min-h-[490px] rounded-xl">
-          <header className="text-center mx-auto">
+      <section className="h-screen   container flex flex-col  items-start mb-4 bg-[#FFFDFB] ">
+        <div className="w-[90.4%] shadowEffect flex flex-col bg-white mx-auto items-start  min-h-[490px] rounded-xl  py-[32px] md:py-[57px] xl:py-[75px]">
+          <header className="text-center mx-auto mb-[48px] md:mb-[58px] xl:mb-[80px]">
             <HeadingTitle
               headerDark={"Get in "}
               headerOrang={"touch"}

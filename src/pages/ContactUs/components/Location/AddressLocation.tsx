@@ -33,14 +33,14 @@ const AddressLocation = ({ locations }: IProps) => {
           disableDefaultUI={true}
           defaultCenter={{ lat: 29.987664269730214, lng: 31.135320380036145 }}
           mapId={"626858346ad1e161"}
-          onCameraChanged={(ev: MapCameraChangedEvent) =>
-            console.log(
-              "camera changed:",
-              ev.detail.center,
-              "zoom:",
-              ev.detail.zoom
-            )
-          }
+          // onCameraChanged={(ev: MapCameraChangedEvent) =>
+          //   console.log(
+          //     "camera changed:",
+          //     ev.detail.center,
+          //     "zoom:",
+          //     ev.detail.zoom
+          //   )
+          // }
         >
           {locations?.map((item) => (
             <AdvancedMarker key={item.key} position={item.location}>

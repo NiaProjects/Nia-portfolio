@@ -29,11 +29,11 @@ const OurWorkSection = () => {
           <div className="py-[24px] flex flex-col md:flex-row justify-between gap-4 xl:gap-[35px]">
             {/* order-1 */}
             <div className="inline-flex md:flex-col justify-center md:w-[31.8%] gap-4 xl:gap-[35px]">
-              <div className="max-md:w-[162px] w-full h-[140px] md:h-full lg:h-[305px] bg-slate-400 rounded-xl"></div>
-              <div className="w-full md:w-full lg:w-full h-[140px] md:h-full lg:h-[305px] bg-slate-400 rounded-xl"></div>
+              <div className="w-[162px] md:w-full h-[140px] md:h-full lg:h-[305px] bg-slate-400 rounded-xl"></div>
+              <div className="w-[162px] md:w-full lg:w-full h-[140px] md:h-full lg:h-[305px] bg-slate-400 rounded-xl"></div>
             </div>
             {/* order-2 */}
-            <div className=" flex justify-center m-auto  h-full w-[280px] md:h-[326px] lg:w-[400px] lg:h-[630px] ">
+            <div className=" flex justify-center m-auto  h-full w-[100%] md:h-[326px] lg:w-[400px] lg:h-[630px] ">
               <div className="w-full md:w-full  lg:w-full h-[140px] md:h-full bg-slate-400 rounded-xl"></div>
             </div>
             {/* order-3 */}
