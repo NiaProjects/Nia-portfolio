@@ -1,74 +1,166 @@
-import React from "react";
-import {
-  APIProvider,
-  AdvancedMarker,
-  Map,
-  MapCameraChangedEvent,
-  Pin,
-} from "@vis.gl/react-google-maps";
-import AddressLocation from "./components/Location/AddressLocation";
 import { v4 as uuidv4 } from "uuid";
+import Tabs from "../../components/Tabs/Tabs";
+import TabContent from "../../components/Tabs/components/TabContent";
+import "../../styles/App.css";
+import { customIcon } from "../../assets/icons/customIcons";
+import AddressLocation from "./components/Location/AddressLocation";
+import FormData from "./components/FormData/FormData";
+import { HeadingTitle } from "../../components/text";
 
-interface IProps {}
 interface ContactInfo {
-  id: any;
+  id: string;
   adds: string;
   phone: string;
-  addsIcon: string;
-  phoneIcon: string;
+  location: string;
+  iconAdds: any;
+  iconPhone: any;
 }
 interface ContactsData {
-  saudi: ContactInfo;
+  [key: string]: ContactInfo[]; // Change the structure to accept any location key
 }
-const MapKey = "AIzaSyALVzDd_-YceNQIpzRFq0w60jTU3RhV22I";
-type Poi = { key: string; location: google.maps.LatLngLiteral };
+type Poi = {
+  key: string;
+  location: google.maps.LatLngLiteral;
+  zoon: string;
+};
 
-const locations: Poi[] = [
+const locations: any = [
   {
-    key: "operaHouse",
+    zoon: "saudi",
+    key: uuidv4(),
     location: { lat: 29.987664269730214, lng: 31.135320380036145 },
   },
   {
-    key: "tarongaZoo",
+    zoon: "saudi",
+    key: uuidv4(),
     location: { lat: 29.940071799838737, lng: 31.220967166544746 },
   },
   {
-    key: "manlyBeach",
+    zoon: "egp",
+    key: uuidv4(),
     location: { lat: 29.984292325438595, lng: 31.254057970423073 },
   },
 ];
-const contactsData: ContactsData[] = [
+const contactsData: ContactInfo[] = [
   {
-    saudi: {
-      id: uuidv4(),
-      adds: "Salhiya-    Riyadh-12662,SaudiArabia ",
-      phone: "+9660126176182 ",
-      addsIcon: "",
-      phoneIcon: "",
-    },
+    id: uuidv4(),
+    location: "saudi", // location for saudi
+    adds: `Salhiya- <br/> Riyadh-12662, Saudi Arabia`,
+    phone: "+9660126176182",
+    iconAdds: customIcon.locationPin,
+    iconPhone: customIcon.locationPhone,
+  },
+  {
+    id: uuidv4(),
+    location: "saudi", // location for saudi
+    adds: "Aziziyah-<br/> Jeddah-23337,SaudiArab",
+    phone: "+9660126176182 ",
+    iconAdds: customIcon.locationPin,
+    iconPhone: customIcon.locationPhone,
+  },
+
+  {
+    id: uuidv4(),
+    location: "egp", // location for egp
+    adds: "al naser giza ",
+    phone: "+201028872884",
+    iconAdds: customIcon.locationPin,
+    iconPhone: customIcon.locationPhone,
   },
 ];
-const ContactUs = ({}: IProps) => {
+
+{
+  /*ContactUs component */
+}
+const ContactUs = (s) => {
+  const saudiContacts = contactsData.filter(
+    (contact) => contact.location === "saudi"
+  );
+  const egpContacts = contactsData.filter(
+    (contact) => contact.location === "egp"
+  );
+  const soaudiLocation = locations.filter((locate) => locate.zoon === "saudi");
+
+  const egpLocation = locations.filter((locate) => locate.zoon === "egp");
   return (
-    <section className="h-screen flex flex-col  items-start">
-      <div className="connectionInfo bg-red-200 cardStyle flex flex-col justify-center  w-[90.4%] mx-auto mb-4 ">
-        {contactsData?.map((contactData) => {
-          const { id, adds, phone, addsIcon, phoneIcon } = contactData.saudi;
-          console.log(id, adds, phone, addsIcon, phoneIcon);
-          return (
-            <div className="bg-sky-600 h-1/2" key={id}>
-              {adds}
-              {phone}
-              {addsIcon}
-              {phoneIcon}
-            </div>
-          );
-        })}
-      </div>
-      <div className="mapInfo bg-stone-500 w-[90.4%] min-h-[246px] mx-auto rounded-[10px]  overflow-hidden  ">
-        <AddressLocation />
-      </div>
-    </section>
+    <>
+      <section className=" bg-[#FFFDFB] container flex flex-col  items-start mb-4 ">
+        <div className="p-[10px] mt-6 mx-auto rounded-3xl w-[90.4%] bg-stone-800 ">
+          <Tabs type="location">
+            <TabContent>
+              <>
+                {saudiContacts.map((contact) => (
+                  <div
+                    key={contact.id}
+                    className="shadowEffect flex flex-col p-[10px] gap-4 bg-white rounded-[10px] shadowEffect mt-4"
+                  >
+                    <div className="flex flex-col gap-[18px]">
+                      <div className="flex">
+                        <span className="me-2">{contact.iconAdds}</span>{" "}
+                        <span
+                          className="address"
+                          dangerouslySetInnerHTML={{
+                            __html: contact.adds,
+                          }}
+                        ></span>
+                      </div>
+                      <div className="phone flex">
+                        <span className="me-2">{contact.iconPhone}</span>
+                        <span>{contact.phone}</span>
+                      </div>
+                    </div>
+                  </div>
+                ))}
+                <div className="w-full h-[246px] bg-slate-300 shadowEffect rounded-xl overflow-hidden mt-4">
+                  <AddressLocation locations={soaudiLocation} />
+                </div>
+              </>
+            </TabContent>
+            <TabContent>
+              <>
+                {egpContacts.map((contact) => (
+                  <div
+                    key={contact.id}
+                    className="shadowEffect capitalize text-lg font-normal flex flex-col p-[10px] gap-4 bg-white rounded-[10px] shadowEffect mt-4"
+                  >
+                    <div className="flex flex-col gap-[18px]">
+                      <div className="flex">
+                        <span className="me-2">{contact.iconAdds}</span>{" "}
+                        <span
+                          className="address"
+                          dangerouslySetInnerHTML={{
+                            __html: contact.adds,
+                          }}
+                        ></span>
+                      </div>
+                      <div className="phone flex">
+                        <span className="me-2">{contact.iconPhone}</span>
+                        <span>{contact.phone}</span>
+                      </div>
+                    </div>
+                  </div>
+                ))}
+                <div className="w-full h-[246px] bg-slate-300 shadowEffect rounded-xl overflow-hidden mt-4">
+                  <AddressLocation locations={egpLocation} />
+                </div>
+              </>
+            </TabContent>
+          </Tabs>
+        </div>
+      </section>
+      <section className="h-screen shadowEffect bg-sky-800 container flex flex-col  items-start mb-4">
+        <div className="w-[90.4%]  flex flex-col bg-white mx-auto items-start  min-h-[490px] rounded-xl">
+          <header className="text-center mx-auto">
+            <HeadingTitle
+              headerDark={"Get in "}
+              headerOrang={"touch"}
+              type="services"
+            />
+          </header>
+          <FormData />
+        </div>
+      </section>
+    </>
   );
 };
 

@@ -280,7 +280,46 @@ nav{
 }
 
 /* Card Shadow */
-.cardStyle{
+.shadowEffect{
 
   box-shadow: 1px 1px 1px 0px #00000040;
+}
+
+.address{white-space: pre; }
+/* ActiveTab */
+.tabsButton{
+  box-shadow: 1px 1px 1px 0px #00000040;
+  border-radius:10px   ;
+
+  overflow: hidden;
+  button{
+    background-color: #fff;
+    text-align: center;
+    /* margin: auto; */
+    padding: 19px 28px;
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 21.94px;
+    color:#EF7D00;
+
+  }
+  .activeTab{
+    background-color: #EF7D00;
+    color: #fff;
+
+}
+ 
+}
+/* Custom cursor */
+
+.custom-cursor-not-allowed {
+  cursor: url('../../src/assets/images/logo.png') 5 5, not-allowed; /* Ensure the URL points to your custom cursor image */
+}
+
+.custom-cursor-pointer {
+  cursor: url('../../src/assets/images/logo.png'), 5 5; /* Ensure the URL points to your custom cursor image */
+}
+.address .line-break::after {
+  content: "\A"; /* Inserts a line break */
+  white-space: pre; /* Preserves white space */
 }
