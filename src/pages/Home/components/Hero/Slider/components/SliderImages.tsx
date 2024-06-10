@@ -34,7 +34,7 @@ const SliderImages = () => {
   useEffect(() => {
     const currentImageDelay = images[currentImageIndex].delay;
     let interval = setInterval(() => {
-      handleNextImage();
+      // handleNextImage();
     }, currentImageDelay);
     // handle active class
     if (prevButtonRef.current && nextButtonRef.current) {
@@ -93,7 +93,7 @@ const SliderImages = () => {
         <>
           {" "}
           <div className="absolute z-10 top-[45%] md:top-[45%] lg:top-[45%] w-[240px] md:w-[352px] lg:w-[517px] text-white capitalize ms-[18px] md:ms-[40px] lg:ms-[100px] text-start h-auto whitespace-pre-wrap">
-            <p className="text-[24px] md:text-[32px] lg:text-[48px] font-bold">
+            <p className="text-[24px] md:text-[36px] lg:text-[48px] font-bold">
               {images[currentImageIndex].text.split(" ").slice(0, -1).join(" ")}
               <span className="text-primary text-[24px] md:text-[32px] lg:text-[48px] font-bold">
                 {` ${images[currentImageIndex].text.split(" ").slice(-1)}`}{" "}
@@ -110,7 +110,7 @@ const SliderImages = () => {
               alt=""
             />
 
-            <p className="font-[dancing-script] text-[20px] md:text-[24px] lg:text-[40px] font-bold md:font-semibold -rotate-6 text-center	max-md:leading-6	">
+            <p className="font-[dancing-script] text-[20px] md:text-[32px] lg:text-[40px] font-bold md:font-semibold -rotate-6 text-center	max-md:leading-6	">
               {images[1].text}
             </p>
             <img className="rounded-full absolute avatar" src={hart} alt="" />

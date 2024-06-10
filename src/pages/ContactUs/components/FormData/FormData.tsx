@@ -3,6 +3,7 @@ import Button from "../../../../components/Button";
 import axios from "axios";
 
 interface IProps {}
+
 const url = "http://localhost:3000/messages";
 const FormContact = ({}: IProps) => {
   const [enteredValues, setEnteredValues] = React.useState({
@@ -17,31 +18,30 @@ const FormContact = ({}: IProps) => {
     phone: false,
     message: false,
   });
+  const [isEdit, setIsEdit] = React.useState({
+    fullName: false,
+    email: false,
+    phone: false,
+    message: false,
+  });
+  const handleInputChange = (identifier, value) => {
+    setIsEdit((prevValue) => ({
+      ...prevValue,
+      [identifier]: false,
+    }));
+    setEnteredValues((prevValue) => ({ ...prevValue, [identifier]: value }));
+  };
 
-  const handleInputChange = (indintfire, value) => {
-    setEnteredValues((prevValue) => ({ ...prevValue, [indintfire]: value }));
+  const nameIsInvalid = isEdit.fullName && !enteredValues.email.includes("1");
+  const emailIsInvalid = isEdit.email && !enteredValues.email.includes("@");
+
+  const handleInBluerInput = (identifier) => {
+    setIsEdit((prevValue) => ({
+      ...prevValue,
+      [identifier]: true,
+    }));
   };
-  const validateFormData = (identifir, value) => {
-    // console.log(fullName.value)
-    // const fullName = document.getElementById("fullName");
-    // const email = document.getElementById("email");
-    // const message = document.getElementById("message");
-    // if (fullName.value === "") {
-    //   fullName.classList.add("border-red-500");
-    // } else {
-    //   fullName.classList.remove("border-red-500");
-    // }
-    // if (email.value === "") {
-    //   email.classList.add("border-red-500");
-    // } else {
-    //   email.classList.remove("border-red-500");
-    // }
-    // if (message.value === "") {
-    //   message.classList.add("border-red-500");
-    // } else {
-    //   message.classList.remove("border-red-500");
-    // }
-  };
+
   const handleFormSubmited = async (
     event: React.FormEvent<HTMLFormElement>
   ) => {
@@ -56,6 +56,8 @@ const FormContact = ({}: IProps) => {
       console.log(error.message);
     }
   };
+  useEffect(() => {});
+
   // const handleSubmitForm = async (event: React.FormEvent<HTMLFormElement>) => {
   //   event.preventDefault();
   //   const form = event.currentTarget;
@@ -89,7 +91,7 @@ const FormContact = ({}: IProps) => {
     <>
       <form
         onSubmit={handleFormSubmited}
-        className="flex flex-col justify-center items-center relative w-full h-full "
+        className="flex flex-col justify-center items-center relative w-full h-full lg:w-[59%] mx-auto"
       >
         <div className="mb-6 w-[87%]">
           <label
@@ -104,8 +106,9 @@ const FormContact = ({}: IProps) => {
             name="fullName"
             // value={enteredValues.fullName}
             onChange={(e) => handleInputChange("fullName", e.target.value)}
-            className=" p-1  border-b-2  w-full "
+            className=" p-1  border-b-2  w-full focus:border-[#EF7D00]"
             onBlur={(e) => validateFormData("fullName", e.target.value)}
+            pattern="^[A-Z a-z]{3,16}$"
             required
           />
         </div>
@@ -123,12 +126,14 @@ const FormContact = ({}: IProps) => {
             name="email"
             // value={formData.email}
             onChange={(e) => handleInputChange("email", e.target.value)}
-            // onBlur={handleValidation}
+            onBlur={(e) => handleInBluerInput(e.target.name)}
             className=" p-1  border-b-2  w-full"
             required
           />
+          <div className="text-red-500	text-sm md:text-base w-full ">
+            {emailIsInvalid && "invalid email"}
+          </div>
         </div>
-
         <div className="mb-6 w-[87%]">
           <label
             htmlFor="phone"

@@ -67,7 +67,7 @@ const NewsSection = ({}: IProps) => {
     </>
   );
   return (
-    <section id="newsContainer" className="mx-[18px] m-auto  container mx-auto">
+    <section id="news" className="mx-[18px] m-auto  container mx-auto">
       <HeadingTitle headerDark={"news"} />
       <Text
         fontSize={{ base: "18px" }}

@@ -28,9 +28,10 @@ import footerLogo from "./images/footerLogo.png";
 import heroImg from "./images/heroImg.png";
 import SoftwareIntroduction from "./images/SoftwareIntroduction.png";
 import SoftwareDescription from "./images/SoftwareDescription.png";
+import contactUsImg from "./images/contactUsImg.png";
 
 export { logo,slider1, slider2,avatarSlider1, facebook, ig,twitter ,homeHart,quoteDown, VectorSlider1,
     VectorSlider2,dotedVector,navBg,navMob,aboutNia1,aboutNia2,aboutNia3,hart,cardServicesCategory,cardServicesCategory2,serviceCard,serviceCardHeaderIcon
-,NiarightIcone,newsCardImg,ReviewUserImg,partnersLogos,footerLogo,heroImg,SoftwareIntroduction,SoftwareDescription
+,NiarightIcone,newsCardImg,ReviewUserImg,partnersLogos,footerLogo,heroImg,SoftwareIntroduction,SoftwareDescription,contactUsImg
 
 };

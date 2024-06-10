@@ -4,7 +4,10 @@ import { HeadingTitle } from "../../../../components/text";
 
 const OurWorkSection = () => {
   return (
-    <section className="container mx-auto py-8 px-[18px] max-md:bg-[#FAD4AA]">
+    <section
+      id="our-works"
+      className="container mx-auto py-8 px-[18px] max-md:bg-[#FAD4AA]"
+    >
       <div className=" flex justify-center text-wrap w-[30%] md:w-[40%] lg:w-[10%] xl:w-[30%]  mx-auto">
         {" "}
         <HeadingTitle

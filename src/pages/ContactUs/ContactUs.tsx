@@ -8,6 +8,7 @@ import FormData from "./components/FormData/FormData";
 import { HeadingTitle } from "../../components/text";
 import TabButtons from "../../components/Tabs/components/TabButtons";
 import React from "react";
+import { contactUsImg } from "../../assets";
 
 interface ContactInfo {
   id: string;
@@ -97,14 +98,14 @@ const ContactUs = () => {
   return (
     <>
       <section className=" bg-[#FFFDFB]   ">
-        {/* w-[90.4%] xl:w-[50%]  */}
-        <div className="xl:p-[10px] mt-6 mx-auto rounded-3xl container ">
-          <div className="flex flex-col lg:flex-row items-center   justify-between xl:w-[98.5%] mx-auto mb-[32px] xl:mb-[62px]">
+        {/* w-[90.4%] lg:w-[50%]  */}
+        <div className="lg:p-[10px] mt-6 mx-auto rounded-3xl container ">
+          <div className="flex flex-col lg:flex-row items-center   justify-between lg:w-[98.5%] mx-auto mb-[32px] lg:mb-[62px]">
             <Tabs type="location" selectedTabIndex={selectedTabIndex}>
               <TabContent>
                 <>
-                  <div className="w-full md:w-[420px] xl:w-[33.8%] max-md:mb-[24px] m-auto  flex flex-col   justify-center ">
-                    <div className="w-[71.4%] mx-auto text-lg  md:text-xl ">
+                  <div className="w-full md:w-[420px] lg:w-[33.8%] max-lg:mb-[24px] m-auto  flex flex-col   justify-center ">
+                    <div className="w-[71.4%] mx-auto text-lg  md:text-xl  ">
                       <TabButtons
                         tabHeader={location}
                         type={"location"}
@@ -115,7 +116,7 @@ const ContactUs = () => {
                     {saudiContacts.map((contact) => (
                       <div
                         key={contact.id}
-                        className="shadowEffect flex flex-col w-[95.4%] mx-auto max-w-[420px] p-[10px] gap-4 bg-white rounded-[10px] shadowEffect mt-4 "
+                        className="shadowEffect flex flex-col w-[95.4%] lg:w-full  mx-auto max-w-[420px] p-[10px] gap-4 bg-white rounded-[10px] shadowEffect mt-4 "
                       >
                         <div className="address flex">
                           <span className="me-2">{contact.iconAdds}</span>{" "}
@@ -133,15 +134,15 @@ const ContactUs = () => {
                       </div>
                     ))}
                   </div>
-                  <div className="w-full md:w-[94%] xl:ms-auto max-md:mx-auto xl:w-[60.4%]  h-[246px] sm:h-[382px] xl:h-[616px] rounded-xl overflow-hidden ">
+                  <div className="w-[95.2%] md:w-[94%] lg:ms-auto max-md:mx-auto lg:w-[60.4%]  h-[246px] sm:h-[382px] lg:h-[616px] rounded-xl overflow-hidden ">
                     <AddressLocation locations={soaudiLocation} />
                   </div>
                 </>
               </TabContent>
               <TabContent>
                 <>
-                  <div className="xl:w-[33.8%] bg-sky-200 flex flex-col  justify-center">
-                    <div className="w-[71.4%] mx-auto">
+                  <div className="w-full md:w-[420px] lg:w-[33.8%] max-md:mb-[24px] m-auto  flex flex-col   justify-center ">
+                    <div className="w-[71.4%] mx-auto text-lg  md:text-xl">
                       <TabButtons
                         tabHeader={location}
                         type={"location"}
@@ -152,12 +153,12 @@ const ContactUs = () => {
                     {egpContacts.map((contact) => (
                       <div
                         key={contact.id}
-                        className="shadowEffect flex flex-col  md:flex-row p-[10px] gap-4 bg-white rounded-[10px] shadowEffect mt-4 "
+                        className="shadowEffect flex flex-col w-[95.4%] lg:w-full mx-auto max-w-[420px] p-[10px] gap-4 bg-white rounded-[10px] shadowEffect mt-4 "
                       >
-                        <div className="flex">
+                        <div className="address flex">
                           <span className="me-2">{contact.iconAdds}</span>{" "}
                           <span
-                            className="address"
+                            className=""
                             dangerouslySetInnerHTML={{
                               __html: contact.adds,
                             }}
@@ -170,7 +171,7 @@ const ContactUs = () => {
                       </div>
                     ))}
                   </div>
-                  <div className="w-1/2 bg-sky-200">
+                  <div className="w-full md:w-[94%] lg:ms-auto max-md:mx-auto lg:w-[60.4%]  h-[246px] sm:h-[382px] xl:h-[616px] rounded-xl overflow-hidden ">
                     <AddressLocation locations={egpLocation} />
                   </div>
                 </>
@@ -179,16 +180,22 @@ const ContactUs = () => {
           </div>
         </div>
       </section>
-      <section className="h-screen    flex flex-col  items-start mb-4 bg-[#FFFDFB] ">
-        <div className="max-md:w-[90.4%]  container shadowEffect flex flex-col bg-white mx-auto items-start  min-h-[490px] rounded-xl  py-[32px] md:py-[57px] xl:py-[75px]">
-          <header className="text-center mx-auto mb-[48px] md:mb-[58px] xl:mb-[80px]">
-            <HeadingTitle
-              headerDark={"Get in "}
-              headerOrang={"touch"}
-              type="services"
-            />
-          </header>
-          <FormData />
+      <section className="w-[89.8%] md:w-[89.2%]  bg-[#FFFDFB]  flex flex-col justify-center mx-auto  items-start mb-4  ">
+        {/* max-md:w-[90.4%]  */}
+        <div className="  container shadowEffect flex flex-col w-[96.8%] lg:w-[96.5%] min-h-[490px]    mx-auto items-start   rounded-xl  py-[32px] md:py-[57px] xl:py-[75px]">
+          <div className=" flex w-full justify-center lg:justify-between mx-auto">
+            <div className="max-lg:hidden w-[41.8%] ">
+              <img src={contactUsImg} alt="contact us" />
+            </div>
+            <div className="w-full md:w-[55%] ">
+              <HeadingTitle
+                headerDark={"Get in "}
+                headerOrang={"touch"}
+                type="services"
+              />
+              <FormData />
+            </div>
+          </div>
         </div>
       </section>
     </>
