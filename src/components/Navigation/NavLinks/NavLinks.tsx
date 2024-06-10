@@ -1,8 +1,9 @@
 import { ChevronDownIcon } from "@chakra-ui/icons";
 import { Center, Menu, MenuButton, MenuItem, MenuList } from "@chakra-ui/react";
-import { Link, useLocation } from "react-router-dom";
+import { Link, NavLink, useLocation } from "react-router-dom";
 import { customIcon } from "../../../assets/icons/customIcons";
 import { v4 as uuidv4 } from "uuid";
+import AnchorLink from "react-anchor-link-smooth-scroll";
 
 interface IProps {
   type?: "header" | "footer" | "mobile";
@@ -20,18 +21,42 @@ export const routesServiceList = [
     url: "our-services/software",
     icon: customIcon.rightArrowFooter,
   },
-  { name: "design", url: "about-us", icon: customIcon.rightArrowFooter },
-  { name: "digital marketing", url: "", icon: customIcon.rightArrowFooter },
-  { name: "events", url: "our-works", icon: customIcon.rightArrowFooter },
-  { name: "photography", url: "news", icon: customIcon.rightArrowFooter },
-  { name: "advertising", url: "news", icon: customIcon.rightArrowFooter },
+  {
+    name: "design",
+    url: "our-services/designs",
+    icon: customIcon.rightArrowFooter,
+  },
+  {
+    name: "digital marketing",
+    url: "our-services/digital-marketing",
+    icon: customIcon.rightArrowFooter,
+  },
+  {
+    name: "events",
+    url: "our-services/events",
+    icon: customIcon.rightArrowFooter,
+  },
+  {
+    name: "photography",
+    url: "our-services/photography",
+    icon: customIcon.rightArrowFooter,
+  },
+  {
+    name: "advertising",
+    url: "our-services/advertising",
+    icon: customIcon.rightArrowFooter,
+  },
 ];
 
 const routes = [
-  { name: "Home", url: "/", icon: "" },
+  { name: "Home", url: "", icon: "" },
   { name: "about us", url: "about-us", icon: customIcon.rightArrowFooter },
   { name: "our services", url: "services", icon: "" },
-  { name: "our works", url: "our-works", icon: customIcon.rightArrowFooter },
+  {
+    name: "our works",
+    url: "our-work",
+    icon: customIcon.rightArrowFooter,
+  },
   { name: "news", url: "news", icon: customIcon.rightArrowFooter },
 ];
 const className =
@@ -99,8 +124,8 @@ const NavItems = ({ type = "header" }) => {
           }`}
         >
           {" "}
-          <a
-            href={"#" + url}
+          <Link
+            to={"home/" + "#" + url}
             className={
               className +
               "" +
@@ -110,7 +135,7 @@ const NavItems = ({ type = "header" }) => {
             }
           >
             {type === "footer" && icon} {item.name}
-          </a>
+          </Link>
         </li>
       )
     );

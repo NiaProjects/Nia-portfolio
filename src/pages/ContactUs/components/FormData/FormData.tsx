@@ -1,6 +1,7 @@
 import React, { useEffect } from "react";
 import Button from "../../../../components/Button";
 import axios from "axios";
+import Inputs from "./components/Inputs";
 
 interface IProps {}
 
@@ -9,19 +10,19 @@ const FormContact = ({}: IProps) => {
   const [enteredValues, setEnteredValues] = React.useState({
     fullName: "",
     email: "",
-    phone: "",
+    phoneNumber: "",
     message: "",
   });
   const [errors, setErrors] = React.useState({
     fullName: false,
     email: false,
-    phone: false,
+    phoneNumber: false,
     message: false,
   });
   const [isEdit, setIsEdit] = React.useState({
     fullName: false,
     email: false,
-    phone: false,
+    phoneNumber: false,
     message: false,
   });
   const handleInputChange = (identifier, value) => {
@@ -31,10 +32,9 @@ const FormContact = ({}: IProps) => {
     }));
     setEnteredValues((prevValue) => ({ ...prevValue, [identifier]: value }));
   };
-
-  const nameIsInvalid = isEdit.fullName && !enteredValues.email.includes("1");
-  const emailIsInvalid = isEdit.email && !enteredValues.email.includes("@");
-
+  // const PhoneIsInvalid = isEdit.fullName && !enteredValues.email.includes("@");
+  const PhoneIsInvalid =
+    isEdit.phoneNumber && enteredValues.phoneNumber.trim().length < 6;
   const handleInBluerInput = (identifier) => {
     setIsEdit((prevValue) => ({
       ...prevValue,
@@ -93,64 +93,37 @@ const FormContact = ({}: IProps) => {
         onSubmit={handleFormSubmited}
         className="flex flex-col justify-center items-center relative w-full h-full lg:w-[59%] mx-auto"
       >
-        <div className="mb-6 w-[87%]">
-          <label
-            htmlFor="fullName"
-            className="block text-[#9E9E9E] font-semibold"
-          >
-            Full Name
-          </label>
-          <input
-            type="text"
-            id="fullName"
-            name="fullName"
-            // value={enteredValues.fullName}
-            onChange={(e) => handleInputChange("fullName", e.target.value)}
-            className=" p-1  border-b-2  w-full focus:border-[#EF7D00]"
-            onBlur={(e) => validateFormData("fullName", e.target.value)}
-            pattern="^[A-Z a-z]{3,16}$"
-            required
-          />
-        </div>
+        <Inputs
+          id="fullName"
+          label="full Name"
+          type="text"
+          name="fullName"
+          value={enteredValues.fullName}
+          onChange={(e) => handleInputChange("fullName", e.target.value)}
+          onBlur={(e) => handleInBluerInput(e.target.name)}
+          error=""
+        />
 
-        <div className="mb-6 w-[87%]">
-          <label
-            htmlFor="email"
-            className=" block text-[#9E9E9E] font-semibold"
-          >
-            Email
-          </label>
-          <input
-            type="email"
-            id="email"
-            name="email"
-            // value={formData.email}
-            onChange={(e) => handleInputChange("email", e.target.value)}
-            onBlur={(e) => handleInBluerInput(e.target.name)}
-            className=" p-1  border-b-2  w-full"
-            required
-          />
-          <div className="text-red-500	text-sm md:text-base w-full ">
-            {emailIsInvalid && "invalid email"}
-          </div>
-        </div>
-        <div className="mb-6 w-[87%]">
-          <label
-            htmlFor="phone"
-            className=" block text-[#9E9E9E] font-semibold"
-          >
-            Phone Number
-          </label>
-          <input
-            type="number"
-            id="phone"
-            name="phone"
-            // value={formData.phone}
-            onChange={(e) => handleInputChange("phone", e.target.value)}
-            className=" p-1  border-b-2  w-full"
-            required
-          />
-        </div>
+        <Inputs
+          id="email"
+          label="email"
+          type="email"
+          name="email"
+          value={enteredValues.email}
+          onChange={(e) => handleInputChange("email", e.target.value)}
+          onBlur={(e) => handleInBluerInput(e.target.name)}
+          error={""}
+        />
+        <Inputs
+          id="phoneNumber"
+          label="phone Number"
+          type="number"
+          name="phoneNumber"
+          value={enteredValues.phoneNumber}
+          onChange={(e) => handleInputChange("phoneNumber", e.target.value)}
+          onBlur={(e) => handleInBluerInput(e.target.name)}
+          error={PhoneIsInvalid && "phone number not valid"}
+        />
 
         <div className="mb-6 w-[87%]">
           <label
@@ -163,6 +136,7 @@ const FormContact = ({}: IProps) => {
             id="message"
             name="message"
             // value={formData.message}
+
             onChange={(e) => handleInputChange("message", e.target.value)}
             className=" p-1  border-b-2  w-full"
             required

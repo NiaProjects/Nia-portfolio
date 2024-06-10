@@ -2,11 +2,16 @@ import { useRoutes } from "react-router-dom";
 
 import { MasterLayout } from "../layout";
 import { AboutPage, HomePage } from "../pages";
-import Services from "../pages/Services";
-import News from "../pages/News";
-import SoftWareService from "../pages/Services/Software/Software";
 import ContactUs from "../pages/ContactUs";
-import ContactUszz from "../pages/ContactUs/ContactUszz";
+import AboutSection from "../pages/Home/components/AboutSection";
+import OurWorkSection from "../pages/Home/components/OurWorkSection";
+import News from "../pages/News";
+import Designs from "../pages/Services/Design/Designs";
+import SoftWareService from "../pages/Services/Software/Software";
+import DigitalMarketing from "../pages/Services/DigitalMarketing";
+import Events from "../pages/Services/Events";
+import Photography from "../pages/Services/Photography";
+import Advertising from "../pages/Services/Advertising";
 
 const useHandleRoutes = () => {
   const routes = useRoutes([
@@ -15,8 +20,22 @@ const useHandleRoutes = () => {
       element: <MasterLayout />,
       children: [
         {
-          path: "/",
+          path: "home",
           element: <HomePage />,
+          children: [
+            {
+              path: "home/#about-us",
+              element: <AboutSection />,
+            },
+            {
+              path: "home/#our-work",
+              element: <OurWorkSection />,
+            },
+            {
+              path: "home/#news",
+              element: <News />,
+            },
+          ],
         },
         { path: "about-us", element: <AboutPage /> },
         { path: "contact-us", element: <ContactUs /> },
@@ -25,7 +44,26 @@ const useHandleRoutes = () => {
           path: "our-services/software",
           element: <SoftWareService />,
         },
-
+        {
+          path: "our-services/designs",
+          element: <Designs />,
+        },
+        {
+          path: "our-services/DigitalMarketing",
+          element: <DigitalMarketing />,
+        },
+        {
+          path: "our-services/Events",
+          element: <Events />,
+        },
+        {
+          path: "our-services/Photography",
+          element: <Photography />,
+        },
+        {
+          path: "our-services/Advertising",
+          element: <Advertising />,
+        },
         { path: "news", element: <News /> },
       ],
     },

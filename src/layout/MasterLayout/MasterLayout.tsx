@@ -7,7 +7,7 @@ import { Footer, Header } from "../../components/Navigation";
 const MasterLayout = () => {
   return (
     <>
-      {/* <Header /> */}
+      <Header />
       <main className=" overflow-hidden  ">
         <Outlet />
       </main>
