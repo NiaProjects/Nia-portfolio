@@ -163,7 +163,6 @@ const FormContact = ({}: IProps) => {
             required
           ></textarea>
         </div>
-        <button>send</button>
         <Button className="mx-auto block absolute bottom-0">send</Button>
       </form>
     </>

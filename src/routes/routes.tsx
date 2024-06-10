@@ -6,6 +6,7 @@ import Services from "../pages/Services";
 import News from "../pages/News";
 import SoftWareService from "../pages/Services/Software/Software";
 import ContactUs from "../pages/ContactUs";
+import ContactUszz from "../pages/ContactUs/ContactUszz";
 
 const useHandleRoutes = () => {
   const routes = useRoutes([

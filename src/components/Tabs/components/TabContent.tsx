@@ -7,11 +7,7 @@ interface IProps {
 }
 
 const TabContent = ({ children }: IProps): JSX.Element => {
-  return (
-    <div className="pt-[32px]  flex-col xl:flex-row justify-between">
-      {children}
-    </div>
-  );
+  return <>{children}</>;
 };
 
 export default TabContent;

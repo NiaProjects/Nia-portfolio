@@ -6,6 +6,8 @@ import { customIcon } from "../../assets/icons/customIcons";
 import AddressLocation from "./components/Location/AddressLocation";
 import FormData from "./components/FormData/FormData";
 import { HeadingTitle } from "../../components/text";
+import TabButtons from "../../components/Tabs/components/TabButtons";
+import React from "react";
 
 interface ContactInfo {
   id: string;
@@ -82,21 +84,76 @@ const ContactUs = () => {
   const soaudiLocation = locations.filter((locate) => locate.zoon === "saudi");
 
   const egpLocation = locations.filter((locate) => locate.zoon === "egp");
+  //
+  const location = ["saudi", "egypt"];
+  const [selectedTabIndex, setSelectedTabIndex] = React.useState<number>(0);
+  const handleOnClick = React.useCallback(
+    (index: number) => {
+      setSelectedTabIndex(index);
+      console.log(index);
+    },
+    [setSelectedTabIndex]
+  );
   return (
     <>
-      <section className=" bg-[#FFFDFB] container  flex flex-col  items-start mb-4 justify-between ">
+      <section className=" bg-[#FFFDFB]   ">
         {/* w-[90.4%] xl:w-[50%]  */}
-        <div className="p-[10px] mt-6 mx-auto rounded-3xl  w-full ">
-          <Tabs type="location">
-            <TabContent>
-              <>
-                <div className="flex flex-col lg:w-[56%]">
-                  {saudiContacts.map((contact) => (
-                    <div
-                      key={contact.id}
-                      className="shadowEffect flex flex-col  md:flex-row p-[10px] gap-4 bg-white rounded-[10px] shadowEffect mt-4 "
-                    >
-                      <div className=" gap-[18px]">
+        <div className="xl:p-[10px] mt-6 mx-auto rounded-3xl container ">
+          <div className="flex flex-col lg:flex-row items-center   justify-between xl:w-[98.5%] mx-auto mb-[32px] xl:mb-[62px]">
+            <Tabs type="location" selectedTabIndex={selectedTabIndex}>
+              <TabContent>
+                <>
+                  <div className="w-full md:w-[420px] xl:w-[33.8%] max-md:mb-[24px] m-auto  flex flex-col   justify-center ">
+                    <div className="w-[71.4%] mx-auto text-lg  md:text-xl ">
+                      <TabButtons
+                        tabHeader={location}
+                        type={"location"}
+                        selectedTabIndex={selectedTabIndex}
+                        handleOnClick={handleOnClick}
+                      />
+                    </div>
+                    {saudiContacts.map((contact) => (
+                      <div
+                        key={contact.id}
+                        className="shadowEffect flex flex-col w-[95.4%] mx-auto max-w-[420px] p-[10px] gap-4 bg-white rounded-[10px] shadowEffect mt-4 "
+                      >
+                        <div className="address flex">
+                          <span className="me-2">{contact.iconAdds}</span>{" "}
+                          <span
+                            className=""
+                            dangerouslySetInnerHTML={{
+                              __html: contact.adds,
+                            }}
+                          ></span>
+                        </div>
+                        <div className="phone flex ">
+                          <span className="me-2">{contact.iconPhone}</span>
+                          <span>{contact.phone}</span>
+                        </div>
+                      </div>
+                    ))}
+                  </div>
+                  <div className="w-full md:w-[94%] xl:ms-auto max-md:mx-auto xl:w-[60.4%]  h-[246px] sm:h-[382px] xl:h-[616px] rounded-xl overflow-hidden ">
+                    <AddressLocation locations={soaudiLocation} />
+                  </div>
+                </>
+              </TabContent>
+              <TabContent>
+                <>
+                  <div className="xl:w-[33.8%] bg-sky-200 flex flex-col  justify-center">
+                    <div className="w-[71.4%] mx-auto">
+                      <TabButtons
+                        tabHeader={location}
+                        type={"location"}
+                        selectedTabIndex={selectedTabIndex}
+                        handleOnClick={handleOnClick}
+                      />
+                    </div>
+                    {egpContacts.map((contact) => (
+                      <div
+                        key={contact.id}
+                        className="shadowEffect flex flex-col  md:flex-row p-[10px] gap-4 bg-white rounded-[10px] shadowEffect mt-4 "
+                      >
                         <div className="flex">
                           <span className="me-2">{contact.iconAdds}</span>{" "}
                           <span
@@ -111,48 +168,19 @@ const ContactUs = () => {
                           <span>{contact.phone}</span>
                         </div>
                       </div>
-                    </div>
-                  ))}
-                </div>
-                <div className="w-full xl:w-[55%] h-[246px] bg-slate-300 shadowEffect rounded-xl overflow-hidden mt-4">
-                  <AddressLocation locations={soaudiLocation} />
-                </div>
-              </>
-            </TabContent>
-            <TabContent>
-              <>
-                {egpContacts.map((contact) => (
-                  <div
-                    key={contact.id}
-                    className="shadowEffect capitalize text-lg font-normal flex flex-col p-[10px] gap-4 bg-white rounded-[10px] shadowEffect mt-4"
-                  >
-                    <div className="flex flex-col gap-[18px]">
-                      <div className="flex">
-                        <span className="me-2">{contact.iconAdds}</span>{" "}
-                        <span
-                          className="address"
-                          dangerouslySetInnerHTML={{
-                            __html: contact.adds,
-                          }}
-                        ></span>
-                      </div>
-                      <div className="phone flex">
-                        <span className="me-2">{contact.iconPhone}</span>
-                        <span>{contact.phone}</span>
-                      </div>
-                    </div>
+                    ))}
                   </div>
-                ))}
-                <div className="w-full h-[246px] bg-slate-300 shadowEffect rounded-xl overflow-hidden mt-4">
-                  <AddressLocation locations={egpLocation} />
-                </div>
-              </>
-            </TabContent>
-          </Tabs>
+                  <div className="w-1/2 bg-sky-200">
+                    <AddressLocation locations={egpLocation} />
+                  </div>
+                </>
+              </TabContent>
+            </Tabs>
+          </div>
         </div>
       </section>
-      <section className="h-screen   container flex flex-col  items-start mb-4 bg-[#FFFDFB] ">
-        <div className="w-[90.4%] shadowEffect flex flex-col bg-white mx-auto items-start  min-h-[490px] rounded-xl  py-[32px] md:py-[57px] xl:py-[75px]">
+      <section className="h-screen    flex flex-col  items-start mb-4 bg-[#FFFDFB] ">
+        <div className="max-md:w-[90.4%]  container shadowEffect flex flex-col bg-white mx-auto items-start  min-h-[490px] rounded-xl  py-[32px] md:py-[57px] xl:py-[75px]">
           <header className="text-center mx-auto mb-[48px] md:mb-[58px] xl:mb-[80px]">
             <HeadingTitle
               headerDark={"Get in "}

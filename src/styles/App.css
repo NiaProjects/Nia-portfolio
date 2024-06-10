@@ -296,8 +296,9 @@ nav{
     background-color: #fff;
     text-align: center;
     /* margin: auto; */
-    padding: 19px 28px;
-    font-size: 18px;
+    padding: 14px 32px;
+    /* font-size: 18px; */
+    text-wrap: nowrap;
     font-weight: 600;
     line-height: 21.94px;
     color:#EF7D00;
