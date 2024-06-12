@@ -1,6 +1,7 @@
 import React, { FC } from "react";
 import { Link } from "react-router-dom";
 import Icon from "../../assets/icons/Icons";
+import { customIcon } from "../../assets/icons/customIcons";
 
 interface ReadMoreProps {
   classes: string;
@@ -13,8 +14,9 @@ const ReadMore: FC<ReadMoreProps> = ({ classes }) => (
     <Link to="" className={`text-[20px] me-3 font-medium text-xl`}>
       read more
     </Link>
-    <span className="rounded-full bg-black p-1">
-      <Icon name="MoveRight" color="white" />
+    <span className="">
+      {/* <Icon name="MoveRight" color="white"  rounded-full bg-black p-1/> */}
+      {customIcon.readMoreArrow}
     </span>
   </div>
 );

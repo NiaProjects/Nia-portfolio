@@ -21,19 +21,24 @@ const News: FC<NewsProps> = () => {
     console.log(videoRef.current);
   };
   return (
-    <div className=" ">
+    <>
       <section id="heroSection" className=" md:h-[300px] lg:h-[500px] ">
         <h1>Top Stories</h1>
       </section>
-      <header className="h-16 text-[30px] ms-[100px] font-bold">
-        <h2>latest news</h2>
-      </header>
-      <section id="top-stories" className="container w-[90.66%] lg:w-[86.2%]  ">
-        <div className="news-cover flex max-lg:flex-col lg:justify-between  lg:flex-row-reverse  max-lg:mx-auto">
-          <div className="right-side-news lg:w-[66.1%]  relative mb-[32px] lg:mb-[56px] ">
+
+      <section
+        id="top-stories"
+        className="container w-[90.66%] lg:w-[86.2%]  mb-[32px] md:mb-[59px] lg:mb-[80px] "
+      >
+        <header className="text-[30px]  font-bold  mb-6 md:mb-[32px] lg:mb-[40px]">
+          <h2 className="capitalize">latest news</h2>
+          <div className=" border-b border-orange-500 w-[189px] "></div>
+        </header>
+        <div className="news-cover gap-5 flex max-lg:flex-col lg:justify-between  lg:flex-row-reverse  max-lg:mx-auto">
+          <div className="right-side-news lg:w-[67.8%]  relative mb-[32px] lg:mb-[56px] ">
             <article className=" flex flex-col justify-between ">
               <figure className="relative  rounded-[20px]  flex   lg:h-[350px] max-xs:h-auto  ">
-                <img src={NewsCover} className="object-fill " />
+                <img src={NewsCover} className="object-fill  w-full	" />
 
                 <figcaption className="absolute bottom-0 bg-white  py-[6.5px] px-1 rounded-[10px] m-5 text-base lg:text-lg">
                   20/3/2022
@@ -55,7 +60,7 @@ const News: FC<NewsProps> = () => {
               <ReadMore classes="pt-4 pt-10" />
             </article>
           </div>
-          <div className="left-side-news  w-full md:w-full gap-4 justify-center   lg:w-[33.1%] flex flex-col lg:flex-col md:flex-row  items-start m-0 p-0 bg-sky-400 ">
+          <div className="left-side-news  w-full md:w-full gap-4 justify-center   lg:w-[33.1%] flex flex-col lg:flex-col md:flex-row  items-start m-0 p-0 ">
             <article className="xl:mb-[32px] xl:w-full m-auto">
               <figure className="topNews w-full	 rounded-[20px] h-[13.125rem] relative flex items-end overflow-hidden max-xs:h-auto">
                 <img src={topNews} className=" object-fill w-full	" />
@@ -90,7 +95,7 @@ const News: FC<NewsProps> = () => {
           <NewsCard {...newsCardData} />
         </div>
       </section>
-    </div>
+    </>
   );
 };
 
