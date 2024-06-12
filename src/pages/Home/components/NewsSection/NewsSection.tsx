@@ -55,10 +55,10 @@ const NewsSection = ({}: IProps) => {
                     read more
                   </Text>
                 </span>
-                <span>
+                <div className="mx-auto bg-sky-500">
                   {/* <img src={NiarightIcone} className="" /> */}
                   <FaArrowAltCircleRight size={20} color="#" />
-                </span>
+                </div>
               </div>
             </div>
           </div>

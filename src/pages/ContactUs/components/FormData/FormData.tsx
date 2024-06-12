@@ -34,7 +34,8 @@ const FormContact = ({}: IProps) => {
   };
   // const PhoneIsInvalid = isEdit.fullName && !enteredValues.email.includes("@");
   const PhoneIsInvalid =
-    isEdit.phoneNumber && enteredValues.phoneNumber.trim().length < 6;
+    isEdit.phoneNumber && enteredValues.phoneNumber.trim().length < 8;
+
   const handleInBluerInput = (identifier) => {
     setIsEdit((prevValue) => ({
       ...prevValue,

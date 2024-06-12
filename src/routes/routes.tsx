@@ -20,19 +20,19 @@ const useHandleRoutes = () => {
       element: <MasterLayout />,
       children: [
         {
-          path: "home",
+          path: "/",
           element: <HomePage />,
           children: [
             {
-              path: "home/#about-us",
+              path: "#about-us",
               element: <AboutSection />,
             },
             {
-              path: "home/#our-work",
+              path: "#our-work",
               element: <OurWorkSection />,
             },
             {
-              path: "home/#news",
+              path: "#news",
               element: <News />,
             },
           ],
