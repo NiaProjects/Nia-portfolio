@@ -56,23 +56,23 @@ const NavMobile: FC<NavMobileProps> = ({ isVisible, setOpen, isOpen }) => {
   const toggleAccordion = () => setActiveAccordion((prev) => !prev);
   const toggleSidebar = () => setOpen((prev) => !prev);
   const items = [
-    { title: "Home", href: "#" },
-    { title: "about us", href: "#" },
+    { title: "Home", href: "/" },
+    { title: "about us", href: "about-us" },
     {
       title: "services",
       icon: <Icon name="ChevronLeft" size={24} color="#ffffff" />,
       href: "#",
     },
     { title: "our works", href: "#" },
-    { title: "news", href: "#" },
+    { title: "news", href: "news" },
   ];
   const routesServiceList = [
-    { name: "design", url: "our-services/design" },
+    { name: "design", url: "our-services/software" },
     { name: "software", url: "our-services/software" },
-    { name: "advertising", url: "our-services/advertising" },
-    { name: "photography", url: "our-services/photography" },
-    { name: "events", url: "our-services/events" },
-    { name: " digital marketing", url: "our-services/digital" },
+    { name: "advertising", url: "our-services/software" },
+    { name: "photography", url: "our-services/software" },
+    { name: "events", url: "our-services/software" },
+    { name: " digital marketing", url: "our-services/software" },
   ];
 
   return (

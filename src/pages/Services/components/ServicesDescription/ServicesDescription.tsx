@@ -37,7 +37,7 @@ const ServicesDescription = ({ srcImg, alt }: IProps) => {
   return (
     <section
       id="ServicesDescription"
-      className="max-md:px-[18px] ps-[1.5rem] xl:ps-[5.12rem] md:w-[108vw] md:pe-[4.7%] pt-6 md:mt-[55px] xl:mt-24.5 leading-normal"
+      className="max-md:px-[18px] ps-[1.5rem] xl:ps-[5.12rem] md:w-[108vw] md:pe-[4.7%] pt-6 md:mt-[55px] xl:mt-24.5 leading-normal mb-8 lg:mb-16"
     >
       <div className="ServicesDescriptionBox relative flex flex-col md:flex-row md:justify-center items-center xl:items-start gap-2 xl:gap-[3.31rem]">
         <div className="mx-auto w-full md:w-[40%] md:order-1">

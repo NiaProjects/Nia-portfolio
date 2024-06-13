@@ -38,7 +38,7 @@ const data = {
 const SoftWareService: FC<SoftwareProps> = () => {
   return (
     <>
-      <HeroImage imageSection={data.imgSection} headerText={"contact us"} />
+      <HeroImage imageSection={data.imgSection} headerText={"software"} />
       <ServicesIntroduction
         srcImg={data.introduction.srcImg}
         alt={data.introduction.alt}

@@ -24,7 +24,7 @@ const socialIcons = [
 ];
 const Footer = ({}: IProps) => {
   return (
-    <footer className=" bottom-0 left-0 right-0 z-10 absolute">
+    <footer className="bg-stone-400 ">
       <div className=" footerContainer bg-[#0E0D0D] flex flex-col  justify-center items-start  px-[18px] py-[30px]	">
         <div className="footerLogo md:hidden m-auto block justify-center items-center  pb-[55px] pt-6">
           <img src={footerLogo} className="w-[82.2px] h-[82.2px] block" />
@@ -44,13 +44,13 @@ const Footer = ({}: IProps) => {
               >
                 our services
               </a>
-              <ul className="flex flex-col text-base first:pb-6 ">
+              <ul className="flex flex-col text-base first:pb-6  ">
                 {routesServiceList?.map((itemList, index) => {
                   const { name, url, icon } = itemList;
                   return (
                     <li
                       key={uuidv4()}
-                      className="flex text-start items-center text-base capitalize  text-white text-[18px] text-nowrap pt-3"
+                      className="flex text-start items-center text-base capitalize  text-white text-[18px] text-wrap pt-3"
                     >
                       {icon}{" "}
                       <a href={`#${url}`} className="">

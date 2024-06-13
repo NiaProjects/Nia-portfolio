@@ -13,12 +13,13 @@ interface IProps extends ButtonHTMLAttributes<HTMLButtonElement>, ButtonProps {
 export type ButtonProps = VariantProps<typeof buttonVariants>;
 const buttonVariants = cva(
   [
-    "text-white rounded-tl-[20px] rounded-br-[20px] w-[150px] md:w-[190px]  h-[3.13rem]  font-medium capitalize",
+    "text-white rounded-tl-[20px] rounded-br-[20px]  h-[3.13rem]  font-medium capitalize",
   ],
   {
     variants: {
       intent: {
         primary: [
+          "w-[150px]  md:w-[190px] ",
           "bg-primary",
           "border-transparent ",
           "hover:rounded-tl-[0px]",
@@ -26,7 +27,15 @@ const buttonVariants = cva(
           "hover:rounded-tr-[20px]",
           "hover:rounded-bl-[20px]",
         ],
-        outline: ["border-solid border-1 ", "border-primary"],
+        outline: [
+          "border-solid ",
+          "border-2",
+          "border-primary",
+          "mx-4",
+          "bg-transparent",
+          // "hover:bg-primary",
+          "hover:text-white",
+        ],
       },
     },
     defaultVariants: {

@@ -4,6 +4,7 @@ import { Link, NavLink, useLocation } from "react-router-dom";
 import { customIcon } from "../../../assets/icons/customIcons";
 import { v4 as uuidv4 } from "uuid";
 import AnchorLink from "react-anchor-link-smooth-scroll";
+import Button from "../../Button";
 
 interface IProps {
   type?: "header" | "footer" | "mobile";
@@ -23,33 +24,33 @@ export const routesServiceList = [
   },
   {
     name: "design",
-    url: "our-services/designs",
+    url: "our-services/software",
     icon: customIcon.rightArrowFooter,
   },
   {
     name: "digital marketing",
-    url: "our-services/digital-marketing",
+    url: "our-services/software",
     icon: customIcon.rightArrowFooter,
   },
   {
     name: "events",
-    url: "our-services/events",
+    url: "our-services/software",
     icon: customIcon.rightArrowFooter,
   },
   {
     name: "photography",
-    url: "our-services/photography",
+    url: "our-services/software",
     icon: customIcon.rightArrowFooter,
   },
   {
     name: "advertising",
-    url: "our-services/advertising",
+    url: "our-services/software",
     icon: customIcon.rightArrowFooter,
   },
 ];
 
 const routes = [
-  { name: "Home", url: "", icon: "/" },
+  { name: "Home", url: "/", icon: "" },
   { name: "about us", url: "about-us", icon: customIcon.rightArrowFooter },
   { name: "our services", url: "services", icon: "" },
   {
@@ -119,7 +120,7 @@ const NavItems = ({ type = "header" }) => {
       name !== "our services" && (
         <li
           key={uuidv4()}
-          className={`text-start ${
+          className={`text-start  my-auto ${
             type === "footer" && "flex items-center first:pb-[22px]"
           }`}
         >
@@ -146,11 +147,21 @@ const NavItems = ({ type = "header" }) => {
       key={uuidv4()}
       className={`flex ${
         type === "header"
-          ? "2xl:translate-x-[6.4%] lg:translate-x-[6.4%] lg:translate-y-[30%]"
+          ? "mx-auto lg:translate-y-[30%] w-[86.2%] items-center "
           : "flex-col text-base"
       }`}
     >
       {linkPages}
+      <li className="ms-auto  ">
+        <Button intent={"outline"}>
+          <div className="flex gap-1.5 p-2 ">
+            {" "}
+            <span className="">English </span>
+            <span>{customIcon.languageIcon}</span>
+          </div>
+        </Button>
+        <Button>contact us</Button>
+      </li>
     </ul>
   );
 };

@@ -162,12 +162,12 @@ position: relative;
 }
 
 .fade-out {
-  opacity: 0;
+  opacity: .75;
 }
 
 .image-slider button {
   position: absolute;
-  transform: translateY(-50%);
+  transform: translateY(-24px);
     color: white;
   border: none;
   padding: 10px;
@@ -176,13 +176,13 @@ position: relative;
   &::after{
     content: " ";
     z-index: -5;
-    height: 50px;
-    width: 50px;
+    height: 13px;
+    width: 13px;
     border-radius: 50%;
     position: absolute;
-    top: -20%;
-    left: -20%;
-    background-color: #2F210F;
+    /* top: -20%; */
+    /* left: -20%; */
+    background-color: white;
   }
 }
 .image-slider button.active::after {
@@ -197,7 +197,7 @@ button.prev  {
 
 button.next {
   left: -20px;
-  bottom: 0%;
+  top: 0%;
 
 }
 .commentSlider {

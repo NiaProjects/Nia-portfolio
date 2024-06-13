@@ -90,7 +90,7 @@ const OurServicesSection = () => {
                       />
                     </div>
                     <s
-                      className={`circleService absolute rounded-full  right-0 translate-y-[10px] xl:translate-y-[190%] xl:w-[70px] xl:h-[70px]  `}
+                      className={`circleService absolute rounded-full  right-0 translate-y-[10px] lg:translate-y-[90%] xl:translate-y-[200%] xl:w-[70px] xl:h-[70px]  `}
                     >
                       <FaArrowRightLong className="-rotate-45 text-white w-[25.5px] h-[25.5px] xl:bottom-0" />
                     </s>

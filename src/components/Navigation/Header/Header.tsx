@@ -50,6 +50,7 @@ const Header = () => {
         className=" text-center max-w-screen  "
       >
         <NavDeskTop isVisible={isVisible} />
+        
         <NavMobile isVisible={isVisible} setOpen={setOpen} isOpen={isOpen} />
       </motion.header>
     </>

@@ -1,14 +1,6 @@
 import { useEffect, useRef, useState } from "react";
-import { ImQuotesRight } from "react-icons/im";
-import {
-  VectorSlider1,
-  VectorSlider2,
-  avatarSlider1,
-  hart,
-  slider1,
-  slider2,
-} from "../../../../../../assets";
 import { FaQuoteRight } from "react-icons/fa6";
+import { slider1, slider2 } from "../../../../../../assets";
 import { customIcon } from "../../../../../../assets/icons/customIcons";
 
 const images = [
@@ -19,7 +11,7 @@ const images = [
   },
   {
     src: slider2,
-    text: "Lorem ipsum dolor sit amet consectetur. Sed nunc varius varius laoreet quisque Lorem ipsum dolor sit amet consectetur. Sed nunc varius varius laoreet quisque..marco",
+    text: "We have created all the solutions and designs through",
     delay: 5000,
   },
 ];
@@ -81,13 +73,6 @@ const SliderImages = () => {
         alt="slider"
         className={`w-full h-auto object-cover ${fadeProp.fade} transition-opacity duration-1000 ease-in-out`}
       />
-      <FaQuoteRight
-        size={50}
-        className={`${
-          currentImageIndex === 0 && "hidden"
-        } absolute top-[20%] z-10 right-10  rotate-12	`}
-        color="#ffffff"
-      />
 
       {currentImageIndex === 0 ? (
         <>
@@ -103,42 +88,32 @@ const SliderImages = () => {
         </>
       ) : (
         <>
-          <div className="commentSlider   absolute z-10 top-[40%] md:top-[40%] lg:top-[30%]  w-[278px] md:w-[60%] lg:w-[60%]  text-white capitalize max-md:translate-x-[34px] md:translate-x-[68px] lg:translate-x-[247px]  text-start h-auto whitespace-pre-wrap">
-            <img
-              className="rounded-full avatar md:w-[60px] lg:w-[107px]"
-              src={avatarSlider1}
-              alt=""
-            />
-
-            <p className="font-[dancing-script] text-[20px] md:text-[32px] lg:text-[40px] font-bold md:font-semibold -rotate-6 text-center	max-md:leading-6	">
-              {images[1].text}
+          <div className="absolute z-10 top-[45%] md:top-[45%] lg:top-[45%] w-[240px] md:w-[352px] lg:w-[517px] text-white capitalize ms-[18px] md:ms-[40px] lg:ms-[100px] text-start h-auto whitespace-pre-wrap">
+            <p className="text-[24px] md:text-[36px] lg:text-[48px] font-bold">
+              {images[currentImageIndex].text.split(" ").slice(0, -1).join(" ")}
+              <span className="text-primary text-[24px] md:text-[32px] lg:text-[48px] font-bold">
+                {` ${images[currentImageIndex].text.split(" ").slice(-1)}`}{" "}
+              </span>
             </p>
-            <img className="rounded-full absolute avatar" src={hart} alt="" />
-            {/* qoutes */}
-            {/* <img src={quoteDown} className="qoutes w-[95px] h-12 shadow" /> */}
           </div>
         </>
       )}
-
-      <div className="flex flex-col gap-7 justify-between h-[70px] lg:h-[120px] absolute z-40 top-[50%] right-6 -translate-x-[18px] md:-translate-x-[40px] lg:-translate-x-[100px]">
+      {/* flex-col gap-7 justify-between h-[70px] lg:h-[120px] absolute z-40 top-[50%] right-6 -translate-x-[18px] md:-translate-x-[40px] lg:-translate-x-[100px] */}
+      <div className="flex absolute left-1/2 right-1/2 gap-10 bottom-0 p-4 bg-stone-500 w-[34px]">
         <button
           className="prev  "
           ref={prevButtonRef}
           onClick={() => {
             handlePrevImage();
           }}
-        >
-          {customIcon.prevSliderHome}
-        </button>
+        ></button>
         <button
           className="next"
           ref={nextButtonRef}
           onClick={() => {
             handleNextImage();
           }}
-        >
-          {customIcon.nextSliderHome}
-        </button>
+        ></button>
       </div>
     </div>
   );

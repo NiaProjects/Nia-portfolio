@@ -1,8 +1,9 @@
 import React, { FC } from "react";
-import { NewsCover, topNews } from "../../assets";
+import { NewsCover, newsHeader, topNews } from "../../assets";
 import ReadMore from "../../components/ReadMore";
 import "./NewsStyle.scss";
 import NewsCard from "./components/NewsCard/NewsCard";
+import HeroImage from "../Services/components/HeroImage";
 interface NewsProps {}
 const newsCardData = {
   newsCardImg: topNews,
@@ -18,13 +19,20 @@ const News: FC<NewsProps> = () => {
     if (videoRef.current) {
       videoRef.current.play();
     }
-    console.log(videoRef.current);
   };
+  const data = [{ imgSection: { img: newsHeader, alt: "contact us Image" } }];
   return (
     <>
-      <section id="heroSection" className=" md:h-[300px] lg:h-[500px] ">
-        <h1>Top Stories</h1>
-      </section>
+      <div className="">
+        <div
+          className="absolute inset-0 bg-cover bg-no-repeat bg-lightgray"
+          style={{
+            backgroundPosition: "0px -4.167px",
+            backgroundSize: "100% 103.333%",
+          }}
+        ></div>
+        <HeroImage data={data[0].imgSection} headerText={"news"} />
+      </div>
 
       <section
         id="top-stories"

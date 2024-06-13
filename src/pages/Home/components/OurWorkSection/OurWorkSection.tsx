@@ -51,7 +51,7 @@ const OurWorkSection = () => {
               <figure className="relative w-full h-full">
                 <img
                   src={whatAchievedBigSection}
-                  className="w-full h-full absolute bottom-0 top-0 left-0 right-0 object-cover md:hidden"
+                  className="w-full h-full absolute bottom-0 top-0 left-0 right-0 object-cover md:hidden rounded-xl"
                 />
                 <img
                   src={prevWorksndBigImg}
