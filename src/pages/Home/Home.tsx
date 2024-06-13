@@ -54,7 +54,7 @@ const HomePage: FC<HomeProps> = () => (
     <OurServicesSection />
     <PartnersSection />
     <OurWorkSection />
-    {/* <ReviewsSection /> */}
+    <ReviewsSection />
     <NewsSection />
     {/* 
    

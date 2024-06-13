@@ -39,7 +39,8 @@
   }
   
   body {
-    font-family: 'Poppins';
+    font-family: 'Poppins';background-color: #FFFDFB;
+    
   }
   
   header a.active,
@@ -259,7 +260,7 @@ nav{
   flex-direction: row;
   align-items: center;
   margin: auto
-
+  
   
 }
 
@@ -271,6 +272,8 @@ nav{
 .swiper-pagination-bullet {
   background-color: orange !important;
   left: 0 !important;
+  width: 13px;
+  height: 13px;
 }
 .swiper-pagination-bullet-active {
   background-color: orange !important;

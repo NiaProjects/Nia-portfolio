@@ -181,7 +181,6 @@ const ContactUs = () => {
         </div>
       </section>
       <section className="w-[89.8%] md:w-[89.2%]  bg-[#FFFDFB]  flex flex-col justify-center mx-auto  items-start mb-4  ">
-        {/* max-md:w-[90.4%]  */}
         <div className="  container shadowEffect flex flex-col w-[96.8%] lg:w-[96.5%] min-h-[490px]    mx-auto items-start   rounded-xl  py-[32px] md:py-[57px] xl:py-[75px]">
           <div className=" flex w-full justify-center lg:justify-between mx-auto">
             <div className="max-lg:hidden w-[41.8%] ">

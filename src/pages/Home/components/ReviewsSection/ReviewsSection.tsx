@@ -5,13 +5,17 @@ import { Autoplay, Navigation, Pagination } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css/pagination";
 import { v4 as uuidv4 } from "uuid";
+import { customIcon } from "../../../../assets/icons/customIcons";
 
 interface IProps {}
 const swiperSliedsReviews = (
   <>
-    {[1, 2, 3, 4, 5, 6, 7, 8].map((index) => (
+    {[1, 2, 3, 4].map((index) => (
       <SwiperSlide key={uuidv4()}>
-        <div className="reviewBox  relative border rounded-xl mb-[100px] w-[270px] lg:w-[376px] h-[250px] lg:h-[235px]  lg:mx-2 ">
+        <div className="reviewBox shadowEffect  relative  rounded-xl mb-[100px] w-[270px] lg:w-[376px] h-[250px] lg:h-[235px]  lg:mx-2 ">
+          <div className="absolute top-0 p-4  right-0">
+            {customIcon.quoteDown}
+          </div>
           <div className="reviewBoxHeader py-[14px]   ">
             <div className="reviewIcon pt-[12px]"></div>
             <Heading
