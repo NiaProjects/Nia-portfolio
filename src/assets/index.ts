@@ -29,6 +29,7 @@ import heroImg from "./images/heroImg.png";
 import SoftwareIntroduction from "./images/SoftwareIntroduction.png";
 import SoftwareDescription from "./images/SoftwareDescription.png";
 import contactUsImg from "./images/contactUsImg.png";
+<<<<<<< HEAD
 import whatAchieved from "./images/whatAchieved.png";
 import whatAchievedBigSection from "./images/whatAchievedBigSection.png";
 import prevWorksndBigImg from "./images/prevWorksndBigImg.png";
@@ -36,4 +37,12 @@ export { logo,slider1, slider2,avatarSlider1, facebook, ig,twitter ,homeHart,quo
     VectorSlider2,dotedVector,navBg,navMob,aboutNia1,aboutNia2,aboutNia3,hart,cardServicesCategory,cardServicesCategory2,serviceCard,serviceCardHeaderIcon
 ,NiarightIcone,newsCardImg,ReviewUserImg,partnersLogos,footerLogo,heroImg,SoftwareIntroduction,SoftwareDescription,contactUsImg,whatAchieved,
 whatAchievedBigSection,prevWorksndBigImg
+=======
+import NewsCover from "./images/NewsCover.png";
+import topNews from "./images/topNews.png";
+export { logo,slider1, slider2,avatarSlider1, facebook, ig,twitter ,homeHart,quoteDown, VectorSlider1,
+    VectorSlider2,dotedVector,navBg,navMob,aboutNia1,aboutNia2,aboutNia3,hart,cardServicesCategory,cardServicesCategory2,serviceCard,serviceCardHeaderIcon
+,NiarightIcone,newsCardImg,ReviewUserImg,partnersLogos,footerLogo,heroImg,SoftwareIntroduction,SoftwareDescription,contactUsImg,NewsCover,topNews,
+
+>>>>>>> c618bf6b6b5703d3305ebf7a3d9b95b60d48a6b0
 };

@@ -49,7 +49,7 @@ export const routesServiceList = [
 ];
 
 const routes = [
-  { name: "Home", url: "", icon: "" },
+  { name: "Home", url: "", icon: "/" },
   { name: "about us", url: "about-us", icon: customIcon.rightArrowFooter },
   { name: "our services", url: "services", icon: "" },
   {
@@ -125,7 +125,7 @@ const NavItems = ({ type = "header" }) => {
         >
           {" "}
           <Link
-            to={"home/" + "#" + url}
+            to={url}
             className={
               className +
               "" +

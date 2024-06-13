@@ -29,6 +29,7 @@ const NewsSection = ({}: IProps) => {
                   Lorem ipsum dolor sit amet{" "}
                 </Heading>
 
+<<<<<<< HEAD
                 <Text
                   fontSize={{ base: "16px", md: "18px" }}
                   paddingTop={{ lg: "20px" }}
@@ -61,6 +62,40 @@ const NewsSection = ({}: IProps) => {
                   <span>
                     <FaArrowAltCircleRight size={20} color="#" />
                   </span>
+=======
+              <Text
+                fontSize={{ base: "16px", md: "18px" }}
+                paddingTop={{ lg: "20px" }}
+                marginBottom={{ base: "30px" }}
+                className="pt-2 capitalize text-center px-4"
+              >
+                Lorem ipsum dolor sit amet consectetur. Natoque lobortis
+                adipiscing id dignissim malesuada pretium mattis ut.{" "}
+              </Text>
+            </div>
+            <div className="cardFooter flex justify-between items-center pb-[14px] px-4 ">
+              <Text
+                fontSize={{ base: "12px", md: "16px" }}
+                fontWeight={{ base: "400" }}
+                className="newsTime"
+              >
+                10 jun.2024
+              </Text>
+              <div className="flex justify-center  items-center  gap-2">
+                <span>
+                  {" "}
+                  <Text
+                    fontSize={{ base: "12px", lg: "16px" }}
+                    fontWeight={{ base: "500" }}
+                    className="readMore capitalize"
+                  >
+                    read more
+                  </Text>
+                </span>
+                <div className="mx-auto bg-sky-500">
+                  {/* <img src={NiarightIcone} className="" /> */}
+                  <FaArrowAltCircleRight size={20} color="#" />
+>>>>>>> c618bf6b6b5703d3305ebf7a3d9b95b60d48a6b0
                 </div>
               </div>
             </div>

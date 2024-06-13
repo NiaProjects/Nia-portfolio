@@ -218,6 +218,7 @@ button.next {
  position: relative;
  margin-bottom: 7px;
  margin-top: 24px;
+
  @media (min-width: 768px) {
   width: 60px;
   height:60px;
@@ -227,7 +228,9 @@ button.next {
   height:107px;
  }
 }}
-
+.swiper-horizontal > .swiper-pagination-bullets.swiper-pagination-bullets-dynamic, .swiper-pagination-horizontal.swiper-pagination-bullets.swiper-pagination-bullets-dynamic{
+  transform:translateX(0)
+}
 /*  */
 nav{
   background-image: url("../components/Navigation/Header/nav.png");
@@ -256,7 +259,7 @@ nav{
   /* position: absolute; */
   top: 50%;
   right: 10px;
-  transform: translateY(-50%);
+  /* transform: translateY(-50%); */
   flex-direction: row;
   align-items: center;
   margin: auto
@@ -293,7 +296,6 @@ nav{
 .tabsButton{
   box-shadow: 1px 1px 1px 0px #00000040;
   border-radius:10px   ;
-
   overflow: hidden;
   button{
     background-color: #fff;
