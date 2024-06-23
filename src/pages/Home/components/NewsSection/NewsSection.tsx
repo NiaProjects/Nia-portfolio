@@ -5,7 +5,10 @@ import { Autoplay, Navigation, Pagination } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { newsCardImg } from "../../../../assets";
 import { HeadingTitle } from "../../../../components/text";
+import "swiper/css/navigation";
+
 import { v4 as uuidv4 } from "uuid";
+import { customIcon } from "../../../../assets/icons/customIcons";
 
 interface IProps {}
 const NewsSection = ({}: IProps) => {
@@ -87,7 +90,6 @@ const NewsSection = ({}: IProps) => {
           pagination={{
             dynamicBullets: true,
           }}
-          navigation={false}
           modules={[Autoplay, Pagination, Navigation]}
           className="mySwiper"
           breakpoints={{

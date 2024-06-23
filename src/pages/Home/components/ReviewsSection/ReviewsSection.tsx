@@ -1,9 +1,10 @@
-import { Heading, Image, Text } from "@chakra-ui/react";
+import { Heading, IconButton, Image, Text } from "@chakra-ui/react";
 import { HeadingTitle } from "../../../../components/text";
 import { ReviewUserImg } from "../../../../assets";
 import { Autoplay, Navigation, Pagination } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css/pagination";
+import "swiper/css/navigation";
 import { v4 as uuidv4 } from "uuid";
 import { customIcon } from "../../../../assets/icons/customIcons";
 
@@ -12,7 +13,7 @@ const swiperSliedsReviews = (
   <>
     {[1, 2, 3, 4].map((index) => (
       <SwiperSlide key={uuidv4()}>
-        <div className="reviewBox shadowEffect  relative  rounded-xl mb-[100px] w-[270px] lg:w-[376px] h-[250px] lg:h-[235px]  lg:mx-2 ">
+        <div className="reviewBox shadowEffect  relative  rounded-xl mb-[100px] w-[270px] lg:w-[376px] h-[250px] lg:h-[235px]  lg:mx-2 relative ">
           <div className="absolute top-0 p-4  right-0">
             {customIcon.quoteDown}
           </div>
@@ -64,7 +65,12 @@ const ReviewsSection = ({}: IProps) => {
       <Swiper
         spaceBetween={0}
         pagination={true}
-        navigation={false}
+        loop={true}
+        center-slides="true"
+        navigation={{
+          nextEl: ".custom-swiper-button-next",
+          prevEl: ".custom-swiper-button-prev",
+        }}
         modules={[Autoplay, Pagination, Navigation]}
         className="mySwiper"
         breakpoints={{
@@ -79,6 +85,7 @@ const ReviewsSection = ({}: IProps) => {
           768: {
             slidesPerView: 2.5,
             spaceBetween: 1,
+            navigation: false,
           },
           1024: {
             slidesPerView: 3,
@@ -87,6 +94,14 @@ const ReviewsSection = ({}: IProps) => {
         }}
       >
         {swiperSliedsReviews}
+
+        <div className="max-md:hidden pagination-btn btn-prev w-[50px] custom-swiper-button-prev">
+          {" "}
+          {customIcon.paginationIcons.prevIcon}
+        </div>
+        <div className="max-md:hidden pagination-btn btn-next w-[50px] custom-swiper-button-next">
+          {customIcon.paginationIcons.nextIcon}
+        </div>
       </Swiper>
     </section>
   );

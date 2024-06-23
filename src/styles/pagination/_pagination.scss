@@ -1,0 +1,86 @@
+.swiper {
+    width: 100%;
+    position: relative;
+  }
+  
+  .swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    background: #fff;
+  
+    /* Center slide text vertically */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .swiper-slide img {
+    display: block;
+     object-fit: cover;
+  }
+  .swiper-pagination {
+    /* position: absolute; */
+    top: 50%;
+    right: 10px;
+    /* transform: translateY(-50%); */
+    flex-direction: row;
+    align-items: center;
+    margin: auto
+    
+    
+  }
+  .swiper-wrapper{
+    transition-timing-function:linear ;
+  }
+  .pagination-btn {
+      position: absolute;
+      z-index: 20;
+      user-select: none;
+      -webkit-user-select: none;
+      cursor: pointer;
+      padding: 2px;
+      border-radius: 5px;
+     
+      .custom-svg{
+        fill: rgba(240, 124, 0, 0.975);
+        transition: fill 0.2s ease;
+        &:hover {
+          fill: rgba(240, 124, 0, 0.821); 
+        }  }
+    
+      
+    }
+    .btn-next{
+        top:50%;
+        right: 0px;
+        transform: translate(2%,-100%);
+      }
+      .btn-prev{
+        fill: rgba(240, 124, 0, 0.975);
+
+        top:50%;
+        left: 0px;
+        transform: translate(10%,-100%);
+      }
+  
+//   .custom-swiper-button-prev:focus, .pagination-btn-next:focus {
+//     outline: none;
+//   }
+  .custom-bullet {
+    font-size: 20px;
+    padding: 5px;
+    cursor: pointer;
+  }
+  .swiper-pagination-bullet {
+    background-color: orange !important;
+    left: 0 !important;
+    width: 13px;
+    height: 13px;
+  }
+  .swiper-pagination-bullet-active {
+    background-color: orange !important;
+  }
+  .swiper-horizontal > .swiper-pagination-bullets.swiper-pagination-bullets-dynamic, .swiper-pagination-horizontal.swiper-pagination-bullets.swiper-pagination-bullets-dynamic{
+    left: 0 !important;
+  }
+  

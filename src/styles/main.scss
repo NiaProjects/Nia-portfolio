@@ -1,5 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
-
+@import "pagination/pagination";
 *,*::before,*::after {
     outline: none;
     list-style: none;
@@ -240,54 +240,6 @@ nav{
   background-image: url("../components/Navigation/Header/nav.png");
 }
 
-.swiper {
-  width: 100%;
-}
-
-.swiper-slide {
-  text-align: center;
-  font-size: 18px;
-  background: #fff;
-
-  /* Center slide text vertically */
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.swiper-slide img {
-  display: block;
-   object-fit: cover;
-}
-.swiper-pagination {
-  /* position: absolute; */
-  top: 50%;
-  right: 10px;
-  /* transform: translateY(-50%); */
-  flex-direction: row;
-  align-items: center;
-  margin: auto
-  
-  
-}
-
-.custom-bullet {
-  font-size: 20px;
-  padding: 5px;
-  cursor: pointer;
-}
-.swiper-pagination-bullet {
-  background-color: orange !important;
-  left: 0 !important;
-  width: 13px;
-  height: 13px;
-}
-.swiper-pagination-bullet-active {
-  background-color: orange !important;
-}
-.swiper-horizontal > .swiper-pagination-bullets.swiper-pagination-bullets-dynamic, .swiper-pagination-horizontal.swiper-pagination-bullets.swiper-pagination-bullets-dynamic{
-  left: 0 !important;
-}
 
 /* Card Shadow */
 .shadowEffect{
