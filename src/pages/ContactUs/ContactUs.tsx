@@ -1,7 +1,7 @@
 import { v4 as uuidv4 } from "uuid";
 import Tabs from "../../components/Tabs/Tabs";
 import TabContent from "../../components/Tabs/components/TabContent";
-import "../../styles/App.css";
+// import "../../styles/main.scss";
 import { customIcon } from "../../assets/icons/customIcons";
 import AddressLocation from "./components/Location/AddressLocation";
 import FormData from "./components/FormData/FormData";

@@ -71,7 +71,9 @@ const NewsSection = ({}: IProps) => {
   );
   return (
     <section id="news" className="m-auto  container  py-6 md:py-10 lg:py-20">
-      <HeadingTitle headerDark={"news"} />
+      <div className="text-center m-auto">
+        <HeadingTitle headerDark={"news"} />
+      </div>
       <Text
         fontSize={{ base: "18px" }}
         textAlign={"center"}

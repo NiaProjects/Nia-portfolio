@@ -3,7 +3,7 @@ import ReactDOM from "react-dom/client";
 
 import App from "./App.tsx";
 import "./styles/index.css";
-import "./styles/App.css";
+import "./styles/main.scss";
 
 import { BrowserRouter } from "react-router-dom";
 import theme from "./theme";

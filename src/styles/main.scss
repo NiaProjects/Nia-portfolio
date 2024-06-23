@@ -24,11 +24,13 @@
   html,
   body {
     position: relative;
-
     scroll-behavior: smooth;
   background-color: #fafafa; 
   }
-  
+  h2{
+    line-height: normal !important;
+      
+  }
   ::-webkit-scrollbar {
     width: 7px !important;
   }
@@ -42,6 +44,8 @@
     font-family: 'Poppins';background-color: #FFFDFB;
     
   }
+  
+  
   
   header a.active,
   .header a.active {

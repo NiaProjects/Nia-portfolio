@@ -11,6 +11,7 @@ interface ITitleProps {
 }
 
 // Define the functional component with the correct prop type
+// mt-small md:mt-medium lg:mt-large
 const HeadingTitle: FC<ITitleProps> = ({
   type = "header",
   headerDark = "",
@@ -18,23 +19,23 @@ const HeadingTitle: FC<ITitleProps> = ({
   classes = "",
   children,
 }) => (
-  <div
-    className={` flex   ${
+  <header
+    className={` inline-flex justify-center items-center mt-small md:mt-medium lg:mt-large text-center ${
       type !== "services"
         ? type === "aboutUsHeader"
-          ? "lg:pb-6 pb-4"
-          : "pt-6 pb-2  md:pb-6 md:pt-8"
-        : "mb-[16px] mx-auto justify-center"
+          ? "mb-4 lg:mb-small  "
+          : " mb-2 lg:mb-small  "
+        : " mx-auto justify-center "
     }`}
   >
     {/*   justify-center  */}
     <h2
       className={`${
         type !== "services" && "titleSections text-center "
-      } capitalize text-2xl md:text-[30px] lg-[40px]`}
+      } capitalize text-2xl md:text-[30px] lg:text-[40px] md:px-4 lg:px-small	`}
     >
       <span
-        className={`${classes} text-[#131312] font-montserrat font-semibold capitalize break-words`}
+        className={`${classes} text-[#131312] font-montserrat font-semibold capitalize break-words `}
       >
         {headerDark}
       </span>
@@ -45,12 +46,12 @@ const HeadingTitle: FC<ITitleProps> = ({
       </span>
       {children}
       {headerDark === "why" && (
-        <span className="text-[#131312] font-montserrat font-semibold capitalize break-words">
+        <span className="text-[#131312] font-montserrat font-semibold capitalize break-words ">
           ?
         </span>
       )}
     </h2>
-  </div>
+  </header>
 );
 
 export default HeadingTitle;

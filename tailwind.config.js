@@ -28,6 +28,12 @@ theme: {
   },
  
   extend: {
+    spacing: {
+      'xsmall': '1.5rem', //24
+      'small': '2rem',    //32
+      'medium': '2.5rem',   //40
+      "large": '5rem', // 80
+    },
     translate: {
       '-1/2': '-50%',
       '1/2': '50%',

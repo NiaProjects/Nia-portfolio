@@ -18,7 +18,7 @@
   }
 
   &::after {
-    left: 105%;
+    left: 100%;
     background: rgb(239, 125, 0);
     background: linear-gradient(
       90deg,
@@ -28,7 +28,7 @@
   }
 
   &::before {
-    right: 105%;
+    right: 100%;
     background: rgb(255, 255, 255);
     background: linear-gradient(
       90deg,

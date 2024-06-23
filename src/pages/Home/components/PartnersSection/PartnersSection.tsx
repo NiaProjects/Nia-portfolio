@@ -28,16 +28,16 @@ const swiperSliedsPartnersLogos = (
   </>
 );
 const PartnersSection = ({}: IProps) => {
-return (
-    <section className="  m-auto mt-[80px]">
+  return (
+    <section className="  m-auto my-large">
       <div className="header w-[160px] md:w-[200px] lg:w-[266px] text-center m-auto">
         {" "}
         <HeadingTitle headerDark="our" headerOrang="partners">
-          <span className="text-[#131312]"> in success</span>
+          <span className="text-[#131312]  font-semibold"> in success</span>
         </HeadingTitle>
       </div>
       {/*  */}
-      <div className="   flex justify-center items-center mt-[75px] mb-[100px] ">
+      <div className="   flex justify-center items-center mt-large ">
         <div className=" h-[140px] lg:h-[295px] w-full ">
           <div className="py-[48px] md:py-[90px] bg-[#FAD4AA]">
             <Swiper
