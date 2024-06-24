@@ -97,10 +97,7 @@ const NewsSection = ({}: IProps) => {
               slidesPerView: 1,
               spaceBetween: 10,
             },
-            550: {
-              slidesPerView: 2,
-              spaceBetween: 16,
-            },
+
             768: {
               slidesPerView: 2.5,
               spaceBetween: 16,

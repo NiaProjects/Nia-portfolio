@@ -52,7 +52,7 @@ const OurWorkSection = () => {
             </div>
             {/* Column 2 */}
             <div className="flex justify-center h-full w-full">
-              <div className="w-full h-[140px] md:h-full rounded-xl">
+              <div className="w-full h-[140px] max-h-[630px] md:h-full rounded-xl">
                 <figure className="relative w-full h-full">
                   <img
                     src={whatAchievedBigSection}

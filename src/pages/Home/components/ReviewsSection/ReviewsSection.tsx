@@ -78,10 +78,7 @@ const ReviewsSection = ({}: IProps) => {
             slidesPerView: 1,
             spaceBetween: 10,
           },
-          550: {
-            slidesPerView: 2.5,
-            spaceBetween: 15,
-          },
+
           768: {
             slidesPerView: 2.5,
             spaceBetween: 1,
