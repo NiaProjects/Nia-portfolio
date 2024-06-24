@@ -253,12 +253,10 @@ nav{
   box-shadow: 1px 1px 1px 0px #00000040;
   border-radius:10px   ;
   overflow: hidden;
-  button{
+  .btn-location{
     background-color: #fff;
     text-align: center;
-    /* margin: auto; */
     padding: 14px 32px;
-    /* font-size: 18px; */
     text-wrap: nowrap;
     font-weight: 600;
     line-height: 21.94px;
@@ -268,7 +266,7 @@ nav{
   .activeTab{
     background-color: #EF7D00;
     color: #fff;
-
+    cursor: pointer;
 }
  
 }
@@ -284,4 +282,8 @@ nav{
 .address .line-break::after {
   content: "\A"; /* Inserts a line break */
   white-space: pre; /* Preserves white space */
+}
+
+.btn-news {
+  cursor: pointer;
 }

@@ -1,7 +1,6 @@
 // src/components/NewsCard.tsx
 
 import React from "react";
-import { FaArrowAltCircleRight } from "react-icons/fa";
 import ReadMore from "../../../../components/ReadMore";
 
 interface NewsCardProps {

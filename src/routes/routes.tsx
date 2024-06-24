@@ -5,13 +5,13 @@ import { AboutPage, HomePage } from "../pages";
 import ContactUs from "../pages/ContactUs";
 import AboutSection from "../pages/Home/components/AboutSection";
 import OurWorkSection from "../pages/Home/components/OurWorkSection";
-import News from "../pages/News";
 import Designs from "../pages/Services/Design/Designs";
 import SoftWareService from "../pages/Services/Software/Software";
 import DigitalMarketing from "../pages/Services/DigitalMarketing";
 import Events from "../pages/Services/Events";
 import Photography from "../pages/Services/Photography";
 import Advertising from "../pages/Services/Advertising";
+import { News } from "../pages/News";
 
 const useHandleRoutes = () => {
   const routes = useRoutes([
