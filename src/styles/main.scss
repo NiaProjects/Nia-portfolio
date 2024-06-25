@@ -126,8 +126,12 @@
   position: relative;
   width: 100vw;
   height: 100vh; 
-  
-  /* overflow: hidden; */
+  @media only screen and (max-width: 744px) {
+    height:31.25rem;
+  }
+  @media only screen and (max-width: 375px) {
+    height:20.625rem;
+  }
 }
 .slider1-image{
   background: rgb(0,0,0);

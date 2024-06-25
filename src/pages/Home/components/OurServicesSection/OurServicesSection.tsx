@@ -51,7 +51,7 @@ const OurServicesSection = () => {
     <>
       <section
         id="our-services"
-        className="  py-xsmall md:py-medium lg:py-large px-[40px] sm:px-10 lg:px-[100px]  overflow-hidden"
+        className="  pb-xsmall md:pb-medium lg:pb-large px-[40px] sm:px-10 lg:px-[100px]  overflow-hidden"
       >
         <div className="max-w-[330px] min-w-[184px] mx-auto text-center">
           <HeadingTitle headerDark="our services" classes={"text-white"} />

@@ -5,9 +5,9 @@ interface IProps {}
 
 const Slider = ({}: IProps) => {
   return (
-    <div>
+    <>
       <SliderImages />
-    </div>
+    </>
   );
 };
 

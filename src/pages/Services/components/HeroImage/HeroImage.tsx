@@ -6,15 +6,14 @@ interface IProps {
   paragraph?: string;
 }
 
-const HeroImage = ({ data, headerText, paragraph }: IProps) => {
-  const { img, alt } = data;
-  console.log(img, alt);
+const HeroImage = ({ imageSection, headerText }: IProps) => {
+  console.log(imageSection);
   return (
     <section className="relative h-[200px] md:h-[300px] xl:h-[500px]">
       <div>
         <img
-          src={img}
-          alt={alt}
+          src={imageSection.img}
+          alt={imageSection.alt}
           className="object-cover h-full w-full absolute inset-0"
         />
         {/* Overlay layer */}

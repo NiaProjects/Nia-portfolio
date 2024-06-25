@@ -20,7 +20,7 @@ const HeadingTitle: FC<ITitleProps> = ({
   children,
 }) => (
   <header
-    className={` inline-flex justify-center items-center mt-small md:mt-medium lg:mt-large text-center ${
+    className={` inline-flex justify-center items-center mt-xsmall md:mt-medium lg:mt-large text-center ${
       type !== "services"
         ? type === "aboutUsHeader"
           ? "mb-4 lg:mb-small  "

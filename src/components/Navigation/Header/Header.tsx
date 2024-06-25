@@ -14,7 +14,7 @@ const headerAnimation = {
     transition: {
       type: "spring",
       satisfies: 120,
-      delay: 0.5,
+      delay: 0.1,
     },
   },
 };
@@ -42,15 +42,14 @@ const Header = () => {
   }, [lastScrollY]);
   return (
     <>
-      {" "}
       <motion.header
         variants={headerAnimation}
         initial="initial"
         animate="animate"
-        className=" text-center max-w-screen  "
+        className="text-center max-w-screen  "
       >
         <NavDeskTop isVisible={isVisible} />
-        
+
         <NavMobile isVisible={isVisible} setOpen={setOpen} isOpen={isOpen} />
       </motion.header>
     </>

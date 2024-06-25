@@ -33,11 +33,12 @@ const AboutSection = () => {
                 type="aboutUsHeader"
               />
             </div>
-            <div className=" m-auto capitalize mb-small ">
+            <div className=" m-auto capitalize mb-xsmall ">
               <Text
                 fontSize={{ base: "16px", md: "16px", lg: "20px" }}
                 fontWeight={{ base: "normal", md: "medium" }}
                 textAlign={"center"}
+                lineHeight={{ base: "19.5px", lg: "24.38px" }}
               >
                 Lorem ipsum dolor sit amet consectetur. Scelerisque ut fermentum
                 non libero quis Lorem ipsum dolor sit amet consectetur.

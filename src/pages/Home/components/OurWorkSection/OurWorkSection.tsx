@@ -29,7 +29,7 @@ const OurWorkSection = () => {
         eu aliquet quam lacus.{" "}
       </Text>
       <div className="max-md:bg-[#FAD4AA]">
-        <div className="relative container w-[91.5%]">
+        <div className="relative container w-[90.4%]">
           <div
             className="backgroundLayer absolute -left-10 md:bg-[#FAD4AA] w-screen max-md:top-0 max-md:bottom-0 max-md:left-0 max-md:right-0 z-1 md:h-[261px] lg:h-[400px]
                  md:top-1/2 md:left-1/2 right-10 md:transform md:-translate-x-1/2 md:-translate-y-1/2"
