@@ -10,6 +10,7 @@ import "./OurServicesSection.scss";
 import { Text } from "@chakra-ui/react";
 import { v4 as uuidv4 } from "uuid";
 import { customIcon } from "../../../../assets/icons/customIcons";
+import { useNavigate } from "react-router-dom";
 
 interface IProps {}
 const cardsData = [
@@ -47,6 +48,12 @@ const cardsData = [
   },
 ];
 const OurServicesSection = () => {
+  const navigate = useNavigate();
+  const handleCardClick = (url?: string) => {
+    if (url) {
+      navigate(url.toLowerCase());
+    }
+  };
   return (
     <>
       <section
@@ -72,7 +79,11 @@ const OurServicesSection = () => {
             {cardsData?.map((cardData, index) => {
               const { icon, header, url } = cardData;
               return (
-                <div className="cards xl:mt-24" key={uuidv4()}>
+                <div
+                  className="cards xl:mt-24"
+                  key={uuidv4()}
+                  onClick={() => alert(header)}
+                >
                   <div className="relative  card rounded-2xl bluer   w-[210px]  xl:w-[376px] h-[170px] xl:h-auto mb-[18px] ">
                     <div className="flex card-first-layer  rounded-2xl bluer border  w-[210px] xl:w-[376px] xl:h-[214px] h-[108px] mb-[18px] ">
                       <header className=" flex ms-[10px] md:ms-[1.5rem] md: mt-[.6rem] mb-[1.18rem] xl:mt-[1.5rem] lg:mb-[2.5rem]">

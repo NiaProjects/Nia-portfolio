@@ -12,17 +12,13 @@ interface HeaderText {
 interface IProps {
   headerText: HeaderText;
   paragraph: string;
+  icons: {
+    text: string;
+    icon: JSX.Element;
+  }[];
 }
 
-const categoriesIcons = [
-  { text: "mobile app", icon: customIcon.systemIcon },
-  { text: "Social media marketing", icon: customIcon.systemIcon },
-  { text: "mobile app", icon: customIcon.systemIcon },
-  { text: "mobile app", icon: customIcon.systemIcon },
-  { text: "mobile app", icon: customIcon.systemIcon },
-];
-
-const ServicesCategories = ({ headerText, paragraph }: IProps) => {
+const ServicesCategories = ({ headerText, paragraph, icons }: IProps) => {
   return (
     <section
       id="ServicesCategories"
@@ -34,19 +30,22 @@ const ServicesCategories = ({ headerText, paragraph }: IProps) => {
             headerDark={headerText.darkHeader}
             headerOrang={headerText.orangeHeader}
             type="services"
-            classes="xl:text-[40px]"
+            classes="xl:text-[2.5rem] "
           />
+
           <Text
             as="p"
-            fontSize={{ base: "18px", lg: "20px" }}
+            fontSize={{ base: "1rem", lg: "1.25rem", "2xl": "1.75rem" }}
             fontWeight={"500"}
             __css={{ textWrap: "balance" }}
+            marginTop={"1rem"}
+            lineHeight={"normal"}
           >
             {paragraph}
           </Text>
         </header>
-        <div className="categoriesIconBox pt-6 pb-4 flex justify-center items-center flex-wrap md:flex-nowrap gap-4 xl:gap-[36px] text-balance whitespace-normal break-normal first:mt-6">
-          {categoriesIcons?.map((item) => (
+        <div className="categoriesIconBox pt-6 pb-4 flex justify-center items-center flex-wrap md:flex-nowrap gap-4 md:gap-[2.8125rem] xl:gap-[36px] text-balance whitespace-normal break-normal first:mt-6">
+          {icons?.map((item) => (
             <article key={uuidv4()} className="flex flex-col items-center">
               <figure
                 id="catIcon"

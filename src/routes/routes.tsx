@@ -49,19 +49,19 @@ const useHandleRoutes = () => {
           element: <Designs />,
         },
         {
-          path: "our-services/DigitalMarketing",
+          path: "our-services/digital-marketing",
           element: <DigitalMarketing />,
         },
         {
-          path: "our-services/Events",
+          path: "our-services/events",
           element: <Events />,
         },
         {
-          path: "our-services/Photography",
+          path: "our-services/photography",
           element: <Photography />,
         },
         {
-          path: "our-services/Advertising",
+          path: "our-services/advertising",
           element: <Advertising />,
         },
         { path: "news", element: <News /> },

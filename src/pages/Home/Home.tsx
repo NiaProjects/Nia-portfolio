@@ -12,6 +12,8 @@ import PartnersSection from "./components/PartnersSection";
 import ReviewsSection from "./components/ReviewsSection";
 import { Link } from "react-router-dom";
 import { customIcon } from "../../assets/icons/customIcons";
+import { MdArrowCircleUp } from "react-icons/md";
+
 interface HomeProps {}
 
 const aboutImages = [{ src: aboutNia1 }, { src: aboutNia2 }];
@@ -39,16 +41,34 @@ const HomePage: FC<HomeProps> = () => {
   return (
     <>
       {isVisible && (
-        <div className="fixed bottom-0  w-full px-[1.125rem] md:px-[1.5rem] lg:px-[100px] transform -translate-y-[40px] bg-red-200 flex justify-between z-50 ">
-          <div className=" ">
-            <Link to="https://api.whatsapp.com/send?phone=201123862013">
-              {customIcon.socialMediaIcons.whatsAppContactIcon}
+        //  lg:px-[100px]
+        <div className="fixed bottom-0  w-full px-[1.125rem] md:px-[1.5rem] transform -translate-y-[40px]  flex justify-between z-50 ">
+          <div className=" relative w-medium h-medium md:w-[2.875rem] lg:w-[4.375rem] lg:h-[4.375rem] ">
+            <Link
+              to="https://api.whatsapp.com/send?phone=201123862013"
+              className=""
+            >
+              <span className="  block">
+                {
+                  customIcon.socialMediaIcons.whatsAppContactIcon
+                    .whatsAppFrameIcon
+                }
+              </span>
+              <span className="absolute top-[50%] left-[50%]  transform -translate-x-[50%] -translate-y-[50%]">
+                {
+                  customIcon.socialMediaIcons.whatsAppContactIcon
+                    .whatsAppTelephoneIcon
+                }
+              </span>
             </Link>
           </div>
-          <div className="bg-red-700  w-12 h-12 "></div>
+          <div className=" w-medium h-medium md:w-[2.875rem] lg:w-large lg:h-large text-4xl hover:text-orange-400 ">
+            <a href="#main-section">{customIcon.arrowsIcon.backTopIcon}</a>
+          </div>
         </div>
       )}
       <section
+        id="main-section"
         className={`bg-gradient-to-r from-[#B45E00] to-[#FF9D32] top-0 bottom-0 left-0 right-0`}
       >
         <Hero />

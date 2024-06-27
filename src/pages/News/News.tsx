@@ -48,7 +48,7 @@ const News: FC<NewsProps> = () => {
 
   return (
     <div className="">
-      <HeroImage data={data[0].imgSection} headerText={"news"} />
+      <HeroImage imageSection={data[0].imgSection} headerText={"news"} />
 
       <Tabs type="location" selectedTabIndex={selectedTabIndex}>
         {tabHeaders.map((header, index) => (

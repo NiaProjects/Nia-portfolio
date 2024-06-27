@@ -24,27 +24,27 @@ export const routesServiceList = [
   },
   {
     name: "design",
-    url: "our-services/software",
+    url: "our-services/designs",
     icon: customIcon.rightArrowFooter,
   },
   {
     name: "digital marketing",
-    url: "our-services/software",
+    url: "our-services/digital-marketing",
     icon: customIcon.rightArrowFooter,
   },
   {
     name: "events",
-    url: "our-services/software",
+    url: "our-services/events",
     icon: customIcon.rightArrowFooter,
   },
   {
     name: "photography",
-    url: "our-services/software",
+    url: "our-services/photography",
     icon: customIcon.rightArrowFooter,
   },
   {
     name: "advertising",
-    url: "our-services/software",
+    url: "our-services/advertising",
     icon: customIcon.rightArrowFooter,
   },
 ];

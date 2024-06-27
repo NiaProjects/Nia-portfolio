@@ -31,11 +31,13 @@ const HeadingTitle: FC<ITitleProps> = ({
     {/*   justify-center  */}
     <h2
       className={`${
-        type !== "services" && "titleSections text-center "
+        type !== "services"
+          ? "titleSections text-center "
+          : "font-semibold md:font-bold"
       } capitalize text-2xl md:text-[30px] lg:text-[40px] md:px-4 lg:px-small	`}
     >
       <span
-        className={`${classes} text-[#131312] font-montserrat font-semibold capitalize break-words `}
+        className={`${classes} text-[#131312] font-montserrat font-semibold  capitalize break-words `}
       >
         {headerDark}
       </span>

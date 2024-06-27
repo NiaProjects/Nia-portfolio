@@ -2,18 +2,18 @@ import React from "react";
 
 interface IProps {
   data?: object;
-  headerText?: string;
+  heroImage: { img: { DMheaderImg: string }; alt: string };
+  headerText: string;
   paragraph?: string;
 }
 
-const HeroImage = ({ imageSection, headerText }: IProps) => {
-  console.log(imageSection);
+const HeroImage = ({ heroImage, headerText }: IProps) => {
   return (
     <section className="relative h-[200px] md:h-[300px] xl:h-[500px]">
       <div>
         <img
-          src={imageSection.img}
-          alt={imageSection.alt}
+          src={heroImage.img}
+          alt={heroImage.alt}
           className="object-cover h-full w-full absolute inset-0"
         />
         {/* Overlay layer */}
