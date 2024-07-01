@@ -99,7 +99,7 @@ const SliderImages = () => {
         </>
       )}
       {/* flex-col gap-7 justify-between h-[70px] lg:h-[120px] absolute z-40 top-[50%] right-6 -translate-x-[18px] md:-translate-x-[40px] lg:-translate-x-[100px] */}
-      <div className="flex absolute left-1/2 right-1/2 gap-10 bottom-0 p-4 bg-stone-500 w-[34px]">
+      <div className="flex absolute left-1/2 right-1/2 gap-10 bottom-0 p-4  w-[34px]">
         <button
           className="prev  "
           ref={prevButtonRef}

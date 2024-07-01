@@ -45,10 +45,10 @@ const News: FC<NewsProps> = () => {
   };
 
   const data = [{ imgSection: { img: newsHeader, alt: "contact us Image" } }];
-
+  console.log(data[0].imgSection);
   return (
     <div className="">
-      <HeroImage imageSection={data[0].imgSection} headerText={"news"} />
+      <HeroImage heroImage={data[0].imgSection} headerText={"news"} />
 
       <Tabs type="location" selectedTabIndex={selectedTabIndex}>
         {tabHeaders.map((header, index) => (

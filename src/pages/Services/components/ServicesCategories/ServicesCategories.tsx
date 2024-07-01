@@ -19,6 +19,7 @@ interface IProps {
 }
 
 const ServicesCategories = ({ headerText, paragraph, icons }: IProps) => {
+  console.log(icons);
   return (
     <section
       id="ServicesCategories"

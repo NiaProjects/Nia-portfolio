@@ -101,4 +101,3 @@ export const servicesPagesImg={
     descriptionImgPH:photographyDescriptionImg,}
     }
 
-    // ,SoftwareIntroduction,SoftwareDescription,heroImg

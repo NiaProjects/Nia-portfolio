@@ -32,7 +32,14 @@ export const data = {
           header: { darkHeader: "type of software", orangeHeader: "Services" },
           paragraph:
             "Tellus facilisis adipiscing cras est Lorem ipsum dolor sit amet consectetur. Viverra tristique vitae rutrum dui aliquet sed at nunc convallis. Tellus facilisis adipiscing cras est Lorem ipsum dolor sit amet consectetur. ",
-        },
+            
+            categoriesIcons : [
+               { text: "mobile app", icon: customIcon.servicesIcons.software.app },
+               { text: "website", icon: customIcon.servicesIcons.software.website },
+               { text: "crm system", icon: customIcon.servicesIcons.software.crm },
+               { text: "dashboard", icon: customIcon.servicesIcons.software.dashboard },
+             ]
+          },
         description: {
           srcImg: descriptionImgSF,
           descriptionHeader: {
@@ -61,13 +68,7 @@ export const data = {
               description:
                 "Viverra tristique vitae rutrum dui aliquet sed at nunc convallis. Tellus facilisis adipiscing cras est. software responsive social media e-commerce utility app",
             },]
-        },
-         categoriesIcons : [
-            { text: "mobile app", icon: customIcon.systemIcon },
-            { text: "website", icon: customIcon.systemIcon },
-            { text: "crm system", icon: customIcon.systemIcon },
-            { text: "dashboard", icon: customIcon.systemIcon },
-          ]
+        }
     },
     // digitalMarketingService
     digitalMarketingService:{
@@ -87,11 +88,11 @@ export const data = {
           paragraph:
             "Tellus facilisis adipiscing cras est Lorem ipsum dolor sit amet consectetur. Viverra tristique vitae rutrum dui aliquet sed at nunc convallis. Tellus facilisis adipiscing cras est Lorem ipsum dolor sit amet consectetur. ",
             categoriesIcons : [
-                { text: "social media marketing", icon: customIcon.systemIcon },
-                { text: "marketing strategy", icon: customIcon.systemIcon },
-                { text: "seo", icon: customIcon.systemIcon },
-                { text: "analysis and reports", icon: customIcon.systemIcon },
-                { text: "create content", icon: customIcon.systemIcon },
+                { text: "social media marketing", icon: customIcon.servicesIcons.digitaMarketing.mediaMarketing },
+                { text: "marketing strategy", icon: customIcon.servicesIcons.digitaMarketing.strategy },
+                { text: "seo", icon: customIcon.servicesIcons.digitaMarketing.seo },
+                { text: "analysis and reports", icon: customIcon.servicesIcons.digitaMarketing.analysisReport },
+                { text: "create content", icon: customIcon.servicesIcons.digitaMarketing.content },
     
               ] },
         description: {
@@ -145,12 +146,13 @@ export const data = {
           paragraph:
             "Tellus facilisis adipiscing cras est Lorem ipsum dolor sit amet consectetur. Viverra tristique vitae rutrum dui aliquet sed at nunc convallis. Tellus facilisis adipiscing cras est Lorem ipsum dolor sit amet consectetur. ",
             categoriesIcons : [
-                { text: "social media marketing", icon: customIcon.systemIcon },
-                { text: "marketing strategy", icon: customIcon.systemIcon },
-                { text: "seo", icon: customIcon.systemIcon },
-                { text: "analysis and reports", icon: customIcon.systemIcon },
-                { text: "create content", icon: customIcon.systemIcon },
-    
+                { text: "logos", icon: customIcon.servicesIcons.design.logosIcons },
+                { text: "brand identity", icon: customIcon.servicesIcons.design.brandIcons},
+                { text: "printing", icon:  customIcon.servicesIcons.design.printingIcons },
+                { text: "social media design", icon:  customIcon.servicesIcons.design.mediaIcons },
+                { text: "motion graphic", icon:  customIcon.servicesIcons.design.motionIcons },
+                { text: "infographic", icon:  customIcon.servicesIcons.design.infographicIcons },
+
               ]
         },
         description: {
@@ -210,7 +212,12 @@ export const data = {
           header: { darkHeader: "advertising", orangeHeader: "services" },
           paragraph:
             "Tellus facilisis adipiscing cras est Lorem ipsum dolor sit amet consectetur. Viverra tristique vitae rutrum dui aliquet sed at nunc convallis. Tellus facilisis adipiscing cras est Lorem ipsum dolor sit amet consectetur. ",
-        },
+            categoriesIcons : [
+              { text: "outdoor", icon: customIcon.servicesIcons.adsIcons.indoor },
+              { text: "indoor", icon: customIcon.servicesIcons.adsIcons.indoor },
+              
+            ],},
+     
         description: {
           srcImg: descriptionImgAds,
           descriptionHeader: {
@@ -230,6 +237,7 @@ export const data = {
                 "Viverra tristique vitae rutrum dui aliquet sed at nunc convallis. Tellus facilisis adipiscing cras est. software responsive social media e-commerce utility app",
             },
           ]},
+
         
     },
     // events
