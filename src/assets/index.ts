@@ -55,6 +55,14 @@ import DesignDescriptionImg from "./images/services/DesignService/designServiceD
 import advertisingHeaderImg from "./images/services/AdvertisingService/advertisingHeader.png";
 import advertisingIntroImg from "./images/services/AdvertisingService/advertisingIntro.png";
 import advertisingDescriptionImg from "./images/services/AdvertisingService/advertisingDescription.png";
+// ** events
+import eventHeaderImg from "./images/services/eventsService/eventHeaderImg.png";
+import eventHIntroImg from "./images/services/eventsService/eventHIntroImg.png";
+import eventDescriptionImg from "./images/services/eventsService/eventDescriptionImg.png";
+// ** photography
+import photographyHeaderImg from "./images/services/photographyService/photographyHeaderImg.png";
+import photographyIntroImg from "./images/services/photographyService/photographyIntroImg.png";
+import photographyDescriptionImg from "./images/services/photographyService/photographyDescriptionImg.png";
 
 export { logo,slider1, slider2,avatarSlider1, facebook, ig,twitter ,homeHart,quoteDown, VectorSlider1,
     VectorSlider2,dotedVector,navBg,navMob,aboutNia1,aboutNia2,aboutNia3,hart,cardServicesCategory,cardServicesCategory2,serviceCard,serviceCardHeaderIcon
@@ -81,16 +89,16 @@ export const servicesPagesImg={
         headerImgAds:advertisingHeaderImg,
     introImgAds:advertisingIntroImg,
     descriptionImgAds:advertisingDescriptionImg,}    ,
-    //
+    // events
     eventsImages:{ 
-        headerImgDM:DMheaderImg,
-    introImgDM:DMintroImg,
-    descriptionImgDM:DMIdecriptionImg,} ,
-    //
-    photography:{ 
-        headerImgDM:DMheaderImg,
-    introImgDM:DMintroImg,
-    descriptionImgDM:DMIdecriptionImg,}
+        headerImgEV:eventHeaderImg,
+    introImgEV:eventHIntroImg,
+    descriptionImgEV:eventDescriptionImg,} ,
+    //photography
+    photographyImages:{ 
+        headerImgPH:photographyHeaderImg,
+    introImgPH:photographyIntroImg,
+    descriptionImgPH:photographyDescriptionImg,}
     }
 
     // ,SoftwareIntroduction,SoftwareDescription,heroImg

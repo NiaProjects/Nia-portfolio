@@ -8,32 +8,33 @@ interface IProps {
   srcImg: string;
   alt: string;
   descriptions: { name: string; description: string }[];
+  descriptionData: any;
 }
 
-const descriptionData = [
-  {
-    name: "Mobile",
-    description:
-      "Viverra tristique vitae rutrum dui aliquet sed at nunc convallis. Tellus facilisis adipiscing cras est. software responsive social media e-commerce utility app",
-  },
-  {
-    name: "Website",
-    description:
-      "Viverra tristique vitae rutrum dui aliquet sed at nunc convallis. Tellus facilisis adipiscing cras est. software responsive social media e-commerce utility app",
-  },
-  {
-    name: "CRM System",
-    description:
-      "Viverra tristique vitae rutrum dui aliquet sed at nunc convallis. Tellus facilisis adipiscing cras est. software responsive social media e-commerce utility app",
-  },
-  {
-    name: "Dashboard",
-    description:
-      "Viverra tristique vitae rutrum dui aliquet sed at nunc convallis. Tellus facilisis adipiscing cras est. software responsive social media e-commerce utility app",
-  },
-];
+// const descriptionData = [
+//   {
+//     name: "Mobile",
+//     description:
+//       "Viverra tristique vitae rutrum dui aliquet sed at nunc convallis. Tellus facilisis adipiscing cras est. software responsive social media e-commerce utility app",
+//   },
+//   {
+//     name: "Website",
+//     description:
+//       "Viverra tristique vitae rutrum dui aliquet sed at nunc convallis. Tellus facilisis adipiscing cras est. software responsive social media e-commerce utility app",
+//   },
+//   {
+//     name: "CRM System",
+//     description:
+//       "Viverra tristique vitae rutrum dui aliquet sed at nunc convallis. Tellus facilisis adipiscing cras est. software responsive social media e-commerce utility app",
+//   },
+//   {
+//     name: "Dashboard",
+//     description:
+//       "Viverra tristique vitae rutrum dui aliquet sed at nunc convallis. Tellus facilisis adipiscing cras est. software responsive social media e-commerce utility app",
+//   },
+// ];
 
-const ServicesDescription = ({ srcImg, alt }: IProps) => {
+const ServicesDescription = ({ srcImg, alt, descriptionData }: IProps) => {
   return (
     <section
       id="ServicesDescription"
@@ -47,7 +48,7 @@ const ServicesDescription = ({ srcImg, alt }: IProps) => {
             alt={alt}
           />
         </div>
-        <div className="me-auto flex flex-col md:w-[54%]">
+        <div className="me-auto flex flex-col md:w-[54%] my-auto">
           <div className="servicesDescription">
             {descriptionData?.map((desData) => {
               const { name, description } = desData;

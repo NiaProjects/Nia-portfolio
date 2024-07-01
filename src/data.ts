@@ -5,8 +5,8 @@ const {headerImgDM, introImgDM, descriptionImgDM} =servicesPagesImg.DigitalMarke
 const {headerImgSF, introImgSF, descriptionImgSF} =servicesPagesImg.softwareImages;
 const {headerImgDesign, introImgDesign, descriptionImgDesign} =servicesPagesImg.designImages;
 const {headerImgAds, introImgAds, descriptionImgAds} =servicesPagesImg.advertisingImages;
-// const {headerImgSF, introImgSF, descriptionImgSF} =servicesPagesImg.eventsImages;
-// const {headerImgSF, introImgSF, descriptionImgSF} =servicesPagesImg.photography;
+const {headerImgEV,introImgEV ,descriptionImgEV } =servicesPagesImg.eventsImages;
+const {headerImgPH,introImgPH ,descriptionImgPH } =servicesPagesImg.photographyImages;
 
 
 
@@ -15,6 +15,7 @@ const {headerImgAds, introImgAds, descriptionImgAds} =servicesPagesImg.advertisi
 
 export const data = {
    services:{
+    // software
     softwareService:{
         imgSection: { img: headerImgSF, alt: "software service" },
         introduction: {
@@ -28,7 +29,7 @@ export const data = {
             "Lorem ipsum dolor sit amet consectetur. Viverra tristique vitae rutrum dui aliquet sed at nunc convallis. Tellus facilisis adipiscing cras est Lorem ipsum dolor sit amet consectetur. Viverra tristique vitae rutrum dui aliquet sed at nunc convallis. Tellus facilisis adipiscing cras est Lorem ipsum dolor sit amet consectetur. Viverra tristique vitae rutrum dui aliquet sed at nunc convallis. Tellus facilisis adipiscing cras est Lorem ipsum dolor sit amet consectetur. Viverra tristique vitae rutrum dui aliquet sed at nunc convallis. Tellus facilisis adipiscing cras est.",
         },
         categories: {
-          header: { darkHeader: "loarm", orangeHeader: "loarm" },
+          header: { darkHeader: "type of software", orangeHeader: "Services" },
           paragraph:
             "Tellus facilisis adipiscing cras est Lorem ipsum dolor sit amet consectetur. Viverra tristique vitae rutrum dui aliquet sed at nunc convallis. Tellus facilisis adipiscing cras est Lorem ipsum dolor sit amet consectetur. ",
         },
@@ -40,13 +41,35 @@ export const data = {
           },
           descriptionText:
             "Tellus facilisis adipiscing cras est Lorem ipsum dolor sit amet consectetur. Viverra tristique vitae rutrum dui aliquet sed at nunc convallis. Tellus facilisis adipiscing cras est Lorem ipsum dolor sit amet consectetur.",
-        }, categoriesIcons : [
+            descriptionData:[ {
+              name: "Mobile",
+              description:
+                "Viverra tristique vitae rutrum dui aliquet sed at nunc convallis. Tellus facilisis adipiscing cras est. software responsive social media e-commerce utility app",
+            },
+            {
+              name: "Website",
+              description:
+                "Viverra tristique vitae rutrum dui aliquet sed at nunc convallis. Tellus facilisis adipiscing cras est. software responsive social media e-commerce utility app",
+            },
+            {
+              name: "CRM System",
+              description:
+                "Viverra tristique vitae rutrum dui aliquet sed at nunc convallis. Tellus facilisis adipiscing cras est. software responsive social media e-commerce utility app",
+            },
+            {
+              name: "Dashboard",
+              description:
+                "Viverra tristique vitae rutrum dui aliquet sed at nunc convallis. Tellus facilisis adipiscing cras est. software responsive social media e-commerce utility app",
+            },]
+        },
+         categoriesIcons : [
             { text: "mobile app", icon: customIcon.systemIcon },
             { text: "website", icon: customIcon.systemIcon },
             { text: "crm system", icon: customIcon.systemIcon },
             { text: "dashboard", icon: customIcon.systemIcon },
           ]
     },
+    // digitalMarketingService
     digitalMarketingService:{
         imgSection: { img: headerImgDM, alt: "contact us Image",headerText:"digital marketing" },
         introduction: {
@@ -79,37 +102,34 @@ export const data = {
           },
           descriptionText:
             "Tellus facilisis adipiscing cras est Lorem ipsum dolor sit amet consectetur. Viverra tristique vitae rutrum dui aliquet sed at nunc convallis. Tellus facilisis adipiscing cras est Lorem ipsum dolor sit amet consectetur.",
-        }
+            descriptionData:[ {
+              name: "social media marketing",
+              description:
+                "Viverra tristique vitae rutrum dui aliquet sed at nunc convallis. Tellus facilisis adipiscing cras est.software responsive social media e-commerce utility app",
+            },
+            {
+              name: "marketing strategy",
+              description:
+                "Viverra tristique vitae rutrum dui aliquet sed at nunc convallis. Tellus facilisis adipiscing cras est. software responsive social media e-commerce utility app",
+            },
+            {
+              name: "seo",
+              description:
+                "Viverra tristique vitae rutrum dui aliquet sed at nunc convallis. Tellus facilisis adipiscing cras est. software responsive social media e-commerce utility app",
+            },
+            {
+              name: "analysis and reports",
+              description:
+                "Viverra tristique vitae rutrum dui aliquet sed at nunc convallis. Tellus facilisis adipiscing cras est. software responsive social media e-commerce utility app",
+            }, {
+              name: "create content",
+              description:
+                "Viverra tristique vitae rutrum dui aliquet sed at nunc convallis. Tellus facilisis adipiscing cras est. software responsive social media e-commerce utility app",
+            }]}
     },
-    // designService:{
-    //     imgSection: { img: headerImgDM, alt: "contact us Image",headerText:"digital marketing" },
-    //     introduction: {
-    //       srcImg: introImgDM,
-    //       alt: "",
-    //       introductionHeader: {
-    //         darkHeader: "Lorem ipsum dolor sit amet",
-    //         orangeHeader: "consectetur",
-    //       },
-    //       introductionText:
-    //         "Lorem ipsum dolor sit amet consectetur. Viverra tristique vitae rutrum dui aliquet sed at nunc convallis. Tellus facilisis adipiscing cras est Lorem ipsum dolor sit amet consectetur. Viverra tristique vitae rutrum dui aliquet sed at nunc convallis. Tellus facilisis adipiscing cras est Lorem ipsum dolor sit amet consectetur.",
-    //     },
-    //     categories: {
-    //       header: { darkHeader: "loarm", orangeHeader: "loarm" },
-    //       paragraph:
-    //         "Tellus facilisis adipiscing cras est Lorem ipsum dolor sit amet consectetur. Viverra tristique vitae rutrum dui aliquet sed at nunc convallis. Tellus facilisis adipiscing cras est Lorem ipsum dolor sit amet consectetur. ",
-    //     },
-    //     description: {
-    //       srcImg: descriptionImgDM,
-    //       descriptionHeader: {
-    //         darkHeader: "type of Design",
-    //         orangeHeader: "Services",
-    //       },
-    //       descriptionText:
-    //         "Tellus facilisis adipiscing cras est Lorem ipsum dolor sit amet consectetur. Viverra tristique vitae rutrum dui aliquet sed at nunc convallis. Tellus facilisis adipiscing cras est Lorem ipsum dolor sit amet consectetur.",
-    //     },
-    // },
+    // design
     design:{
-        imgSection: { img: headerImgDesign, alt: "contact us Image",headerText:"digital marketing" },
+        imgSection: { img: headerImgDesign, alt: "design service",headerText:"design" },
         introduction: {
           srcImg: introImgDesign,
           alt: "",
@@ -139,12 +159,43 @@ export const data = {
             darkHeader: "advertising",
             orangeHeader: "Services",
           },
-          descriptionText:
+        
+            descriptionText:
             "Tellus facilisis adipiscing cras est Lorem ipsum dolor sit amet consectetur. Viverra tristique vitae rutrum dui aliquet sed at nunc convallis. Tellus facilisis adipiscing cras est Lorem ipsum dolor sit amet consectetur.",
-        },
+            descriptionData:[ {
+              name: "logos",
+              description:
+                "Viverra tristique vitae rutrum dui aliquet sed at nunc convallis. Tellus facilisis adipiscing cras est.software responsive social media e-commerce utility app",
+            },
+            {
+              name: "brand identity",
+              description:
+                "Viverra tristique vitae rutrum dui aliquet sed at nunc convallis. Tellus facilisis adipiscing cras est. software responsive social media e-commerce utility app",
+            },
+            {
+              name: "printing",
+              description:
+                "Viverra tristique vitae rutrum dui aliquet sed at nunc convallis. Tellus facilisis adipiscing cras est. software responsive social media e-commerce utility app",
+            },
+            {
+              name: "social media design",
+              description:
+                "Viverra tristique vitae rutrum dui aliquet sed at nunc convallis. Tellus facilisis adipiscing cras est. software responsive social media e-commerce utility app",
+            }, {
+              name: "motion graphic",
+              description:
+                "Viverra tristique vitae rutrum dui aliquet sed at nunc convallis. Tellus facilisis adipiscing cras est. software responsive social media e-commerce utility app",
+            }, {
+              name: "info graphic",
+              description:
+                "Viverra tristique vitae rutrum dui aliquet sed at nunc convallis. Tellus facilisis adipiscing cras est. software responsive social media e-commerce utility app",
+            }]
+          },
+     
     },
+    // advertising
     advertising:{
-        imgSection: { img: headerImgAds, alt: "contact us Image",headerText:"digital marketing" },
+        imgSection: { img: headerImgAds, alt: "contact us Image",headerText:"Advertising" },
         introduction: {
           srcImg: introImgAds,
           alt: "",
@@ -156,7 +207,7 @@ export const data = {
             "Lorem ipsum dolor sit amet consectetur. Viverra tristique vitae rutrum dui aliquet sed at nunc convallis. Tellus facilisis adipiscing cras est Lorem ipsum dolor sit amet consectetur. Viverra tristique vitae rutrum dui aliquet sed at nunc convallis. Tellus facilisis adipiscing cras est Lorem ipsum dolor sit amet consectetur.",
         },
         categories: {
-          header: { darkHeader: "loarm", orangeHeader: "loarm" },
+          header: { darkHeader: "advertising", orangeHeader: "services" },
           paragraph:
             "Tellus facilisis adipiscing cras est Lorem ipsum dolor sit amet consectetur. Viverra tristique vitae rutrum dui aliquet sed at nunc convallis. Tellus facilisis adipiscing cras est Lorem ipsum dolor sit amet consectetur. ",
         },
@@ -168,12 +219,24 @@ export const data = {
           },
           descriptionText:
             "Tellus facilisis adipiscing cras est Lorem ipsum dolor sit amet consectetur. Viverra tristique vitae rutrum dui aliquet sed at nunc convallis. Tellus facilisis adipiscing cras est Lorem ipsum dolor sit amet consectetur.",
-        },
+            descriptionData:[ {
+              name: "outdoor",
+              description:
+                "Viverra tristique vitae rutrum dui aliquet sed at nunc convallis. Tellus facilisis adipiscing cras est.software responsive social media e-commerce utility app",
+            },
+            {
+              name: "indoor",
+              description:
+                "Viverra tristique vitae rutrum dui aliquet sed at nunc convallis. Tellus facilisis adipiscing cras est. software responsive social media e-commerce utility app",
+            },
+          ]},
+        
     },
+    // events
     events:{
-        imgSection: { img: headerImgDM, alt: "contact us Image",headerText:"digital marketing" },
+        imgSection: { img: headerImgEV, alt: "events service",headerText:"events" },
         introduction: {
-          srcImg: introImgDM,
+          srcImg: introImgEV,
           alt: "",
           introductionHeader: {
             darkHeader: "Lorem ipsum dolor sit amet",
@@ -182,25 +245,22 @@ export const data = {
           introductionText:
             "Lorem ipsum dolor sit amet consectetur. Viverra tristique vitae rutrum dui aliquet sed at nunc convallis. Tellus facilisis adipiscing cras est Lorem ipsum dolor sit amet consectetur. Viverra tristique vitae rutrum dui aliquet sed at nunc convallis. Tellus facilisis adipiscing cras est Lorem ipsum dolor sit amet consectetur.",
         },
-        categories: {
-          header: { darkHeader: "loarm", orangeHeader: "loarm" },
-          paragraph:
-            "Tellus facilisis adipiscing cras est Lorem ipsum dolor sit amet consectetur. Viverra tristique vitae rutrum dui aliquet sed at nunc convallis. Tellus facilisis adipiscing cras est Lorem ipsum dolor sit amet consectetur. ",
-        },
+        
         description: {
-          srcImg: descriptionImgDM,
+          srcImg: descriptionImgEV,
           descriptionHeader: {
-            darkHeader: "type of software",
-            orangeHeader: "Services",
+            darkHeader: "events ",
+            orangeHeader: "services",
           },
           descriptionText:
             "Tellus facilisis adipiscing cras est Lorem ipsum dolor sit amet consectetur. Viverra tristique vitae rutrum dui aliquet sed at nunc convallis. Tellus facilisis adipiscing cras est Lorem ipsum dolor sit amet consectetur.",
         },
     },
+    // EVotography
     photography:{
-        imgSection: { img: headerImgDM, alt: "contact us Image",headerText:"digital marketing" },
+        imgSection: { img: headerImgPH, alt: "contact us Image",headerText:"digital marketing" },
         introduction: {
-          srcImg: introImgDM,
+          srcImg: introImgPH,
           alt: "",
           introductionHeader: {
             darkHeader: "Lorem ipsum dolor sit amet",
@@ -215,7 +275,7 @@ export const data = {
             "Tellus facilisis adipiscing cras est Lorem ipsum dolor sit amet consectetur. Viverra tristique vitae rutrum dui aliquet sed at nunc convallis. Tellus facilisis adipiscing cras est Lorem ipsum dolor sit amet consectetur. ",
         },
         description: {
-          srcImg: descriptionImgDM,
+          srcImg: descriptionImgPH,
           descriptionHeader: {
             darkHeader: "type of software",
             orangeHeader: "Services",

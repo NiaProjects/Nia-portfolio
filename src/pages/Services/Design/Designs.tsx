@@ -21,14 +21,16 @@ const Designs: FC<DesignProps> = () => {
         paragraph={introduction.introductionText}
       />
       <ServicesCategories
-        headerText={description.descriptionHeader}
-        paragraph={description.descriptionText}
+        headerText={categories.header}
+        paragraph={categories.paragraph}
+        icons={categories.categoriesIcons}
       />
       <ServicesDescription
         srcImg={description.srcImg}
         alt={description.alt}
         headerText={description.descriptionHeader}
         paragraph={description.descriptionText}
+        descriptionData={description.descriptionData}
       />
     </>
   );

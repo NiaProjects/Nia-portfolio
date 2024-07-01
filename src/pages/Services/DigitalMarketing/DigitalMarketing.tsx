@@ -22,8 +22,8 @@ const DigitalMarketing: FC<DigitalMarketingProps> = () => {
         paragraph={introduction.introductionText}
       />
       <ServicesCategories
-        headerText={description.descriptionHeader}
-        paragraph={description.descriptionText}
+        headerText={categories.header}
+        paragraph={categories.paragraph}
         icons={categories.categoriesIcons}
       />
       <ServicesDescription
@@ -31,6 +31,7 @@ const DigitalMarketing: FC<DigitalMarketingProps> = () => {
         alt={description.alt}
         headerText={description.descriptionHeader}
         paragraph={description.descriptionText}
+        descriptionData={description.descriptionData}
       />
     </>
   );
