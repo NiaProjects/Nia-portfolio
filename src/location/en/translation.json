@@ -1,0 +1,167 @@
+{
+    "softwareService": {
+        "name": "software",
+     "intro":{ 
+      "introductionHeader": {
+      "darkHeader": "Building Websites",
+      "orangeHeader": "Top-notch Programming Team"
+    },
+    "introductionText": "Our team of academics work alone, and do not outsource, which makes us the ideal choice to provide all web services whether your activity is local or commercial, as well as mobile applications; because these services complement each other. Nowadays, website design is one of the most influential factors in the success of a business to achieve financial returns, which makes it a display window that includes all the products or services provided, and helps you attract visitors from everywhere, and at all times, but the biggest and clearest goal is for your appearance to become familiar to many."
+  } ,
+  "categories":{
+    "header":{
+       "darkHeader": "type of software services",
+    "orangeHeader": ""
+    },
+"categoriesText":"We are unique in providing software in an innovative way that includes developing and designing services that precisely meet your business needs, so that you can achieve your technical goals through our professional team whose efforts focus on increasing your production."
+
+    ,"categoriesData":{
+       "mobile": "mobile",
+       "website": "website",
+       "crm": "crm system",
+       "dashboard": "Advertising"
+
+    }
+ }
+   , "desc":{     
+      "descriptionData":{
+         "mobile": {"name": "mobile", "description": "Viverra tristique vitae rutrum dui aliquet sed at nunc convallis. Tellus facilisis adipiscing cras est."},
+         "website": {"name": "mobile", "description": "Viverra tristique vitae rutrum dui aliquet sed at nunc convallis. Tellus facilisis adipiscing cras est."},
+         "crm": {"name": "mobile", "description": "Viverra tristique vitae rutrum dui aliquet sed at nunc convallis. Tellus facilisis adipiscing cras est."},
+         "dashboard":{"name": "mobile", "description": "Viverra tristique vitae rutrum dui aliquet sed at nunc convallis. Tellus facilisis adipiscing cras est."}
+      }
+   }
+  
+  
+  },
+    "digitalMarketingService": {
+      "name": "Digital marketing",
+      "intro":{
+      "introductionHeader": {
+       "darkHeader": "Lorem ipsum dolor sit amet",
+       "orangeHeader": " consectetur. "},
+       "introductionText": "Lorem ipsum dolor sit amet consectetur. Viverra tristique vitae rutrum dui aliquet sed at nunc convallis. Tellus facilisis adipiscing cras est Lorem ipsum dolor sit amet consectetur. Viverra tristique vitae rutrum dui aliquet sed at nunc convallis. Tellus facilisis adipiscing cras est Lorem ipsum dolor sit amet consectetur. Viverra tristique vitae rutrum dui aliquet sed at nunc convallis. Tellus facilisis adipiscing cras est Lorem ipsum dolor sit amet consectetur. Viverra tristique vitae rutrum dui aliquet sed at nunc convallis. Tellus facilisis adipiscing cras est."
+     },
+     "categories":{
+      "header":{
+         "darkHeader": " design",
+      "orangeHeader": "services"
+      },
+"categoriesText":"Tellus facilisis adipiscing cras est Lorem ipsum dolor sit amet consectetur. Viverra tristique vitae rutrum dui aliquet sed at nunc convallis. Tellus facilisis adipiscing cras est Lorem ipsum dolor sit amet consectetur. Viverra tristique vitae rutrum dui aliquet sed at nunc convallis. Tellus facilisis adipiscing cras est."
+
+,   "categoriesData":{
+  "content":  "create content",
+  "analysis":"analysis and reports",
+  "seo": "seo ",
+  "marketing": "marketing strategy"
+  ,"mediaMarketing":"social media marketing"
+} 
+
+}, "desc":{     
+      "descriptionData":{
+         "content": {"name": "create content", "description": "Viverra tristique vitae rutrum dui aliquet sed at nunc convallis. Tellus facilisis adipiscing cras est.software responsive social media e-commerce utility app"},
+         "analysis": {"name": "marketing strategy", "description": "Viverra tristique vitae rutrum dui aliquet sed at nunc convallis. Tellus facilisis adipiscing cras est."},
+         "seo": {"name": "seo", "description": "Viverra tristique vitae rutrum dui aliquet sed at nunc convallis. Tellus facilisis adipiscing cras est."},
+         "marketing":{"name": "analysis and reports", "description": "Viverra tristique vitae rutrum dui aliquet sed at nunc convallis. Tellus facilisis adipiscing cras est."}
+         ,"mediaMarketing":{"name": "create content", "description": "Viverra tristique vitae rutrum dui aliquet sed at nunc convallis. Tellus facilisis adipiscing cras est."}
+
+        }
+   }
+    },
+    "design": {
+      "name": "Design",
+      "intro":{
+      "introductionHeader": {
+       "darkHeader": "Lorem ipsum dolor sit amet",
+       "orangeHeader": " consectetur. "},
+       "introductionText": "Lorem ipsum dolor sit amet consectetur. Viverra tristique vitae rutrum dui aliquet sed at nunc convallis. Tellus facilisis adipiscing cras est Lorem ipsum dolor sit amet consectetur. Viverra tristique vitae rutrum dui aliquet sed at nunc convallis. Tellus facilisis adipiscing cras est Lorem ipsum dolor sit amet consectetur. Viverra tristique vitae rutrum dui aliquet sed at nunc convallis. Tellus facilisis adipiscing cras est Lorem ipsum dolor sit amet consectetur. Viverra tristique vitae rutrum dui aliquet sed at nunc convallis. Tellus facilisis adipiscing cras est."
+     },
+     "categories":{
+      "header":{
+         "darkHeader": " design",
+      "orangeHeader": "services"
+      },
+"categoriesText":"Tellus facilisis adipiscing cras est Lorem ipsum dolor sit amet consectetur. Viverra tristique vitae rutrum dui aliquet sed at nunc convallis. Tellus facilisis adipiscing cras est Lorem ipsum dolor sit amet consectetur. Viverra tristique vitae rutrum dui aliquet sed at nunc convallis. Tellus facilisis adipiscing cras est."
+
+,   "categoriesData":{
+  "logos":  "logos",
+  "brand":"brand",
+  "printing": "printing",
+  "mediaDesign": "mediaDesign"
+  ,"motion":"motion",
+  "infographic":"infographic"
+} 
+
+}, "desc":{     
+      "descriptionData":{
+         "logos": {"name": "logos", "description": "Viverra tristique vitae rutrum dui aliquet sed at nunc convallis. Tellus facilisis adipiscing cras est.software responsive social media e-commerce utility app"},
+         "brandIdentity": {"name": "brand identity", "description": "Viverra tristique vitae rutrum dui aliquet sed at nunc convallis. Tellus facilisis adipiscing cras est."},
+         "printing": {"name": "printing", "description": "Viverra tristique vitae rutrum dui aliquet sed at nunc convallis. Tellus facilisis adipiscing cras est."},
+         "mediaDesign":{"name": "social media design", "description": "Viverra tristique vitae rutrum dui aliquet sed at nunc convallis. Tellus facilisis adipiscing cras est."}
+         ,"motionGraphic":{"name": "motion graphic", "description": "Viverra tristique vitae rutrum dui aliquet sed at nunc convallis. Tellus facilisis adipiscing cras est."}
+         ,"infoGraphic":{"name": "info graphic", "description": "Viverra tristique vitae rutrum dui aliquet sed at nunc convallis. Tellus facilisis adipiscing cras est."}
+
+        }
+   }
+    },
+    "advertising": {
+      "name": "advertising",
+      "intro":{
+      "introductionHeader": {
+       "darkHeader": "Lorem ipsum dolor sit amet ",
+       "orangeHeader": "consectetur"},
+       "introductionText": "Lorem ipsum dolor sit amet consectetur. Viverra tristique vitae rutrum dui aliquet sed at nunc convallis. Tellus facilisis adipiscing cras est Lorem ipsum dolor sit amet consectetur. Viverra tristique vitae rutrum dui aliquet sed at nunc convallis. Tellus facilisis adipiscing cras est Lorem ipsum dolor sit amet consectetur. Viverra tristique vitae rutrum dui aliquet sed at nunc convallis. Tellus facilisis adipiscing cras est Lorem ipsum dolor sit amet consectetur. Viverra tristique vitae rutrum dui aliquet sed at nunc convallis. Tellus facilisis adipiscing cras est."
+     },
+     "categories":{
+      "header":{
+         "darkHeader": " advertising",
+      "orangeHeader": "services"
+      },
+"categoriesText":"Tellus facilisis adipiscing cras est Lorem ipsum dolor sit amet consectetur. Viverra tristique vitae rutrum dui aliquet sed at nunc convallis. Tellus facilisis adipiscing cras est Lorem ipsum dolor sit amet consectetur. Viverra tristique vitae rutrum dui aliquet sed at nunc convallis. Tellus facilisis adipiscing cras est."
+
+,  "categoriesData":{
+  "outdoor":  "outdoor",
+  "indoor":"indoor"
+ 
+} 
+
+}, "desc":{     
+      "descriptionData":{
+         "outdoor": {"name": "outdoor", "description": "Viverra tristique vitae rutrum dui aliquet sed at nunc convallis. Tellus facilisis adipiscing cras est."},
+         "indoor": {"name": "indoor", "description": "Viverra tristique vitae rutrum dui aliquet sed at nunc convallis. Tellus facilisis adipiscing cras est."}
+        }
+   }
+    },
+    "events": {
+      "name": "events",
+      "intro":{
+      "introductionHeader": {
+       "darkHeader": "Lorem ipsum dolor sit amet",
+       "orangeHeader": "consectetur"},
+       "introductionText": " Lorem ipsum dolor sit amet consectetur. Viverra tristique vitae rutrum dui aliquet sed at nunc convallis. Tellus facilisis adipiscing cras est Lorem ipsum dolor sit amet consectetur. Viverra tristique vitae rutrum dui aliquet sed at nunc convallis. Tellus facilisis adipiscing cras est Lorem ipsum dolor sit amet consectetur. Viverra tristique vitae rutrum dui aliquet sed at nunc convallis. Tellus facilisis adipiscing cras est Lorem ipsum dolor sit amet consectetur. Viverra tristique vitae rutrum dui aliquet sed at nunc convallis. Tellus facilisis adipiscing cras est."
+     },
+ "desc":{     
+      "descriptionHeader": {
+      "darkHeader": "events ",
+      "orangeHeader": "services"
+    },"descriptionText":"Tellus facilisis adipiscing cras est Lorem ipsum dolor sit amet consectetur. Viverra tristique vitae rutrum dui aliquet sed at nunc convallis. Tellus facilisis adipiscing cras est Lorem ipsum dolor "
+   }
+    },
+    "photography": {
+      "name": "events",
+      "intro":{
+      "introductionHeader": {
+       "darkHeader": "Lorem ipsum dolor sit amet",
+       "orangeHeader": "consectetur"},
+       "introductionText": " Lorem ipsum dolor sit amet consectetur. Viverra tristique vitae rutrum dui aliquet sed at nunc convallis. Tellus facilisis adipiscing cras est Lorem ipsum dolor sit amet consectetur. Viverra tristique vitae rutrum dui aliquet sed at nunc convallis. Tellus facilisis adipiscing cras est Lorem ipsum dolor sit amet consectetur. Viverra tristique vitae rutrum dui aliquet sed at nunc convallis. Tellus facilisis adipiscing cras est Lorem ipsum dolor sit amet consectetur. Viverra tristique vitae rutrum dui aliquet sed at nunc convallis. Tellus facilisis adipiscing cras est."
+     },
+ "desc":{     
+      "descriptionHeader": {
+      "darkHeader": "events ",
+      "orangeHeader": "services"
+    },"descriptionText":"Tellus facilisis adipiscing cras est Lorem ipsum dolor sit amet consectetur. Viverra tristique vitae rutrum dui aliquet sed at nunc convallis. Tellus facilisis adipiscing cras est Lorem ipsum dolor "
+   }
+    
+    }
+  }
+  

@@ -5,6 +5,7 @@ import { customIcon } from "../../../assets/icons/customIcons";
 import { v4 as uuidv4 } from "uuid";
 import AnchorLink from "react-anchor-link-smooth-scroll";
 import Button from "../../Button";
+import LanguageSwitcher from "../LanguageSwitcher/LanguageSwitcher ";
 
 interface IProps {
   type?: "header" | "footer" | "mobile";
@@ -153,13 +154,8 @@ const NavItems = ({ type = "header" }) => {
     >
       {linkPages}
       <li className="ms-auto  ">
-        <Button intent={"outline"}>
-          <div className="flex gap-1.5 p-2 ">
-            {" "}
-            <span className="">English </span>
-            <span>{customIcon.languageIcon}</span>
-          </div>
-        </Button>
+        <LanguageSwitcher />
+
         <Button>contact us</Button>
       </li>
     </ul>

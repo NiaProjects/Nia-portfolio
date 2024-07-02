@@ -9,7 +9,6 @@ interface IProps {
 }
 
 const HeroImage = ({ heroImage, headerText }: IProps) => {
-  // const { t } = useTranslation();
   return (
     <section className="relative h-[200px] md:h-[300px] xl:h-[500px]">
       <div>

@@ -4,11 +4,11 @@ import ReactDOM from "react-dom/client";
 import App from "./App.tsx";
 import "./styles/index.css";
 import "./styles/main.scss";
-import "./i18n/config.ts";
+// import "./i18n/config.ts";
 import { BrowserRouter } from "react-router-dom";
 import theme from "./theme";
 import { ChakraProvider } from "@chakra-ui/react";
-
+import "./location/i18n.ts";
 ReactDOM.createRoot(document.getElementById("root")!).render(
   <React.StrictMode>
     <ChakraProvider theme={theme}>
