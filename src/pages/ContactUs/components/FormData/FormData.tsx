@@ -57,37 +57,7 @@ const FormContact = ({}: IProps) => {
       console.log(error.message);
     }
   };
-  useEffect(() => {});
 
-  // const handleSubmitForm = async (event: React.FormEvent<HTMLFormElement>) => {
-  //   event.preventDefault();
-  //   const form = event.currentTarget;
-  //   const formData = new FormData(form);
-  //   const data = Object.fromEntries(formData.entries());
-  //   try {
-  //     const respons = await axios.post(url, data);
-  //     if (respons.status === 201) {
-
-  //         const data = Object.fromEntries(formData.entries());
-  //         try {
-  //           const response = await axios.post(url, data);
-  //           if (response.status === 201) {
-  //             alert("Success!");
-  //             form.reset();
-  //           }
-  //         } catch (error) {
-  //           console.log(error.message);
-  //         }
-  //       }
-  //       event.target.reset();
-  //     }
-  //   } catch (error) {
-  //     console.log(error.message);
-  //   }
-  // };
-  // useEffect(() => {
-  //   handleSubmitForm();
-  // }, []);
   return (
     <>
       <form

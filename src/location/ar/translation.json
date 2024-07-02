@@ -1,4 +1,14 @@
 {
+  "home":{
+  "sidler":{"firstSlider":{"header":"we have created all the solution and designs","subHeader":"through"}
+  ,"secondSlider":{"header":"we have created all the solution and designs","subHeader":"through"}},
+  "aboutUs":{"header":{"darkText":""}},
+  "ourServices":{"header":"خدماتنا","description":"تفانينا في العمل هو شغفنا تفانينا في العمل هو شغفنا تفانينا في العمل هو شغفنا "}
+  ,"partners":""
+  ,"ourWorks":"",
+  "reviews":"",
+  "news":""
+},
     "softwareService": {
       "name": "البرمجيات",
       "intro":{

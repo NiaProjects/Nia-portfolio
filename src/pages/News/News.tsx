@@ -35,7 +35,6 @@ const News: FC<NewsProps> = () => {
 
   const handleOnClick = useCallback((index: number) => {
     setSelectedTabIndex(index);
-    console.log(index);
   }, []);
 
   const handlePlay = () => {
@@ -45,7 +44,6 @@ const News: FC<NewsProps> = () => {
   };
 
   const data = [{ imgSection: { img: newsHeader, alt: "contact us Image" } }];
-  console.log(data[0].imgSection);
   return (
     <div className="">
       <HeroImage heroImage={data[0].imgSection} headerText={"news"} />

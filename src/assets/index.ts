@@ -37,7 +37,9 @@ import whatAchieved from "./images/whatAchieved.png";
 import whatAchievedBigSection from "./images/whatAchievedBigSection.png";
 import partners from "./images/partners.png";
 import newsHeader from "./images/newsHeader.png";
-
+//HOME
+//OurServices
+import ads from "./images/Home/ads.png" 
 // Services 
 // ** digital Marketing 
 import DMheaderImg from "./images/services/DigitalmarketingService/DigitalmarketingServiceHeader.png";
@@ -69,6 +71,10 @@ export { logo,slider1, slider2,avatarSlider1, facebook, ig,twitter ,homeHart,quo
 ,NiarightIcone,newsCardImg,ReviewUserImg,partnersLogos,footerLogo,heroImg,contactUsImg,NewsCover,topNews,prevWorksndBigImg
 ,whatAchieved,whatAchievedBigSection,partners,newsHeader
 };
+export const homeImgs={
+    ourServicesImgs:{ads:ads}
+};
+
 export const servicesPagesImg={
     softwareImages:{ 
         headerImgSF:SFheaderImg,
@@ -100,4 +106,5 @@ export const servicesPagesImg={
     introImgPH:photographyIntroImg,
     descriptionImgPH:photographyDescriptionImg,}
     }
+
 

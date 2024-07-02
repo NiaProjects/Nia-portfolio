@@ -1,4 +1,13 @@
-{
+{"home":{
+  "sidler":{"firstSlider":{"header":"we have created all the solution and designs","subHeader":"through"}
+  ,"secondSlider":{"header":"we have created all the solution and designs","subHeader":"through"}},
+  "aboutUs":{"header":{"darkText":""}},
+  "ourServices":{"header":"our services"}
+  ,"partners":""
+  ,"ourWorks":"",
+  "reviews":"",
+  "news":""
+},
     "softwareService": {
         "name": "software",
      "intro":{ 

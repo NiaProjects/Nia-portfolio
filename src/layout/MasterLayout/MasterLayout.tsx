@@ -10,7 +10,9 @@ const MasterLayout = () => {
   return (
     <>
       <Header />
-      <main className={`App ${i18n.language === "ar" ? "rtl" : "ltr"}`}>
+      <main
+        className={`overflow-hidden ${i18n.language === "ar" ? "rtl" : "ltr"}`}
+      >
         <Outlet />
       </main>
       {/* <Footer /> */}

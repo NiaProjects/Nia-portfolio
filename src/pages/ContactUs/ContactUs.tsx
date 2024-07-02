@@ -91,7 +91,6 @@ const ContactUs = () => {
   const handleOnClick = React.useCallback(
     (index: number) => {
       setSelectedTabIndex(index);
-      console.log(index);
     },
     [setSelectedTabIndex]
   );

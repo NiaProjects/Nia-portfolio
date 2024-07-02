@@ -20,27 +20,13 @@ const AddressLocation = ({ locations }: IProps) => {
         apiKey={MapKey}
         onLoad={() => console.log("Maps API has loaded.")}
       >
-        {/*
-         1: Entire World
-        5: Landmass/continent
-        10: City
-        15: Streets
-        20: Buildings 
-        */}
+      
         <Map
           defaultZoom={10}
-          // gestureHandling={"red"}
           disableDefaultUI={true}
           defaultCenter={{ lat: 29.987664269730214, lng: 31.135320380036145 }}
           mapId={"626858346ad1e161"}
-          // onCameraChanged={(ev: MapCameraChangedEvent) =>
-          //   console.log(
-          //     "camera changed:",
-          //     ev.detail.center,
-          //     "zoom:",
-          //     ev.detail.zoom
-          //   )
-          // }
+         
         >
           {locations?.map((item) => (
             <AdvancedMarker key={item.key} position={item.location}>

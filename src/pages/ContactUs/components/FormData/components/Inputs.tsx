@@ -12,7 +12,6 @@ interface IProps {
 }
 
 const Inputs = ({ label, id, error, ...props }: IProps) => {
-  console.log(error);
   return (
     <div className="mb-6 w-[87%]">
       <label htmlFor="email" className=" block text-[#9E9E9E] font-semibold">

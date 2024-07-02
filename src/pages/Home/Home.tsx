@@ -33,7 +33,6 @@ const HomePage: FC<HomeProps> = () => {
   };
   React.useEffect(() => {
     window.addEventListener("scroll", controlNavbar);
-    console.log("scrollY", lastScrollY, "Y", window.innerHeight);
     return () => {
       window.removeEventListener("scroll", controlNavbar);
     };
@@ -41,7 +40,6 @@ const HomePage: FC<HomeProps> = () => {
   return (
     <>
       {isVisible && (
-        //  lg:px-[100px]
         <div className="fixed bottom-0  w-full px-[1.125rem] md:px-[1.5rem] transform -translate-y-[40px]  flex justify-between z-50 ">
           <div className=" relative w-medium h-medium md:w-[2.875rem] lg:w-[4.375rem] lg:h-[4.375rem] ">
             <Link
@@ -75,10 +73,10 @@ const HomePage: FC<HomeProps> = () => {
       </section>
       <AboutSection />
       <OurServicesSection />
-      <PartnersSection />
+      {/* <PartnersSection />
       <OurWorkSection />
       <ReviewsSection />
-      <NewsSection />
+      <NewsSection /> */}
     </>
   );
 };
