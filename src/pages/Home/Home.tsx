@@ -73,10 +73,10 @@ const HomePage: FC<HomeProps> = () => {
       </section>
       <AboutSection />
       <OurServicesSection />
-      {/* <PartnersSection />
+      <PartnersSection />
       <OurWorkSection />
       <ReviewsSection />
-      <NewsSection /> */}
+      <NewsSection />
     </>
   );
 };

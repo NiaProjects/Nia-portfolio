@@ -1,12 +1,23 @@
-{"home":{
+{
+  "components":{"readMore":"read more"},
+  "home":{
   "sidler":{"firstSlider":{"header":"we have created all the solution and designs","subHeader":"through"}
   ,"secondSlider":{"header":"we have created all the solution and designs","subHeader":"through"}},
-  "aboutUs":{"header":{"darkText":""}},
-  "ourServices":{"header":"our services"}
-  ,"partners":""
-  ,"ourWorks":"",
-  "reviews":"",
-  "news":""
+  "aboutUs":{"header":{"darkText":"who"},"paragraph":"Lorem ipsum dolor sit amet consectetur. Scelerisque ut fermentum non libero quis Lorem ipsum dolor sit amet consectetur. Scelerisque ut fermentum non libero quis Lorem ipsum dolor sit amet consectetur. Scelerisque ut fermentum non libero quis Lorem ipsum dolor sit amet consectetur. Scelerisque ut fermentum non libero quis. "},
+  "ourServices":{"header":{"text":"our services","description":"lorem ibsum donetlorem ibsum donet lorem ibsum donetlorem ibsum donet donet lorem ibsum donetlorem ibsum donet"},
+  "mainServices":{
+    "ads":"Advertising","marketing":"Digital marketing","design":"Design","events":"Events","software":"software","Photography":"Photography"
+  }}
+  ,"partners":{"header":{"darkText":"our","orangeHeader":"partners"}}
+  ,"ourWorks":{"header":{"darkText":"What we have","orangeHeader":"achieved"},"description":"Lorem ipsum dolor sit amet consectetur. Volutpat condimentum nibh eget eu aliquet quam lacus."},
+  "reviews":{"header":{"darkText":"reviews"},"description":"Lorem ipsum dolor sit amet consectetur. Volutpat condimentum nibh eget eu aliquet quam lacus."},
+  "news":{"header":{"darkText":"news"},"description":"Lorem ipsum dolor sit amet consectetur. Volutpat condimentum nibh eget eu aliquet quam lacus."
+    ,"newsCard":{"header":"Lorem ipsum dolor sit amet ","body":"Lorem ipsum dolor sit amet consectetur. Natoque lobortis adipiscing id dignissim malesuada pretium mattis ut."
+    ,"footer":{"date":"jun"}
+  }
+
+  }
+  
 },
     "softwareService": {
         "name": "software",

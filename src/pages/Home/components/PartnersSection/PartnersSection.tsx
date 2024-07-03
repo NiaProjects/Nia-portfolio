@@ -7,18 +7,20 @@ import { Autoplay, Navigation, Pagination } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { v4 as uuidv4 } from "uuid";
 import { delay } from "framer-motion";
+import { useTranslation } from "react-i18next";
 
 interface IProps {}
-
+const partnersArray = [1, 2, 4, 5, 6, 7, 8, 9, 10, 11];
+const partnerLogos = [{ url: partners }];
 const swiperSliedsPartnersLogos = (
   <>
-    {[1, 2, 4, 5, 6, 7, 8, 9, 10, 11].map(() => (
-      <div key={uuidv4()}>
-        {" "}
+    {partnersArray.map((item, index) => (
+      <div key={`partner-${index}-${item}`}>
+        {`partner - ${index}`}
         <SwiperSlide>
           <div className="partnerLogos  bg-[#FAD4AA] w-full">
             <img
-              src={partners}
+              src={partnerLogos[0].url}
               className="w-[100px] md:w-[110px] lg:w-[168px] h-[44px] md:h-[60px] lg:h-[108px] "
             />
           </div>
@@ -28,15 +30,21 @@ const swiperSliedsPartnersLogos = (
   </>
 );
 const PartnersSection = ({}: IProps) => {
+  const { t, i18n } = useTranslation();
   return (
     <section className="  m-auto my-large">
       <div className="header w-[160px] md:w-[200px] lg:w-[266px] text-center m-auto">
         {" "}
-        <HeadingTitle headerDark="our" headerOrang="partners">
-          <span className="text-[#131312]  font-semibold"> in success</span>
+        <HeadingTitle
+          headerDark={t("home.partners.header.darkText")}
+          headerOrang={t("home.partners.header.orangeHeader")}
+        >
+          <span className="text-[#131312]  font-semibold block">
+            {i18n.language !== "ar" && "In success"}
+          </span>
         </HeadingTitle>
       </div>
-      {/*  */}
+
       <div className="   flex justify-center items-center mt-large ">
         <div className=" h-[140px] lg:h-[295px] w-full ">
           <div className="py-[48px] md:py-[90px] bg-[#FAD4AA]">
@@ -66,6 +74,10 @@ const PartnersSection = ({}: IProps) => {
                   spaceBetween: 10,
                 },
                 1024: {
+                  slidesPerView: 5,
+                  spaceBetween: 20,
+                },
+                1225: {
                   slidesPerView: 8.5,
                   spaceBetween: 10,
                 },

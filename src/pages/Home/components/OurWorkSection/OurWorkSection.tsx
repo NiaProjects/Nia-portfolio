@@ -6,16 +6,19 @@ import {
   whatAchieved,
   whatAchievedBigSection,
 } from "../../../../assets";
+import { t } from "i18next";
+import { useTranslation } from "react-i18next";
 
 const OurWorkSection = () => {
+  const { t, i18n } = useTranslation();
   return (
     <section id="our-works" className="mx-auto py-8 ">
       {/* container flex  justify-center w-[30%] md:w-[40%] lg:w-[10%] xl:w-[30%] mx-auto" */}
       <div className="max-w-[330px] min-w-[184px] mx-auto text-center">
         <div className="text-center m-auto w-[11.5rem] max-w-[20.625rem]">
           <HeadingTitle
-            headerDark="What we have"
-            headerOrang="achieved"
+            headerDark={t("home.ourWorks.header.darkText")}
+            headerOrang={t("home.ourWorks.header.orangeHeader")}
             classes=""
           />
         </div>
@@ -25,14 +28,17 @@ const OurWorkSection = () => {
         marginBottom={{ base: "32px", md: "64px", lg: "100px" }}
         textAlign="center"
       >
-        Lorem ipsum dolor sit amet consectetur. Volutpat condimentum nibh eget
-        eu aliquet quam lacus.{" "}
+        {t("home.ourWorks.description")}
       </Text>
-      <div className="max-md:bg-[#FAD4AA]">
-        <div className="relative container w-[90.4%]">
+      <div className="max-md:bg-[#FAD4AA] bg-sky-600 relative">
+        <div className=" container w-[90.4%] ">
           <div
-            className="backgroundLayer absolute -left-10 md:bg-[#FAD4AA] w-screen max-md:top-0 max-md:bottom-0 max-md:left-0 max-md:right-0 z-1 md:h-[261px] lg:h-[400px]
-                 md:top-1/2 md:left-1/2 right-10 md:transform md:-translate-x-1/2 md:-translate-y-1/2"
+            className={`backgroundLayer absolute -left-10 md:bg-[#FAD4AA] w-screen max-md:top-0 max-md:bottom-0 max-md:left-0 max-md:right-0 z-1 md:h-[261px] lg:h-[400px]
+                 ${
+                   i18n.language !== "ar"
+                     ? "right-0   md:top-1/2 md:left-1/2 md:transform md:-translate-x-1/2 md:-translate-y-1/2"
+                     : "  right-0 left-0  md:top-1/4"
+                 } `}
           ></div>
           <div className="ourWorksContainer relative z-2 py-[24px] grid grid-cols-1 md:grid-cols-3 gap-4 xl:gap-[1.25rem]">
             {/* Column 1 */}

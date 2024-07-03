@@ -17,54 +17,54 @@ import ServicesCardSVG from "./components/ServicesCardSVG";
 
 interface IProps {}
 const { ads } = homeImgs.ourServicesImgs;
-const cardsData = [
-  {
-    id: uuidv4(),
-    icon: customIcon.ourServicesIcons.advertisingIcon,
-    url: ads,
-    serviceCardImage: cardServicesCategory,
-    header: "Advertising",
-  },
-  {
-    id: uuidv4(),
-    url: ads,
-
-    icon: customIcon.ourServicesIcons.digitalMarkingIcon,
-    serviceCardImage: cardServicesCategory2,
-    header: "Digital Marketing  ",
-  },
-
-  {
-    id: uuidv4(),
-    url: ads,
-    icon: customIcon.ourServicesIcons.designIcon,
-    serviceCardImage: cardServicesCategory,
-    header: "design",
-  },
-  {
-    id: uuidv4(),
-    url: ads,
-    icon: customIcon.ourServicesIcons.eventsIcon,
-    serviceCardImage: cardServicesCategory,
-    header: "events",
-  },
-  {
-    id: uuidv4(),
-    url: ads,
-    icon: customIcon.ourServicesIcons.softWareIcon,
-    serviceCardImage: cardServicesCategory,
-    header: "Software",
-  },
-  {
-    id: uuidv4(),
-    url: ads,
-    icon: customIcon.ourServicesIcons.photographyIcon,
-    serviceCardImage: cardServicesCategory,
-    header: "photography",
-  },
-];
 const OurServicesSection = () => {
   const { t } = useTranslation();
+  const cardsData = [
+    {
+      id: uuidv4(),
+      icon: customIcon.ourServicesIcons.advertisingIcon,
+      url: ads,
+      serviceCardImage: cardServicesCategory,
+      header: t("home.ourServices.mainServices.ads"),
+    },
+    {
+      id: uuidv4(),
+      url: ads,
+
+      icon: customIcon.ourServicesIcons.digitalMarkingIcon,
+      serviceCardImage: cardServicesCategory2,
+      header: t("home.ourServices.mainServices.marketing"),
+    },
+
+    {
+      id: uuidv4(),
+      url: ads,
+      icon: customIcon.ourServicesIcons.designIcon,
+      serviceCardImage: cardServicesCategory,
+      header: t("home.ourServices.mainServices.design"),
+    },
+    {
+      id: uuidv4(),
+      url: ads,
+      icon: customIcon.ourServicesIcons.eventsIcon,
+      serviceCardImage: cardServicesCategory,
+      header: t("home.ourServices.mainServices.events"),
+    },
+    {
+      id: uuidv4(),
+      url: ads,
+      icon: customIcon.ourServicesIcons.softWareIcon,
+      serviceCardImage: cardServicesCategory,
+      header: t("home.ourServices.mainServices.software"),
+    },
+    {
+      id: uuidv4(),
+      url: ads,
+      icon: customIcon.ourServicesIcons.photographyIcon,
+      serviceCardImage: cardServicesCategory,
+      header: t("home.ourServices.mainServices.Photography"),
+    },
+  ];
   const navigate = useNavigate();
   const handleCardClick = (url?: string) => {
     if (url) {
@@ -79,7 +79,7 @@ const OurServicesSection = () => {
       >
         <div className="max-w-[330px] min-w-[184px] mx-auto text-center">
           <HeadingTitle
-            headerDark={t("home.ourServices.header")}
+            headerDark={t("home.ourServices.header.text")}
             classes={"text-white"}
           />
         </div>
@@ -90,21 +90,21 @@ const OurServicesSection = () => {
             fontSize={{ base: "16px", md: "18px" }}
             color={"white"}
           >
-            t("home.ourServices.description")
+            {t("home.ourServices.header.description")}
           </Text>
         </div>
-        <div className=" ourServicesCardsContainer max-md:w-[13.8125rem] md:w-[94.64%] lg:w-[87.15rem]  container ">
-          <div className="  ServiceCard  grid gap-6 grid-cols-1  w-full bg-sky-900  md:grid-cols-3 lg:grid-cols-3 justify-center items-center ">
+        <div className=" ourServicesCardsContainer  mt-8  max-md:w-[14.8125rem] md:w-[94.64%] lg:w-[87.15rem]  container ">
+          <div className="  ServiceCard  grid gap-6 grid-cols-1  w-full  md:grid-cols-3 lg:grid-cols-3 justify-center items-center  ">
             {cardsData?.map((cardData) => {
               const { icon, header, url, id } = cardData;
               return (
                 <div
-                  className="cards relative  bg-orange-900  xl:mt-24  max-md:h-[13rem] md:min-h-[13rem] lg:h-[16rem] xl:h-[22rem] w-full     "
+                  className="cards relative   max-md:h-[13rem] md:min-h-[13rem] lg:h-[17rem] xl:h-[24rem] w-full"
                   key={id}
                   onClick={() => alert(header)}
                 >
-                  <div className="  card rounded-2xl bluer mx-auto   w-full  bg-orange-400  min-h-[170px] max-h-[214.41px] ">
-                    <div className="flex card-first-layer  rounded-2xl bluer border  xl:h-[214px] h-[108px] ">
+                  <div className="  card rounded-2xl bluer mx-auto   w-full  min-h-[170px] max-h-[214.41px] ">
+                    <div className="flex card-first-layer  rounded-2xl bluer border  xl:h-[250px] h-[108px] ">
                       <header className=" flex ms-[10px] md:ms-[1.5rem] md: mt-[.6rem] mb-[1.18rem] xl:mt-[1.5rem] lg:mb-[2.5rem]">
                         <span className=" me-1 p-1">{icon}</span>
                         <h3 className="text-white text-[1rem] xl:text-[1.5rem] capitalize">
@@ -112,8 +112,8 @@ const OurServicesSection = () => {
                         </h3>
                       </header>
                     </div>
-                    {/*  */}
-                    <div className="absolute rounded-2xl bluer  translate-x-[11%]  max-xl:-translate-y-[115%] xl:top-[97px]  w-[80%] xl:w-[320px] bg-[#e2e2e24b] h-[70px] mb-[18px] "></div>
+                    {/*  translate-x-[11%]  max-xl:-translate-y-[100%] bg-[#e2e2e24b]*/}
+                    <div className="absolute rounded-2xl bluer left-0 right-0 max-xl:-translate-y-[80%]   xl:top-[97px]  w-[80%] xl:w-[80%] bg-[#0000004b]  mx-auto h-[70px] mb-[18px] "></div>
                     <div className="absolute  min-h-[7.0625rem]   top-[4rem] w-full   xl:h-[224px] xl:top-[115px] ">
                       <div className="w-full object-fill ">
                         <ServicesCardSVG url={url} />
@@ -121,9 +121,9 @@ const OurServicesSection = () => {
                     </div>
                   </div>
                   <s
-                    className={`circleService absolute rounded-full  lg:first-letter  right-0 bottom-0 transform translate-y-[10%] -translate-x-[10%]  w-[18%] h-[20%] xl:w-[70px] xl:h-[70px]  `}
+                    className={`circleService absolute rounded-full  lg:first-letter  right-0 lg:right-1 bottom-1 xl:bottom-2 transform translate-y-[-5%] translate-x-[15%]  w-[18%] h-[20%] lg:w-[60px] lg:h-[60px] xl:w-[80px] xl:h-[80px]  `}
                   >
-                    <FaArrowRightLong className="-rotate-45 text-white w-[50%] h-[25.5px] xl:bottom-0" />
+                    <FaArrowRightLong className="-rotate-45 text-white w-[50%]  h-[25.5px] xl:bottom-0" />
                   </s>
                 </div>
               );

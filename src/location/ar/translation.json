@@ -1,13 +1,22 @@
 {
+  "components":{"readMore":"أقرأ المزيد"},
+
   "home":{
-  "sidler":{"firstSlider":{"header":"we have created all the solution and designs","subHeader":"through"}
-  ,"secondSlider":{"header":"we have created all the solution and designs","subHeader":"through"}},
-  "aboutUs":{"header":{"darkText":""}},
-  "ourServices":{"header":"خدماتنا","description":"تفانينا في العمل هو شغفنا تفانينا في العمل هو شغفنا تفانينا في العمل هو شغفنا "}
-  ,"partners":""
-  ,"ourWorks":"",
-  "reviews":"",
-  "news":""
+  "sidler":{"firstSlider":{"header":"we have created all the solution and designs","subHeader":"through"},"secondSlider":{"header":"we have created all the solution and designs","subHeader":"through"}},
+  "aboutUs":{"header":{"darkText":"من"},"paragraph":"كان عام ،1993 بمثابة نقطة تحول في السوق المحلي؛ ألنه تم تأسيس. شركتنا NIA المتخصصة في الدعاية واإلعالن، ووجدنا أن السوق. متعط ًشا لإلبداع، فقررنا إشباعه بأفكارنا التي ال تنتهي وصدقنا في. وعودنا على مدار أكثر من 30 عاما، وأبدعنا في ظهور األنشطة. التجارية عبر ابتكار الحلول والتصاميم من قبل ُنخبة من أفضل الخبراء في كافة المجاالت كما أسهمنا في صناعة وتركيب أكثر من 150000 متر لجميع أنواع. الالفتات اإلعالنية ....... "},
+  "ourServices":{"header":{"text":"خدماتنا","description":"تفانينا في العمل هو شغفنا"},
+  "mainServices":{
+    "ads":"تنظيم المعارض","marketing":"التسويق الرقمي","design":"التصميم","events":"تنظيم المعارض","software":"البرمجيات","Photography":"التصوير"
+  }}
+  ,"partners":{"header":{"darkText":"شركائنا في","orangeHeader":"النجاح"}}
+  ,"ourWorks":{"header":{"darkText":"ماذا","orangeHeader":"حققنا"},"description":"ابداعنا يتحدث"},
+  "reviews":{"header":{"darkText":"التقيمات"},"description":"نقدم تجارب حقيقية وآراء صادقة لمساعدتك في اتخاذ قرارات مستنيرة"},
+  "news":{"header":{"darkText":"الأخبار"},"description":"خطوة أخرى في سلسلة نجاحاتنا"    ,
+  "newsCard":{"header":"تصنيف شركة nai من افضل ثلاث شركات علي مستوي المملكة العربية السعودية","body":"أعلنت شركة nia عن تصنيفها كواحدة من أفضل ثلاث شركات في المملكة العربية السعودية, مما يعكس بالجودة والتميز في تقديم خدماتها..."
+  ,"footer":{"date":"يونيو"}
+
+}
+}
 },
     "softwareService": {
       "name": "البرمجيات",

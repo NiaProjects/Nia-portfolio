@@ -3,19 +3,6 @@ import { FaQuoteRight } from "react-icons/fa6";
 import { slider1, slider2 } from "../../../../../../assets";
 import { customIcon } from "../../../../../../assets/icons/customIcons";
 
-const images = [
-  {
-    src: slider1,
-    text: "We have created all the solutions and designs through",
-    delay: 7000,
-  },
-  {
-    src: slider2,
-    text: "We have created all the solutions and designs through",
-    delay: 5000,
-  },
-];
-
 const SliderImages = () => {
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
   const [fadeProp, setFadeProp] = useState({ fade: "fade-in" });
@@ -23,6 +10,18 @@ const SliderImages = () => {
   const prevButtonRef = useRef<HTMLButtonElement>(null);
   const nextButtonRef = useRef<HTMLButtonElement>(null);
 
+  const images = [
+    {
+      src: slider1,
+      text: "We have created all the solutions and designs through",
+      delay: 7000,
+    },
+    {
+      src: slider2,
+      text: "We have created all the solutions and designs through",
+      delay: 5000,
+    },
+  ];
   useEffect(() => {
     const currentImageDelay = images[currentImageIndex].delay;
     let interval = setInterval(() => {

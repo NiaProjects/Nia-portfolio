@@ -6,10 +6,16 @@ import {
   aboutNia2,
   aboutNia3,
   dotedVector,
+  homeImgs,
+  servicesPagesImg,
 } from "../../../../assets";
 import { HeadingTitle } from "../../../../components/text";
+import { useTranslation } from "react-i18next";
+import { FaArrowAltCircleLeft, FaArrowAltCircleRight } from "react-icons/fa";
 
 const AboutSection = () => {
+  const { tech, mark, social } = homeImgs.aboutUs;
+  const { t, i18n } = useTranslation();
   return (
     <>
       <section
@@ -28,8 +34,8 @@ const AboutSection = () => {
           <div className="aboutText  md:w-1/2   ">
             <div className="mx-auto text-center">
               <HeadingTitle
-                headerDark="why"
-                headerOrang="nia"
+                headerDark={t("home.aboutUs.header.darkText")}
+                headerOrang="nia "
                 type="aboutUsHeader"
               />
             </div>
@@ -40,9 +46,7 @@ const AboutSection = () => {
                 textAlign={"center"}
                 lineHeight={{ base: "19.5px", lg: "24.38px" }}
               >
-                Lorem ipsum dolor sit amet consectetur. Scelerisque ut fermentum
-                non libero quis Lorem ipsum dolor sit amet consectetur.
-                Scelerisque ut fermentum non libero quis Lorem ipsum dolor sit
+                {t("home.aboutUs.paragraph")}
               </Text>
             </div>
             <div className="flex gap-3 items-center justify-end md:me-4 xl:pt-[32px] cursor-pointer">
@@ -52,27 +56,32 @@ const AboutSection = () => {
                   fontWeight={{ base: "medium" }}
                   textAlign={"end"}
                   textTransform={"capitalize"}
+                  fontFamily={"bold"}
                 >
-                  read more
+                  {t("components.readMore")}
                 </Text>
               </Link>
               <span>
-                <img src={NiarightIcone} />
+                {i18n.language !== "ar" ? (
+                  <FaArrowAltCircleRight size={20} color="#131312" />
+                ) : (
+                  <FaArrowAltCircleLeft size={20} color="#131312" />
+                )}
               </span>
             </div>
           </div>
           <div className="aboutImages  h-[380px] lg:h-[813px] w-1/2 md:flex flex-col justify-end hidden relative  ">
             <img
-              src={aboutNia3}
-              className="w-[190px] h-[160px]  top lg:w-[280px] lg:h-[230px]  xl:w-[376px]   xl:h-[304px]  ms-auto   absolute top-[31px] lg:top-[120px] xl:top-[80px] right-0    order-1 z-20	 "
+              src={mark}
+              className="w-[190px] h-[160px] rounded-3xl  top lg:w-[280px] lg:h-[230px]  xl:w-[376px]   xl:h-[304px]  ms-auto z-5	  absolute top-[31px] lg:top-[120px] xl:top-[80px] right-0    order-1 "
             />
             <img
-              src={aboutNia2}
-              className="w-[190px] h-[160px]  lg:w-[280px] lg:h-[230px]  xl:w-[376px]   xl:h-[304px]  order-2 z-10 absolute left-0 top-[116px]  lg:top-[255px]"
+              src={social}
+              className="w-[190px] h-[160px]  rounded-3xl lg:w-[280px] lg:h-[230px]  xl:w-[376px]   xl:h-[304px]  order-2 z-0 absolute left-0 top-[116px]  lg:top-[255px]"
             />
             <img
-              src={aboutNia1}
-              className="w-[190px] h-[160px]   lg:w-[280px] lg:h-[230px]  xl:w-[376px]   xl:h-[304px]  ms-auto order-3 z-0 absolute  right-0 bottom-[31px] lg:bottom-[20%]  xl:bottom-[7%]"
+              src={tech}
+              className="w-[190px] h-[160px]  rounded-3xl  lg:w-[280px] lg:h-[230px]  xl:w-[376px]   xl:h-[304px]  ms-auto order-3 z-10 absolute  right-0 bottom-[31px] lg:bottom-[20%]  xl:bottom-[7%]"
             />
           </div>
         </div>

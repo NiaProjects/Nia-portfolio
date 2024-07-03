@@ -38,6 +38,11 @@ import whatAchievedBigSection from "./images/whatAchievedBigSection.png";
 import partners from "./images/partners.png";
 import newsHeader from "./images/newsHeader.png";
 //HOME
+//about us
+import about_1 from "./images/AboutSection/about_1.png"
+import about_2 from "./images/AboutSection/about_2.png"
+import about_3 from "./images/AboutSection/about_3.png"
+
 //OurServices
 import ads from "./images/Home/ads.png" 
 // Services 
@@ -72,6 +77,7 @@ export { logo,slider1, slider2,avatarSlider1, facebook, ig,twitter ,homeHart,quo
 ,whatAchieved,whatAchievedBigSection,partners,newsHeader
 };
 export const homeImgs={
+    aboutUs:{tech:about_1,social:about_2,mark:about_3},
     ourServicesImgs:{ads:ads}
 };
 

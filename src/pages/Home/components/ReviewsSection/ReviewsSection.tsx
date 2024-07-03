@@ -7,13 +7,14 @@ import "swiper/css/pagination";
 import "swiper/css/navigation";
 import { v4 as uuidv4 } from "uuid";
 import { customIcon } from "../../../../assets/icons/customIcons";
+import { useTranslation } from "react-i18next";
 
 interface IProps {}
 const swiperSliedsReviews = (
   <>
     {[1, 2, 3, 4].map((index) => (
       <SwiperSlide key={uuidv4()}>
-        <div className="reviewBox shadowEffect  relative  rounded-xl mb-[100px] w-[270px] lg:w-[376px] h-[250px] lg:h-[235px]  lg:mx-2 relative ">
+        <div className="reviewBox shadowEffect relative    rounded-xl mb-[100px] w-[270px] lg:w-[376px] h-[250px] lg:h-[235px]  lg:mx-2">
           <div className="absolute top-0 p-4  right-0">
             {customIcon.quoteDown}
           </div>
@@ -35,7 +36,7 @@ const swiperSliedsReviews = (
             Lorem ipsum dolor sit amet consectetur. Nec nunc tristique interdum
             tellus nibh aliquet elementum.
           </Text>
-          <div className="reviewBoxAvatar absolute bottom-0 left-[50%] right-0 translate-y-[50%] -translate-x-[30%] ">
+          <div className="reviewBoxAvatar absolute bottom-0  right-1/2  translate-y-[50%] translate-x-[50%] ">
             <Image
               borderRadius="full"
               objectFit={"contain"}
@@ -51,15 +52,16 @@ const swiperSliedsReviews = (
 );
 
 const ReviewsSection = ({}: IProps) => {
+  const { t } = useTranslation();
   return (
     <section className=" flex container flex-col mx-auto  justify-center items-center  lg:mx-auto">
-      <HeadingTitle headerDark="reviews" />
+      <HeadingTitle headerDark={t("home.reviews.header.darkText")} />
       <Text
         fontSize={{ base: "16px", md: "18px" }}
         marginBottom={{ base: "32px", md: "64px", lg: "100px" }}
         textAlign={"center"}
       >
-        Lorem ipsum dolor sit amet consectetur. Volutpat condimentum{" "}
+        {t("home.reviews.description")}{" "}
       </Text>
       {/*  */}
       <Swiper
