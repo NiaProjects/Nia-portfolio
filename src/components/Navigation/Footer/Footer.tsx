@@ -1,8 +1,14 @@
-import { Box, Link } from "@chakra-ui/react";
+import { Box } from "@chakra-ui/react";
 import { footerLogo } from "../../../assets";
 import { customIcon } from "../../../assets/icons/customIcons";
-import NavItems, { routesServiceList } from "../NavLinks/NavLinks";
+import NavItems, {
+  contactUsLinks,
+  routesServiceList,
+} from "../NavLinks/NavLinks";
 import { v4 as uuidv4 } from "uuid";
+import Button from "../../Button";
+import { Link } from "react-router-dom";
+import { useTranslation } from "react-i18next";
 
 interface IProps {}
 const socialIcons = [
@@ -19,146 +25,164 @@ const socialIcons = [
     icon: customIcon.facebook,
   },
 ];
+
+// name !== "our services" && (
+//   <li
+//     key={uuidv4()}
+//     className={`text-start  my-auto ${
+//       type === "footer" && "flex items-center first:pb-[22px]"
+//     }`}
+//   >
+//     {" "}
+//     <Link
+//       to={url}
+//       className={
+//         className +
+//         "" +
+//         ` text-nowrap relative text-white transition duration-300 ${
+//           isActive ? "active" : ""
+//         }`
+//       }
+//     >
+//       {type === "footer" && icon} {item.name}
+//     </Link>
+//   </li>
 const Footer = ({}: IProps) => {
+  const { t, i18n } = useTranslation();
+  const footerLinks = {
+    home: [
+      {
+        aboutUs: {
+          name: t("footer.footerLinks.aboutUs"),
+          path: "about-us",
+        },
+        clients: { name: t("footer.footerLinks.clients"), path: "/" },
+        works: { name: t("footer.footerLinks.works"), path: "/" },
+        news: { name: t("footer.footerLinks.news"), path: "/" },
+      },
+    ],
+
+    ourServices: [
+      {
+        ads: { name: t("footer.footerLinks.advertising"), path: "advertising" },
+        marketing: {
+          name: t("footer.footerLinks.marketing"),
+          path: "digital-marketing",
+        },
+        design: { name: t("footer.footerLinks.design"), path: "design" },
+        event: { name: t("footer.footerLinks.events"), path: "event" },
+        software: { name: t("footer.footerLinks.software"), path: "software" },
+        photography: {
+          name: t("footer.footerLinks.photography"),
+          path: "photography",
+        },
+      },
+    ],
+    support: [
+      {
+        terms: { name: t("footer.footerLinks.terms"), path: "" },
+        policy: { name: t("footer.footerLinks.policy"), path: "" },
+      },
+    ],
+  };
   return (
-    <footer className="bg-stone-400 overflow-hidden">
-      <div className=" footerContainer bg-[#0E0D0D] flex flex-col  justify-center items-start  px-[18px] py-[30px]	">
-        <div className="footerLogo md:hidden m-auto block justify-center items-center  pb-[55px] pt-6">
-          <img src={footerLogo} className="w-[82.2px] h-[82.2px] block" />
-        </div>
-        {/*  */}
-        <div className="flex justify-center md:gap-x-4 max-md:flex-col  w-full ">
-          <div className="footerList flex  justify-evenly gap-12  ">
-            <div className="footerLogo max-md:hidden m-auto block justify-center items-center  pb-[55px] pt-6 w-1/3">
-              <img src={footerLogo} className="w-[82.2px] h-[82.2px] block" />
-            </div>
-            <NavItems type={"footer"} />
-            {/* our services */}
-            <div>
-              <a
-                href="#services"
-                className={`pt-3  capitalize text-white flex items-center first:pb-[22px]`}
-              >
-                our services
-              </a>
-              <ul className="flex flex-col text-base first:pb-6  ">
-                {routesServiceList?.map((itemList, index) => {
-                  const { name, url, icon } = itemList;
-                  return (
-                    <li
-                      key={uuidv4()}
-                      className="flex text-start items-center text-base capitalize  text-white text-[18px] text-wrap pt-3"
-                    >
-                      {icon}{" "}
-                      <a href={`#${url}`} className="">
-                        {name}
-                      </a>
-                    </li>
-                  );
-                })}
-              </ul>
-            </div>
-            <div className="max-md:hidden relative">
-              <div className="footerContact flex justify-between  max-md:mt-[22px]  max-md:mb-[55px]  ">
-                {/* <ul className="flex flex-col  text-base pb-[22px]  first:pb-[22px]">
-                  {contactUsLinks?.map((item, index) => {
-                    const { url, name, icon } = item;
-                    return (
-                      <li
-                        key={uuidv4()}
-                        className="flex text-star  first:pb-[22px] justify-start items-center text-base capitalize text-white text-[18px] text-nowrap  "
-                      >
-                        <a href={`#${url}`} className="pt-3 flex ute">
-                          {icon} {name}
-                        </a>
-                      </li>
-                    );
-                  })}
-                </ul> */}
-                {/* Icons */}
-                <ul className="bg-[#0E0D0D] gap-3  md:transform md:translate-y-[50%] z-50 mx-10">
-                  {socialIcons?.map((socialIcon, index) => {
-                    const { url, icon } = socialIcon;
-                    return (
-                      <li
-                        key={uuidv4()}
-                        className="flex mt-3 text-start text-base capitalize text-white text-[18px] text-nowrap  "
-                      >
-                        <a href={`#${url}`}>{icon}</a>
-                      </li>
-                    );
-                  })}{" "}
-                </ul>
-              </div>
-            </div>
-            <ul className="flex flex-col  text-base pb-[22px] ">
-              {contactUsLinks?.map((item, index) => {
-                const { url, name, icon } = item;
-                return (
-                  <>
-                    <>
-                      <li
-                        key={index}
-                        className="flex text-star justify-start items-center text-base capitalize text-white text-[18px] text-nowrap  "
-                      >
-                        <a href={`#${url}`} className="pt-3 flex ute">
-                          {icon} {name}
-                        </a>
-                      </li>
-                    </>
-                  </>
-                );
-              })}
-            </ul>
+    <footer
+      className={`bg-stone-800 overflow-hidden ${
+        i18n.language === "ar" ? "rtl" : "ltr"
+      }`}
+    >
+      <section className="">
+        <div className="flex justify-between  w-full py-6 px-[100] container flex-wrap md:flex-nowrap">
+          {/* logo */}
+          <div className="logo-box grid-rows-1 mx-auto ">
+            <Link href="/">
+              <img src={footerLogo} alt="logo" className="w-[100px]" />
+            </Link>
           </div>
-          {/*footerContact  */}
-          <div className="md:hidden">
-            <div className="footerContact flex justify-between max-md:mt-[22px]  max-md:mb-[55px] ">
-              <ul className="flex flex-col  text-base pb-[22px] ">
-                {contactUsLinks?.map((item, index) => {
-                  const { url, name, icon } = item;
-                  return (
-                    <li
-                      key={uuidv4()}
-                      className="flex text-star justify-start items-center text-base capitalize text-white text-[18px] text-nowrap  "
-                    >
-                      <a href={`#${url}`} className="pt-3 flex ute">
-                        {icon} {name}
-                      </a>
+          <div className="relative services h-[300px] flex flex-wrap w-full">
+            {/* home */}
+            <div className="nav-links_home  w-1/2 md:w-1/2 gap-4 px-2 bg-sky-600 z-20">
+              <p className="text-white capitalize">
+                {t("footer.footerLinksHeader.home")}
+              </p>
+              <ul className="bg-stone-950">
+                {footerLinks.home.map((serviceGroup) =>
+                  Object.values(serviceGroup).map((service, subIndex) => (
+                    <li className="flex items-center ">
+                      <Link
+                        key={subIndex}
+                        to={"our-services/" + service.path}
+                        className="text-nowrap relative text-white transition duration-300 flex "
+                      >
+                        <span className="inline-block rotate-180">
+                          {customIcon.rightArrowFooter}
+                        </span>
+                        <span className="inline-block">{service.name}</span>
+                      </Link>
                     </li>
-                  );
-                })}
+                  ))
+                )}
               </ul>
-              {/* Icons */}
-              <ul className="gap-3 z-50">
-                {/* {socialIcons?.map((socialIcon, index) => {
-                  const { url, icon } = socialIcon;
-                  return (
-                    <li
-                      key={uuidv4()}
-                      className="flex mt-3 text-start text-base capitalize text-white text-[18px] text-nowrap  "
-                    >
-                      <a href={`#${url}`}>{icon}</a>
+            </div>
+            <div className="nav-links_services  w-1/2 md:w-1/2 z-10">
+              <p className="text-white capitalize">
+                {t("footer.footerLinksHeader.ourServices")}
+              </p>{" "}
+              <ul className="bg-stone-950">
+                {footerLinks.ourServices.map((serviceGroup, index) =>
+                  Object.values(serviceGroup).map((service, subIndex) => (
+                    <li className="flex items-center  ">
+                      <Link
+                        key={subIndex}
+                        to={"our-services/" + service.path}
+                        className="text-nowrap relative text-white transition duration-300 flex "
+                      >
+                        <span className="inline-block ">
+                          {customIcon.rightArrowFooter}
+                        </span>
+                        <span className="inline-block">{service.name}</span>
+                      </Link>
                     </li>
-                  );
-                })} */}
+                  ))
+                )}
+              </ul>
+            </div>
+            <div className="nav-links_contactUS z-10 w-full md:w-1/2">
+              <p className="text-white capitalize">
+                {t("footer.footerLinksHeader.ourServices")}
+              </p>{" "}
+              <ul className="bg-stone-950">
+                {footerLinks.support.map((serviceGroup, index) =>
+                  Object.values(serviceGroup).map((service, subIndex) => (
+                    <li className="flex items-center  ">
+                      <Link
+                        key={subIndex}
+                        to={"our-services/" + service.path}
+                        className="text-nowrap relative text-white transition duration-300 flex "
+                      >
+                        <span className="inline-block ">
+                          {customIcon.rightArrowFooter}
+                        </span>
+                        <span className="inline-block">{service.name}</span>
+                      </Link>
+                    </li>
+                  ))
+                )}
               </ul>
             </div>
           </div>
+          <div className="contact-us_btn grid-rows-1 mx-auto">
+            {" "}
+            <Button>contact us</Button>
+          </div>
         </div>
-      </div>
-      {/*  */}
+      </section>
       <Box bg="#0E0D0D" color="white" borderTop="1px solid gold">
-        <div className="flex flex-col justify-center text-center  md:justify-between px-[100] container">
-          <div className="flex gap-2.5 justify-center my-4">
-            <Link href="#" _hover={{ color: "gray.400" }}>
-              Privacy Policy
-            </Link>
-            <Link href="#" _hover={{ color: "gray.400" }}>
-              Terms of Service
-            </Link>
+        <div className="flex flex-col md:flex-row justify-center text-center w-full bg-sky-400 md:justify-between px-[100] container">
+          <div className="social-icons pt-3 md:w-1/2 bg-red-200 order-1">
+            Icons
           </div>
-          <div className="text-sm text-center">
+          <div className="text-sm text-center pt-3 pb-6 bg-red-600 md:w-1/2">
             &copy; 2024 Nia. All rights reserved.
           </div>
         </div>

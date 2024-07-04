@@ -154,7 +154,7 @@ const NavItems = ({ type = "header" }) => {
     >
       {linkPages}
       <li className="ms-auto  ">
-        {type === "footer" && (
+        {type !== "footer" && (
           <>
             <LanguageSwitcher />
             <Button>contact us</Button>

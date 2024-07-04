@@ -22,6 +22,14 @@
   }
   
 },
+"footer":{
+  "footerLinksHeader":{"home":"home","ourServices":"our services","get help":"get help"},
+  "footerLinks":{"aboutUs":" about us " ,"clients":"our clients","works":"our works","news":"news"
+    ,"advertising":"advertising","marketing":"digital marketing","design":"design","events":"events"
+    ,"software":"software","photography":"photography","terms":"terms and services","policy":"privacy policy"
+}
+
+},
     "softwareService": {
         "name": "software",
      "intro":{ 

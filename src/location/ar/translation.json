@@ -19,6 +19,13 @@
 }
 }
 },
+"footer":{
+  "footerLinksHeader":{"home":"الصفحة الرئيسية","ourServices":"الخدمات","get help":"مركز المساعده"},
+  "footerLinks":{"aboutUs":" من nia؟" ,"clients":"عملائنا","works":"أعمالنا","news":"الأخبار"
+ ,"advertising":"الدعايا والإعلان","marketing":"التسويق الرقمي","design":"التصميم","events":"تنظيم المعارض"
+    ,"software":"البرمجة","photography":"التصوير","terms":"الشروط والخدمات","policy":"سياسة الخصوصية"}
+
+},
     "softwareService": {
       "name": "البرمجيات",
       "intro":{
