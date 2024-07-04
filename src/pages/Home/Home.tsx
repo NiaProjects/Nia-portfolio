@@ -41,18 +41,18 @@ const HomePage: FC<HomeProps> = () => {
     <>
       {isVisible && (
         <div className="fixed bottom-0  w-full px-[1.125rem] md:px-[1.5rem] transform -translate-y-[40px]  flex justify-between z-50 ">
-          <div className=" relative w-medium h-medium md:w-[2.875rem] lg:w-[4.375rem] lg:h-[4.375rem] ">
+          <div className=" relative  w-medium h-medium md:w-[2.875rem] lg:w-[4.375rem] lg:h-[4.375rem] my-auto">
             <Link
               to="https://api.whatsapp.com/send?phone=201123862013"
               className=""
             >
-              <span className="  block">
+              <div className="  block ">
                 {
                   customIcon.socialMediaIcons.whatsAppContactIcon
                     .whatsAppFrameIcon
                 }
-              </span>
-              <span className="absolute top-[50%] left-[50%]  transform -translate-x-[50%] -translate-y-[50%] bg-sky-600">
+              </div>
+              <span className="telephoneIcon absolute top-[50%] left-[50%]  transform -translate-x-[50%] -translate-y-[50%] inline-block">
                 {
                   customIcon.socialMediaIcons.whatsAppContactIcon
                     .whatsAppTelephoneIcon
@@ -76,6 +76,7 @@ const HomePage: FC<HomeProps> = () => {
       <PartnersSection />
       <OurWorkSection />
       <ReviewsSection />
+
       <NewsSection />
     </>
   );

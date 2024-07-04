@@ -1,5 +1,6 @@
 import { Image, Text } from "@chakra-ui/react";
 import { HeadingTitle } from "../../../../components/text";
+import { useTranslation } from "react-i18next";
 
 interface HeaderText {
   darkHeader: string;
@@ -18,14 +19,19 @@ const ServicesIntroduction = ({
   headerText,
   paragraph,
 }: IProps) => {
+  const { i18n } = useTranslation();
   return (
     <section
       id="servicesIntroduction "
       className=" max-md:px-[18px] md:pe-[4.7%]  md:mt-[55px] xl:mt-24.5 mt-xsmall "
     >
       {/* md:transform md:translate-x-[-1%] xl:translate-x-[-7.5%] 3xl:translate-x-[-10.5%]  mb-[40px] mb:mb-[90px] mt-[27px] md:mt-[57px]  xl:mt-[100px] */}
-      <div className="  servicesIntroductionBox flex flex-col md:flex-row md:justify-between items-center md:gap-1 lg:gap-xsmall ">
-        <div className="   mx-auto w-[100%] md:w-1/2  transform translate-x-[-1%]  ">
+      <div className="servicesIntroductionBox flex flex-col md:flex-row md:justify-between items-center md:gap-1 lg:gap-xsmall ">
+        <div
+          className={`mx-auto w-[100%] md:w-1/2  transform ${
+            i18n.language !== "ar" ? "translate-x-[-1%]" : "translate-x-[1%]"
+          } `}
+        >
           <Image
             src={srcImg}
             className=" rounded-xl max-sm:h-[12.5rem]  w-full sm:h-auto  object-center max-md:hidden max-h-[536px]"

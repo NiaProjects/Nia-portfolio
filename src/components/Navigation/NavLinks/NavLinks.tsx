@@ -154,9 +154,12 @@ const NavItems = ({ type = "header" }) => {
     >
       {linkPages}
       <li className="ms-auto  ">
-        <LanguageSwitcher />
-
-        <Button>contact us</Button>
+        {type === "footer" && (
+          <>
+            <LanguageSwitcher />
+            <Button>contact us</Button>
+          </>
+        )}
       </li>
     </ul>
   );

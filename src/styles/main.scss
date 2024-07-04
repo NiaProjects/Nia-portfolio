@@ -1,4 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@200..1000&display=swap');
+
 @import "pagination/pagination";
 @import "components/icons";
 @import "base/localization";
@@ -6,6 +8,8 @@
     outline: none;
     list-style: none;
     box-sizing: border-box;
+    word-wrap: break-word;
+    font-weight: 500;
   }
   
   :root {
@@ -18,7 +22,6 @@
     min-height: 100svh;
     display: flex;
     flex-direction: column;
-    font-family: "Montserrat", sans-serif;
     font-optical-sizing: auto;
     font-style: normal;
   }
@@ -28,6 +31,7 @@
     position: relative;
     scroll-behavior: smooth;
   background-color: #fafafa; 
+
   }
   h2{
     line-height: normal !important;

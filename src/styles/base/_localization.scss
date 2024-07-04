@@ -1,9 +1,14 @@
+
 .ltr {
+ 
+
     direction: ltr;
     text-align: left;
+    font-family: "Montserrat", sans-serif;
   }
   
   .rtl {
     direction: rtl;
+    font-family: "Cairo", sans-serif;
     text-align: right;
 }

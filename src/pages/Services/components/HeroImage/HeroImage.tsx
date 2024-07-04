@@ -24,7 +24,7 @@ const HeroImage = ({ heroImage, headerText }: IProps) => {
         <div className="opacity-100 p-4 rounded">
           <div className="text-white text-center">
             <header>
-              <h2 className="uppercase font-bold mb-3 text-lg md:text-[2.5rem] xl:text-[5.625rem] opacity-70">
+              <h2 className="uppercase font-bold mb-3 text-lg md:text-[2.5rem] xl:text-[5.625rem] opacity-50">
                 {headerText}
               </h2>
             </header>

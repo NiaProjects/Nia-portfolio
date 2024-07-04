@@ -44,7 +44,13 @@ import about_2 from "./images/AboutSection/about_2.png"
 import about_3 from "./images/AboutSection/about_3.png"
 
 //OurServices
-import ads from "./images/Home/ads.png" 
+import ads from "./images/Home/advertising.png" ;
+import marketing from "./images/Home/marketing.jpg";
+import design from "./images/Home/desgin.png";
+import events from "./images/Home/events.jpg";
+import software from "./images/Home/software.png";
+import photography from "./images/Home/photography.png";
+
 // Services 
 // ** digital Marketing 
 import DMheaderImg from "./images/services/DigitalmarketingService/DigitalmarketingServiceHeader.png";
@@ -76,9 +82,11 @@ export { logo,slider1, slider2,avatarSlider1, facebook, ig,twitter ,homeHart,quo
 ,NiarightIcone,newsCardImg,ReviewUserImg,partnersLogos,footerLogo,heroImg,contactUsImg,NewsCover,topNews,prevWorksndBigImg
 ,whatAchieved,whatAchievedBigSection,partners,newsHeader
 };
+
+
 export const homeImgs={
     aboutUs:{tech:about_1,social:about_2,mark:about_3},
-    ourServicesImgs:{ads:ads}
+    ourServicesImgs:{ads:ads,marketing:marketing,design:design,events:events,software:software,photography}
 };
 
 export const servicesPagesImg={

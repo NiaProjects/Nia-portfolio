@@ -1,5 +1,6 @@
 import { FC, ReactNode } from "react";
 import "./Title.scss";
+import { useTranslation } from "react-i18next";
 
 // Define the interface for the props
 interface ITitleProps {
@@ -18,42 +19,49 @@ const HeadingTitle: FC<ITitleProps> = ({
   headerOrang = "",
   classes = "",
   children,
-}) => (
-  <header
-    className={` inline-flex justify-center items-center mt-xsmall md:mt-medium lg:mt-large text-center ${
-      type !== "services"
-        ? type === "aboutUsHeader"
-          ? "mb-4 lg:mb-small  "
-          : " mb-2 lg:mb-small  "
-        : " mx-auto justify-center "
-    }`}
-  >
-    {/*   justify-center  */}
-    <h2
-      className={`${
+}) => {
+  const { i18n } = useTranslation();
+  return (
+    <header
+      className={` inline-flex justify-center items-center mt-xsmall md:mt-medium lg:mt-large text-center ${
         type !== "services"
-          ? "titleSections text-center "
-          : "font-semibold md:font-bold"
-      } capitalize text-2xl md:text-[30px] lg:text-[40px] md:px-4 lg:px-small	`}
+          ? type === "aboutUsHeader"
+            ? "mb-4 lg:mb-small  "
+            : " mb-2 lg:mb-small  "
+          : " mx-auto justify-center "
+      }`}
     >
-      <span
-        className={`${classes} text-[#131312] font-montserrat font-semibold  capitalize break-words `}
+      {/*   justify-center  */}
+      <h2
+        className={`${
+          type !== "services"
+            ? "titleSections text-center "
+            : "font-semibold md:font-bold"
+        } capitalize text-2xl md:text-[30px] lg:text-[40px] md:px-4 lg:px-small	`}
       >
-        {headerDark}
-      </span>
-      <span
-        className={`${classes} ms-2 text-[#EF7D00] font-montserrat font-semibold break-words capitalize`}
-      >
-        {headerOrang}
-      </span>
-      {children}
-      {headerDark === "why" && (
-        <span className="text-[#131312] font-montserrat font-semibold capitalize break-words ">
-          ?
+        <span
+          className={`${classes} text-[#131312] font-montserrat font-semibold  capitalize break-words ${
+            i18n.language === "ar" ? "inline-block" : ""
+          } `}
+        >
+          {headerDark}
         </span>
-      )}
-    </h2>
-  </header>
-);
+        <span
+          className={`${classes} ms-2 text-[#EF7D00] font-montserrat font-semibold break-words capitalize ${
+            i18n.language === "ar" ? "inline-block" : ""
+          }`}
+        >
+          {headerOrang}
+        </span>
+        {children}
+        {headerDark === "why" && (
+          <span className="text-[#131312] font-montserrat font-semibold capitalize break-words ">
+            ?
+          </span>
+        )}
+      </h2>
+    </header>
+  );
+};
 
 export default HeadingTitle;

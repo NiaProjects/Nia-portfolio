@@ -56,7 +56,6 @@ const AboutSection = () => {
                   fontWeight={{ base: "medium" }}
                   textAlign={"end"}
                   textTransform={"capitalize"}
-                  fontFamily={"bold"}
                 >
                   {t("components.readMore")}
                 </Text>
@@ -73,15 +72,21 @@ const AboutSection = () => {
           <div className="aboutImages  h-[380px] lg:h-[813px] w-1/2 md:flex flex-col justify-end hidden relative  ">
             <img
               src={mark}
-              className="w-[190px] h-[160px] rounded-3xl  top lg:w-[280px] lg:h-[230px]  xl:w-[376px]   xl:h-[304px]  ms-auto z-5	  absolute top-[31px] lg:top-[120px] xl:top-[80px] right-0    order-1 "
+              className={`w-[190px] h-[160px] rounded-3xl  top lg:w-[280px] lg:h-[230px]  xl:w-[376px]   xl:h-[304px]  ms-auto z-5	  absolute top-[31px] lg:top-[120px] xl:top-[80px]  ${
+                i18n.language !== "ar" ? "right-0" : "left-0"
+              }   order-1 `}
             />
             <img
               src={social}
-              className="w-[190px] h-[160px]  rounded-3xl lg:w-[280px] lg:h-[230px]  xl:w-[376px]   xl:h-[304px]  order-2 z-0 absolute left-0 top-[116px]  lg:top-[255px]"
+              className={`w-[190px] h-[160px]  rounded-3xl lg:w-[280px] lg:h-[230px]  xl:w-[376px]   xl:h-[304px]  order-2 z-0 absolute  ${
+                i18n.language !== "ar" ? "left-0" : "right-0"
+              }  top-[116px]  lg:top-[255px]`}
             />
             <img
               src={tech}
-              className="w-[190px] h-[160px]  rounded-3xl  lg:w-[280px] lg:h-[230px]  xl:w-[376px]   xl:h-[304px]  ms-auto order-3 z-10 absolute  right-0 bottom-[31px] lg:bottom-[20%]  xl:bottom-[7%]"
+              className={`w-[190px] h-[160px]  rounded-3xl  lg:w-[280px] lg:h-[230px]  xl:w-[376px]   xl:h-[304px]  ms-auto order-3 z-10 absolute  ${
+                i18n.language !== "ar" ? "right-0" : "left-0"
+              } bottom-[31px] lg:bottom-[20%]  xl:bottom-[7%]`}
             />
           </div>
         </div>

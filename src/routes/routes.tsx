@@ -41,28 +41,28 @@ const useHandleRoutes = () => {
         { path: "contact-us", element: <ContactUs /> },
 
         {
-          path: "our-services/software",
-          element: <SoftWareService />,
-        },
-        {
-          path: "our-services/designs",
-          element: <Designs />,
+          path: "our-services/advertising",
+          element: <Advertising />,
         },
         {
           path: "our-services/digital-marketing",
           element: <DigitalMarketing />,
         },
         {
+          path: "our-services/designs",
+          element: <Designs />,
+        },
+        {
           path: "our-services/events",
           element: <Events />,
         },
         {
-          path: "our-services/photography",
-          element: <Photography />,
+          path: "our-services/software",
+          element: <SoftWareService />,
         },
         {
-          path: "our-services/advertising",
-          element: <Advertising />,
+          path: "our-services/photography",
+          element: <Photography />,
         },
         { path: "news", element: <News /> },
       ],

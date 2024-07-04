@@ -20,13 +20,11 @@ const AddressLocation = ({ locations }: IProps) => {
         apiKey={MapKey}
         onLoad={() => console.log("Maps API has loaded.")}
       >
-      
         <Map
           defaultZoom={10}
           disableDefaultUI={true}
           defaultCenter={{ lat: 29.987664269730214, lng: 31.135320380036145 }}
           mapId={"626858346ad1e161"}
-         
         >
           {locations?.map((item) => (
             <AdvancedMarker key={item.key} position={item.location}>

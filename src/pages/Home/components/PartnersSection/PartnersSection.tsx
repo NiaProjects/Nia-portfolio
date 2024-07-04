@@ -1,6 +1,6 @@
 import React from "react";
 import { HeadingTitle } from "../../../../components/text";
-import { Image } from "@chakra-ui/react";
+import { Image, Text } from "@chakra-ui/react";
 import { partners, partnersLogos } from "../../../../assets";
 import "swiper/css/pagination";
 import { Autoplay, Navigation, Pagination } from "swiper/modules";
@@ -15,17 +15,14 @@ const partnerLogos = [{ url: partners }];
 const swiperSliedsPartnersLogos = (
   <>
     {partnersArray.map((item, index) => (
-      <div key={`partner-${index}-${item}`}>
-        {`partner - ${index}`}
-        <SwiperSlide>
-          <div className="partnerLogos  bg-[#FAD4AA] w-full">
-            <img
-              src={partnerLogos[0].url}
-              className="w-[100px] md:w-[110px] lg:w-[168px] h-[44px] md:h-[60px] lg:h-[108px] "
-            />
-          </div>
-        </SwiperSlide>
-      </div>
+      <SwiperSlide key={uuidv4()}>
+        <div className="partnerLogos  bg-[#FAD4AA] w-full">
+          <img
+            src={partnerLogos[0].url}
+            className="w-[100px] md:w-[110px] lg:w-[168px] h-[44px] md:h-[60px] lg:h-[108px] "
+          />
+        </div>
+      </SwiperSlide>
     ))}
   </>
 );
@@ -44,7 +41,13 @@ const PartnersSection = ({}: IProps) => {
           </span>
         </HeadingTitle>
       </div>
-
+      <Text
+        fontSize={{ base: "16px", md: "18px" }}
+        marginBottom={{ base: "32px", md: "64px", lg: "100px" }}
+        textAlign="center"
+      >
+        {t("home.partners.description")}
+      </Text>
       <div className="   flex justify-center items-center mt-large ">
         <div className=" h-[140px] lg:h-[295px] w-full ">
           <div className="py-[48px] md:py-[90px] bg-[#FAD4AA]">

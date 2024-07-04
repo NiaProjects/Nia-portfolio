@@ -51,11 +51,11 @@ const Designs: FC<DesignProps> = () => {
         icon: customIcon.servicesIcons.software.crm,
       },
       {
-        text: t("design.categories.categoriesData.dashboard"),
+        text: t("design.categories.categoriesData.motion"),
         icon: customIcon.servicesIcons.software.dashboard,
       },
       {
-        text: t("design.categories.categoriesData.dashboard"),
+        text: t("design.categories.categoriesData.infographic"),
         icon: customIcon.servicesIcons.software.dashboard,
       },
     ],

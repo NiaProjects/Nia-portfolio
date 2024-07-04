@@ -14,11 +14,15 @@ import { customIcon } from "../../../../assets/icons/customIcons";
 import { useNavigate } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 import ServicesCardSVG from "./components/ServicesCardSVG";
+import React from "react";
 
 interface IProps {}
-const { ads } = homeImgs.ourServicesImgs;
+const { ads, marketing, design, events, software, photography } =
+  homeImgs.ourServicesImgs;
 const OurServicesSection = () => {
   const { t } = useTranslation();
+  const [isHovered, setIsHovered] = React.useState<boolean>(false);
+
   const cardsData = [
     {
       id: uuidv4(),
@@ -26,43 +30,48 @@ const OurServicesSection = () => {
       url: ads,
       serviceCardImage: cardServicesCategory,
       header: t("home.ourServices.mainServices.ads"),
+      path: "our-services/advertising",
     },
     {
       id: uuidv4(),
-      url: ads,
-
+      url: marketing,
       icon: customIcon.ourServicesIcons.digitalMarkingIcon,
       serviceCardImage: cardServicesCategory2,
       header: t("home.ourServices.mainServices.marketing"),
+      path: "our-services/digital-marketing",
     },
 
     {
       id: uuidv4(),
-      url: ads,
+      url: design,
       icon: customIcon.ourServicesIcons.designIcon,
       serviceCardImage: cardServicesCategory,
       header: t("home.ourServices.mainServices.design"),
+      path: "our-services/designs",
     },
     {
       id: uuidv4(),
-      url: ads,
+      url: events,
       icon: customIcon.ourServicesIcons.eventsIcon,
       serviceCardImage: cardServicesCategory,
       header: t("home.ourServices.mainServices.events"),
+      path: "our-services/events",
     },
     {
       id: uuidv4(),
-      url: ads,
+      url: software,
       icon: customIcon.ourServicesIcons.softWareIcon,
       serviceCardImage: cardServicesCategory,
       header: t("home.ourServices.mainServices.software"),
+      path: "our-services/software",
     },
     {
       id: uuidv4(),
-      url: ads,
+      url: photography,
       icon: customIcon.ourServicesIcons.photographyIcon,
       serviceCardImage: cardServicesCategory,
       header: t("home.ourServices.mainServices.Photography"),
+      path: "our-services/photography",
     },
   ];
   const navigate = useNavigate();
@@ -96,15 +105,19 @@ const OurServicesSection = () => {
         <div className=" ourServicesCardsContainer  mt-8  max-md:w-[14.8125rem] md:w-[94.64%] lg:w-[87.15rem]  container ">
           <div className="  ServiceCard  grid gap-6 grid-cols-1  w-full  md:grid-cols-3 lg:grid-cols-3 justify-center items-center  ">
             {cardsData?.map((cardData) => {
-              const { icon, header, url, id } = cardData;
+              const { icon, header, url, id, path } = cardData;
               return (
                 <div
-                  className="cards relative   max-md:h-[13rem] md:min-h-[13rem] lg:h-[17rem] xl:h-[24rem] w-full"
+                  className="cards relative group     max-md:h-[13rem] md:min-h-[13rem] lg:h-[17rem] xl:h-[24rem] w-full"
                   key={id}
-                  onClick={() => alert(header)}
+                  onClick={() => navigate(path)}
                 >
-                  <div className="  card rounded-2xl bluer mx-auto   w-full  min-h-[170px] max-h-[214.41px] ">
-                    <div className="flex card-first-layer  rounded-2xl bluer border  xl:h-[250px] h-[108px] ">
+                  <div
+                    className={`absolute   z-10 card   rounded-2xl bluer mx-auto   w-full  min-h-[170px] max-h-[214.41px] `}
+                  >
+                    <div
+                      className={`flex card-first-layer group-hover:bg-[#ef7b00] rounded-2xl bluer border  xl:h-[250px] h-[108px]`}
+                    >
                       <header className=" flex ms-[10px] md:ms-[1.5rem] md: mt-[.6rem] mb-[1.18rem] xl:mt-[1.5rem] lg:mb-[2.5rem]">
                         <span className=" me-1 p-1">{icon}</span>
                         <h3 className="text-white text-[1rem] xl:text-[1.5rem] capitalize">
@@ -112,18 +125,18 @@ const OurServicesSection = () => {
                         </h3>
                       </header>
                     </div>
-                    {/*  translate-x-[11%]  max-xl:-translate-y-[100%] bg-[#e2e2e24b]*/}
-                    <div className="absolute rounded-2xl bluer left-0 right-0 max-xl:-translate-y-[80%]   xl:top-[97px]  w-[80%] xl:w-[80%] bg-[#0000004b]  mx-auto h-[70px] mb-[18px] "></div>
-                    <div className="absolute  min-h-[7.0625rem]   top-[4rem] w-full   xl:h-[224px] xl:top-[115px] ">
-                      <div className="w-full object-fill ">
-                        <ServicesCardSVG url={url} />
+
+                    <div className="absolute rounded-2xl bluer  left-0 right-0 max-xl:-translate-y-[80%]   xl:top-[97px]  w-[80%] xl:w-[80%] bg-[#e2e2e25d]  mx-auto h-[70px] mb-[18px] "></div>
+                    <div className="absolute  min-h-[7.0625rem]  top-[4rem] w-full   xl:h-[224px] xl:top-[115px] ">
+                      <div className="w-full object-fill group-hover:scale-[1.05] transform  transition-all ease-in-out delay-150">
+                        <ServicesCardSVG url={url} id={id} />
                       </div>
                     </div>
                   </div>
                   <s
-                    className={`circleService absolute rounded-full  lg:first-letter  right-0 lg:right-1 bottom-1 xl:bottom-2 transform translate-y-[-5%] translate-x-[15%]  w-[18%] h-[20%] lg:w-[60px] lg:h-[60px] xl:w-[80px] xl:h-[80px]  `}
+                    className={`circleService group-hover:bg-orange-500 absolute z-0 rounded-full  lg:first-letter  right-0 lg:right-1 bottom-1 xl:bottom-2 transform translate-y-[-5%] translate-x-[15%]  w-[18%] h-[20%] lg:w-[60px] lg:h-[60px] xl:w-[80px] xl:h-[80px]  `}
                   >
-                    <FaArrowRightLong className="-rotate-45 text-white w-[50%]  h-[25.5px] xl:bottom-0" />
+                    <FaArrowRightLong className="-rotate-45 text-white w-[50%]  h-[25.5px] xl:bottom-0 transform group-hover:rotate-[1deg] transition-all ease-in-out duration-150	" />
                   </s>
                 </div>
               );

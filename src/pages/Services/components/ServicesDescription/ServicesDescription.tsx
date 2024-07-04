@@ -3,6 +3,7 @@ import { Image, Text } from "@chakra-ui/react";
 import { HeadingTitle } from "../../../../components/text";
 import Icon from "../../../../assets/icons/Icons";
 import { v4 as uuidv4 } from "uuid";
+import { useTranslation } from "react-i18next";
 
 interface IProps {
   srcImg: string;
@@ -11,30 +12,8 @@ interface IProps {
   descriptionData: any;
 }
 
-// const descriptionData = [
-//   {
-//     name: "Mobile",
-//     description:
-//       "Viverra tristique vitae rutrum dui aliquet sed at nunc convallis. Tellus facilisis adipiscing cras est. software responsive social media e-commerce utility app",
-//   },
-//   {
-//     name: "Website",
-//     description:
-//       "Viverra tristique vitae rutrum dui aliquet sed at nunc convallis. Tellus facilisis adipiscing cras est. software responsive social media e-commerce utility app",
-//   },
-//   {
-//     name: "CRM System",
-//     description:
-//       "Viverra tristique vitae rutrum dui aliquet sed at nunc convallis. Tellus facilisis adipiscing cras est. software responsive social media e-commerce utility app",
-//   },
-//   {
-//     name: "Dashboard",
-//     description:
-//       "Viverra tristique vitae rutrum dui aliquet sed at nunc convallis. Tellus facilisis adipiscing cras est. software responsive social media e-commerce utility app",
-//   },
-// ];
-
 const ServicesDescription = ({ srcImg, alt, descriptionData }: IProps) => {
+  const { i18n } = useTranslation();
   return (
     <section
       id="ServicesDescription"
@@ -63,7 +42,7 @@ const ServicesDescription = ({ srcImg, alt, descriptionData }: IProps) => {
                   >
                     <Icon
                       name="MoveRight"
-                      classes="w-[1.875rem] h-[1.875rem] xl:w-[3.125rem] xl:h-[1.875rem]"
+                      classes="w-[1.875rem] h-[1.875rem] xl:w-[3.125rem] xl:h-[1.875rem] rotate-180	"
                       color="#EF7D00"
                     />
                   </div>

@@ -1,10 +1,7 @@
 import { Box, Link } from "@chakra-ui/react";
 import { footerLogo } from "../../../assets";
 import { customIcon } from "../../../assets/icons/customIcons";
-import NavItems, {
-  contactUsLinks,
-  routesServiceList,
-} from "../NavLinks/NavLinks";
+import NavItems, { routesServiceList } from "../NavLinks/NavLinks";
 import { v4 as uuidv4 } from "uuid";
 
 interface IProps {}
@@ -24,7 +21,7 @@ const socialIcons = [
 ];
 const Footer = ({}: IProps) => {
   return (
-    <footer className="bg-stone-400 ">
+    <footer className="bg-stone-400 overflow-hidden">
       <div className=" footerContainer bg-[#0E0D0D] flex flex-col  justify-center items-start  px-[18px] py-[30px]	">
         <div className="footerLogo md:hidden m-auto block justify-center items-center  pb-[55px] pt-6">
           <img src={footerLogo} className="w-[82.2px] h-[82.2px] block" />
@@ -63,7 +60,7 @@ const Footer = ({}: IProps) => {
             </div>
             <div className="max-md:hidden relative">
               <div className="footerContact flex justify-between  max-md:mt-[22px]  max-md:mb-[55px]  ">
-                <ul className="flex flex-col  text-base pb-[22px]  first:pb-[22px]">
+                {/* <ul className="flex flex-col  text-base pb-[22px]  first:pb-[22px]">
                   {contactUsLinks?.map((item, index) => {
                     const { url, name, icon } = item;
                     return (
@@ -77,7 +74,7 @@ const Footer = ({}: IProps) => {
                       </li>
                     );
                   })}
-                </ul>
+                </ul> */}
                 {/* Icons */}
                 <ul className="bg-[#0E0D0D] gap-3  md:transform md:translate-y-[50%] z-50 mx-10">
                   {socialIcons?.map((socialIcon, index) => {
@@ -94,25 +91,25 @@ const Footer = ({}: IProps) => {
                 </ul>
               </div>
             </div>
-            {/* <ul className="flex flex-col  text-base pb-[22px] ">
-            {contactUsLinks?.map((item, index) => {
-              const { url, name, icon } = item;
-              return (
-                <>
+            <ul className="flex flex-col  text-base pb-[22px] ">
+              {contactUsLinks?.map((item, index) => {
+                const { url, name, icon } = item;
+                return (
                   <>
-                    <li
-                      key={index}
-                      className="flex text-star justify-start items-center text-base capitalize text-white text-[18px] text-nowrap  "
-                    >
-                      <a href={`#${url}`} className="pt-3 flex ute">
-                        {icon} {name}
-                      </a>
-                    </li>
+                    <>
+                      <li
+                        key={index}
+                        className="flex text-star justify-start items-center text-base capitalize text-white text-[18px] text-nowrap  "
+                      >
+                        <a href={`#${url}`} className="pt-3 flex ute">
+                          {icon} {name}
+                        </a>
+                      </li>
+                    </>
                   </>
-                </>
-              );
-            })}
-          </ul> */}
+                );
+              })}
+            </ul>
           </div>
           {/*footerContact  */}
           <div className="md:hidden">
@@ -134,7 +131,7 @@ const Footer = ({}: IProps) => {
               </ul>
               {/* Icons */}
               <ul className="gap-3 z-50">
-                {socialIcons?.map((socialIcon, index) => {
+                {/* {socialIcons?.map((socialIcon, index) => {
                   const { url, icon } = socialIcon;
                   return (
                     <li
@@ -144,7 +141,7 @@ const Footer = ({}: IProps) => {
                       <a href={`#${url}`}>{icon}</a>
                     </li>
                   );
-                })}
+                })} */}
               </ul>
             </div>
           </div>
