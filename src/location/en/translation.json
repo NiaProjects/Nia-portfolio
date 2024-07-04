@@ -1,8 +1,11 @@
 {
   "components":{"readMore":"read more"},
   "home":{
-  "sidler":{"firstSlider":{"header":"we have created all the solution and designs","subHeader":"through"}
+  "slider":{"firstSlider":{"header":"we have created all the solution and designs","subHeader":"through"}
   ,"secondSlider":{"header":"we have created all the solution and designs","subHeader":"through"}},
+
+
+  
   "aboutUs":{"header":{"darkText":"who"},"paragraph":"Lorem ipsum dolor sit amet consectetur. Scelerisque ut fermentum non libero quis Lorem ipsum dolor sit amet consectetur. Scelerisque ut fermentum non libero quis Lorem ipsum dolor sit amet consectetur. Scelerisque ut fermentum non libero quis Lorem ipsum dolor sit amet consectetur. Scelerisque ut fermentum non libero quis. "},
   "ourServices":{"header":{"text":"our services","description":"lorem ibsum donetlorem ibsum donet lorem ibsum donetlorem ibsum donet donet lorem ibsum donetlorem ibsum donet"},
   "mainServices":{

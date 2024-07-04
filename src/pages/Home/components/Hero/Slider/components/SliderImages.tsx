@@ -1,7 +1,6 @@
 import { useEffect, useRef, useState } from "react";
-import { FaQuoteRight } from "react-icons/fa6";
 import { slider1, slider2 } from "../../../../../../assets";
-import { customIcon } from "../../../../../../assets/icons/customIcons";
+import { useTranslation } from "react-i18next";
 
 const SliderImages = () => {
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
@@ -9,16 +8,18 @@ const SliderImages = () => {
   const firstImage = useRef(true);
   const prevButtonRef = useRef<HTMLButtonElement>(null);
   const nextButtonRef = useRef<HTMLButtonElement>(null);
-
+  const { t } = useTranslation();
   const images = [
     {
       src: slider1,
-      text: "We have created all the solutions and designs through",
+      text: t("home.slider.firstSlider.header"),
+      subText: t("home.slider.firstSlider.subHeader"),
       delay: 7000,
     },
     {
       src: slider2,
-      text: "We have created all the solutions and designs through",
+      text: t("home.slider.secondSlider.header"),
+      subText: t("home.slider.secondSlider.subHeader"),
       delay: 5000,
     },
   ];
@@ -78,9 +79,10 @@ const SliderImages = () => {
           {" "}
           <div className="absolute z-10 top-[45%] md:top-[45%] lg:top-[45%] w-[240px] md:w-[352px] lg:w-[517px] text-white capitalize ms-[18px] md:ms-[40px] lg:ms-[100px] text-start h-auto whitespace-pre-wrap">
             <p className="text-[24px] md:text-[36px] lg:text-[48px] font-bold">
-              {images[currentImageIndex].text.split(" ").slice(0, -1).join(" ")}
-              <span className="text-primary text-[24px] md:text-[32px] lg:text-[48px] font-bold">
-                {` ${images[currentImageIndex].text.split(" ").slice(-1)}`}{" "}
+              {images[currentImageIndex].text}
+              <span className="text-primary inline-block ms-2 text-[24px] md:text-[32px] lg:text-[48px] font-bold">
+                {/* {` ${images[currentImageIndex].text.split(" ").slice(-1)}`}{" "} */}
+                {images[currentImageIndex].subText}
               </span>
             </p>
           </div>

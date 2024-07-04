@@ -2,7 +2,8 @@
   "components":{"readMore":"أقرأ المزيد"},
 
   "home":{
-  "sidler":{"firstSlider":{"header":"we have created all the solution and designs","subHeader":"through"},"secondSlider":{"header":"we have created all the solution and designs","subHeader":"through"}},
+  "slider":{"firstSlider":{"header":"أبدعنا في ظهور الأنشطة التجارية وابتكرنا كافة الحلول والتصاميم بواسطه ",
+  "subHeader":"نخبه"},"secondSlider":{"header":"أبدعنا في ظهور الأنشطة التجارية وابتكرنا كافة الحلول والتصاميم بواسطه","subHeader":"نخبه"}},
   "aboutUs":{"header":{"darkText":"من"},"paragraph":"كان عام ،1993 بمثابة نقطة تحول في السوق المحلي؛ ألنه تم تأسيس. شركتنا NIA المتخصصة في الدعاية واإلعالن، ووجدنا أن السوق. متعط ًشا لإلبداع، فقررنا إشباعه بأفكارنا التي ال تنتهي وصدقنا في. وعودنا على مدار أكثر من 30 عاما، وأبدعنا في ظهور األنشطة. التجارية عبر ابتكار الحلول والتصاميم من قبل ُنخبة من أفضل الخبراء في كافة المجاالت كما أسهمنا في صناعة وتركيب أكثر من 150000 متر لجميع أنواع. الالفتات اإلعالنية ....... "},
   "ourServices":{"header":{"text":"خدماتنا","description":"تفانينا في العمل هو شغفنا"},
   "mainServices":{

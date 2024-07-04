@@ -15,7 +15,7 @@ const OurWorkSection = () => {
     <section id="our-works" className="mx-auto py-8 ">
       {/* container flex  justify-center w-[30%] md:w-[40%] lg:w-[10%] xl:w-[30%] mx-auto" */}
       <div className="max-w-[330px] min-w-[184px] mx-auto text-center">
-        <div className="text-center m-auto w-[11.5rem] max-w-[20.625rem]">
+        <div className="text-center m-auto  max-w-[20.625rem]">
           <HeadingTitle
             headerDark={t("home.ourWorks.header.darkText")}
             headerOrang={t("home.ourWorks.header.orangeHeader")}

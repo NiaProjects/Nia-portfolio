@@ -52,7 +52,7 @@ const HomePage: FC<HomeProps> = () => {
                     .whatsAppFrameIcon
                 }
               </span>
-              <span className="absolute top-[50%] left-[50%]  transform -translate-x-[50%] -translate-y-[50%]">
+              <span className="absolute top-[50%] left-[50%]  transform -translate-x-[50%] -translate-y-[50%] bg-sky-600">
                 {
                   customIcon.socialMediaIcons.whatsAppContactIcon
                     .whatsAppTelephoneIcon
