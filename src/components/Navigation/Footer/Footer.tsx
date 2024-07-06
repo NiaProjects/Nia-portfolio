@@ -1,5 +1,5 @@
 import { Box, Link } from "@chakra-ui/react";
-import { footerLogo } from "../../../assets";
+import { footerLogo, logo } from "../../../assets";
 import { customIcon } from "../../../assets/icons/customIcons";
 import NavItems, {
   contactUsLinks,
@@ -24,136 +24,54 @@ const socialIcons = [
 ];
 const Footer = ({}: IProps) => {
   return (
-    <footer className="bg-stone-400 ">
-      <div className=" footerContainer bg-[#0E0D0D] flex flex-col  justify-center items-start  px-[18px] py-[30px]	">
-        <div className="footerLogo md:hidden m-auto block justify-center items-center  pb-[55px] pt-6">
-          <img src={footerLogo} className="w-[82.2px] h-[82.2px] block" />
+    <footer className="bg-[#0E0D0D]  rounded-2xl">
+      <div className="footer-container container grid grid-cols-1 md:grid-cols-10   ">
+        <div className="footer_logo  md:col-span-2 mx-auto">
+          <img src={logo} alt="nia company logo" width={80} height={80} />
         </div>
-        {/*  */}
-        <div className="flex justify-center md:gap-x-4 max-md:flex-col  w-full ">
-          <div className="footerList flex  justify-evenly gap-12  ">
-            <div className="footerLogo max-md:hidden m-auto block justify-center items-center  pb-[55px] pt-6 w-1/3">
-              <img src={footerLogo} className="w-[82.2px] h-[82.2px] block" />
-            </div>
-            <NavItems type={"footer"} />
-            {/* our services */}
-            <div>
-              <a
-                href="#services"
-                className={`pt-3  capitalize text-white flex items-center first:pb-[22px]`}
-              >
-                our services
-              </a>
-              <ul className="flex flex-col text-base first:pb-6  ">
-                {routesServiceList?.map((itemList, index) => {
-                  const { name, url, icon } = itemList;
-                  return (
-                    <li
-                      key={uuidv4()}
-                      className="flex text-start items-center text-base capitalize  text-white text-[18px] text-wrap pt-3"
-                    >
-                      {icon}{" "}
-                      <a href={`#${url}`} className="">
-                        {name}
-                      </a>
-                    </li>
-                  );
-                })}
-              </ul>
-            </div>
-            <div className="max-md:hidden relative">
-              <div className="footerContact flex justify-between  max-md:mt-[22px]  max-md:mb-[55px]  ">
-                <ul className="flex flex-col  text-base pb-[22px]  first:pb-[22px]">
-                  {contactUsLinks?.map((item, index) => {
-                    const { url, name, icon } = item;
-                    return (
-                      <li
-                        key={uuidv4()}
-                        className="flex text-star  first:pb-[22px] justify-start items-center text-base capitalize text-white text-[18px] text-nowrap  "
-                      >
-                        <a href={`#${url}`} className="pt-3 flex ute">
-                          {icon} {name}
-                        </a>
-                      </li>
-                    );
-                  })}
-                </ul>
-                {/* Icons */}
-                <ul className="bg-[#0E0D0D] gap-3  md:transform md:translate-y-[50%] z-50 mx-10">
-                  {socialIcons?.map((socialIcon, index) => {
-                    const { url, icon } = socialIcon;
-                    return (
-                      <li
-                        key={uuidv4()}
-                        className="flex mt-3 text-start text-base capitalize text-white text-[18px] text-nowrap  "
-                      >
-                        <a href={`#${url}`}>{icon}</a>
-                      </li>
-                    );
-                  })}{" "}
-                </ul>
-              </div>
-            </div>
-            {/* <ul className="flex flex-col  text-base pb-[22px] ">
-            {contactUsLinks?.map((item, index) => {
-              const { url, name, icon } = item;
-              return (
-                <>
-                  <>
-                    <li
-                      key={index}
-                      className="flex text-star justify-start items-center text-base capitalize text-white text-[18px] text-nowrap  "
-                    >
-                      <a href={`#${url}`} className="pt-3 flex ute">
-                        {icon} {name}
-                      </a>
-                    </li>
-                  </>
-                </>
-              );
-            })}
-          </ul> */}
+        <div className="footer-links  md:col-span-8  bg-sky-500 grid grid-cols-2 md:grid-cols-3  justify-items-stretch">
+          <div className="home-links gap-y-5 bg-orange-500 text-capitalize text-white">
+            <h3 className="text-lg md:text-xl md:text-[22px] font-medium ">
+              home
+            </h3>
+            <ul className="">
+              <li>about us</li>
+              <li>about us</li>
+              <li>about us</li>
+            </ul>
           </div>
-          {/*footerContact  */}
-          <div className="md:hidden">
-            <div className="footerContact flex justify-between max-md:mt-[22px]  max-md:mb-[55px] ">
-              <ul className="flex flex-col  text-base pb-[22px] ">
-                {contactUsLinks?.map((item, index) => {
-                  const { url, name, icon } = item;
-                  return (
-                    <li
-                      key={uuidv4()}
-                      className="flex text-star justify-start items-center text-base capitalize text-white text-[18px] text-nowrap  "
-                    >
-                      <a href={`#${url}`} className="pt-3 flex ute">
-                        {icon} {name}
-                      </a>
-                    </li>
-                  );
-                })}
-              </ul>
-              {/* Icons */}
-              <ul className="gap-3 z-50">
-                {socialIcons?.map((socialIcon, index) => {
-                  const { url, icon } = socialIcon;
-                  return (
-                    <li
-                      key={uuidv4()}
-                      className="flex mt-3 text-start text-base capitalize text-white text-[18px] text-nowrap  "
-                    >
-                      <a href={`#${url}`}>{icon}</a>
-                    </li>
-                  );
-                })}
-              </ul>
-            </div>
+          <div className="our-service-links bg-orange-800 text-capitalize text-white">
+            <h3 className="text-lg md:text-xl md:text-[22px] font-medium">
+              our service
+            </h3>
+            <ul className="text-capitalize text-white">
+              <li>about us</li>
+              <li>about us</li>
+              <li>about us</li>
+            </ul>{" "}
           </div>
+          <div className="get-help-links bg-orange-400 text-capitalize text-white ">
+            {" "}
+            <h3 className="text-lg md:text-xl md:text-[22px] font-medium">
+              get-help
+            </h3>
+            <ul className="text-capitalize text-white">
+              <li>about us </li>
+              <li>about us</li>
+              <li>about us</li>
+            </ul>{" "}
+          </div>
+        </div>
+        <div className="footer-btn bg-red-400  md:col-[5/10]  ms-auto my-auto">
+          <button className=" border">contact us</button>
         </div>
       </div>
-      {/*  */}
       <Box bg="#0E0D0D" color="white" borderTop="1px solid gold">
-        <div className="flex flex-col justify-center text-center  md:justify-between px-[100] container">
-          <div className="flex gap-2.5 justify-center my-4">
+        <div
+          className="grid grid-cols-1 md:grid-cols-2 justify-items-center justify-self-center items-center  content-center
+        px-[100] container  h-[5.38rem] md:h-[3.56rem] lg:h-[5.19rem] gap-[.75rem] "
+        >
+          <div className=" md:order-2 ">
             <Link href="#" _hover={{ color: "gray.400" }}>
               Privacy Policy
             </Link>
@@ -161,7 +79,7 @@ const Footer = ({}: IProps) => {
               Terms of Service
             </Link>
           </div>
-          <div className="text-sm text-center">
+          <div className="text-sm text-center md:order-1">
             &copy; 2024 Nia. All rights reserved.
           </div>
         </div>

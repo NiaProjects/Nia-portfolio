@@ -153,10 +153,12 @@ const NavItems = ({ type = "header" }) => {
       }`}
     >
       {linkPages}
-      <li className="ms-auto  ">
+      <li className="ms-auto my-auto ">
         <LanguageSwitcher />
 
-        <Button>contact us</Button>
+        <Button>
+          <Link to="contact-us">contact us</Link>
+        </Button>
       </li>
     </ul>
   );

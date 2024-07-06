@@ -5,7 +5,7 @@ import Inputs from "./components/Inputs";
 
 interface IProps {}
 
-const url = "http://localhost:3000/messages";
+const url = "http://nia.hopto.org/Nia/public/api/contacts";
 const FormContact = ({}: IProps) => {
   const [enteredValues, setEnteredValues] = React.useState({
     fullName: "",
@@ -47,6 +47,7 @@ const FormContact = ({}: IProps) => {
     event: React.FormEvent<HTMLFormElement>
   ) => {
     event.preventDefault();
+    console.log(isEdit);
     try {
       const respons = await axios.post(url, enteredValues);
       if (respons.status === 201) {
