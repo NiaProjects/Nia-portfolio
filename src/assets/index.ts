@@ -24,7 +24,6 @@ import NiarightIcone from "./images/NiarightIcone.png";
 import newsCardImg from "./images/newsCardImg.png";
 import ReviewUserImg from "./images/ReviewUserImg.png";
 import partnersLogos from "./images/partnersLogos.png";
-import footerLogo from "./images/footerLogo.png";
 import heroImg from "./images/heroImg.png";
 // import SoftwareIntroduction from "./images/SoftwareIntroduction.png";
 // import SoftwareDescription from "./images/SoftwareDescription.png";
@@ -77,6 +76,9 @@ import photographyHeaderImg from "./images/services/photographyService/photograp
 import photographyIntroImg from "./images/services/photographyService/photographyIntroImg.png";
 import photographyDescriptionImg from "./images/services/photographyService/photographyDescriptionImg.png";
 
+// footer logo
+import footerLogo from "./images/footer-logo/footerLogo.png";
+
 export { logo,slider1, slider2,avatarSlider1, facebook, ig,twitter ,homeHart,quoteDown, VectorSlider1,
     VectorSlider2,dotedVector,navBg,navMob,aboutNia1,aboutNia2,aboutNia3,hart,cardServicesCategory,cardServicesCategory2,serviceCard,serviceCardHeaderIcon
 ,NiarightIcone,newsCardImg,ReviewUserImg,partnersLogos,footerLogo,heroImg,contactUsImg,NewsCover,topNews,prevWorksndBigImg
@@ -120,5 +122,4 @@ export const servicesPagesImg={
     introImgPH:photographyIntroImg,
     descriptionImgPH:photographyDescriptionImg,}
     }
-
 

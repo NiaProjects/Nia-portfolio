@@ -48,13 +48,13 @@ const HomePage: FC<HomeProps> = () => {
             >
               <div className="  block ">
                 {
-                  customIcon.socialMediaIcons.whatsAppContactIcon
+                  customIcon.socialmediaIcons.whatsAppContactIcon
                     .whatsAppFrameIcon
                 }
               </div>
               <span className="telephoneIcon absolute top-[50%] left-[50%]  transform -translate-x-[50%] -translate-y-[50%] inline-block">
                 {
-                  customIcon.socialMediaIcons.whatsAppContactIcon
+                  customIcon.socialmediaIcons.whatsAppContactIcon
                     .whatsAppTelephoneIcon
                 }
               </span>

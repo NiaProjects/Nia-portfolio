@@ -1,6 +1,10 @@
 {
-  "components":{"readMore":"أقرأ المزيد"},
+  "components":{"readMore":"أقرأ المزيد","contactUs":"تواصل معنا"},
 
+  "nav":{"pages":{"home":"الصفحة الرئيسية","aboutUs":" من nia","ourServices":"الخدمات","ourWorks":"أعمالنا","news":"الأخبار",
+  "advertising":"الدعايا والإعلان","photography":"التصوير","events":"تنظيم المعارض","marketing":"التسويق الرقمي"
+  ,"software":"البرمجة","design":"التصميم"
+  }},
   "home":{
   "slider":{"firstSlider":{"header":"أبدعنا في ظهور الأنشطة التجارية وابتكرنا كافة الحلول والتصاميم بواسطه",
   "subHeader":"نخبه"},"secondSlider":{"header":"أبدعنا في ظهور الأنشطة التجارية وابتكرنا كافة الحلول والتصاميم بواسطه","subHeader":"نخبه"}},

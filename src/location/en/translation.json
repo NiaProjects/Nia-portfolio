@@ -1,5 +1,9 @@
 {
-  "components":{"readMore":"read more"},
+  "components":{"readMore":"read more","contactUs":"contact us"},
+  "nav":{"pages":{"home":"home","aboutUs":"about us","ourServices":"our services","ourWorks":"our works","news":"news",
+  "advertising":"advertising","photography":"photography","events":"events","marketing":"Digital marketing"
+  ,"software":"software"
+  }},
   "home":{
   "slider":{"firstSlider":{"header":"we have created all the solution and designs","subHeader":"through"}
   ,"secondSlider":{"header":"we have created all the solution and designs","subHeader":"through"}},

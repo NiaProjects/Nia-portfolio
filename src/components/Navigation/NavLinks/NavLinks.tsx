@@ -6,6 +6,7 @@ import { v4 as uuidv4 } from "uuid";
 import AnchorLink from "react-anchor-link-smooth-scroll";
 import Button from "../../Button";
 import LanguageSwitcher from "../LanguageSwitcher/LanguageSwitcher ";
+import { useTranslation } from "react-i18next";
 
 interface IProps {
   type?: "header" | "footer" | "mobile";
@@ -17,58 +18,67 @@ export const contactUsLinks = [
   { name: "CTA form", url: "about-us", icon: customIcon.rightArrowFooter },
   { name: "chat pot", url: "services", icon: customIcon.rightArrowFooter },
 ];
-export const routesServiceList = [
+const getRoutesServiceList = (t: Function) => [
   {
-    name: "software",
+    name: t("nav.pages.software"),
     url: "our-services/software",
     icon: customIcon.rightArrowFooter,
   },
   {
-    name: "design",
+    name: t("nav.pages.design"),
     url: "our-services/designs",
     icon: customIcon.rightArrowFooter,
   },
   {
-    name: "digital marketing",
+    name: t("nav.pages.marketing"),
     url: "our-services/digital-marketing",
     icon: customIcon.rightArrowFooter,
   },
   {
-    name: "events",
+    name: t("nav.pages.events"),
     url: "our-services/events",
     icon: customIcon.rightArrowFooter,
   },
   {
-    name: "photography",
+    name: t("nav.pages.photography"),
     url: "our-services/photography",
     icon: customIcon.rightArrowFooter,
   },
   {
-    name: "advertising",
+    name: t("nav.pages.advertising"),
     url: "our-services/advertising",
     icon: customIcon.rightArrowFooter,
   },
 ];
-
-const routes = [
-  { name: "Home", url: "/", icon: "" },
-  { name: "about us", url: "about-us", icon: customIcon.rightArrowFooter },
-  { name: "our services", url: "services", icon: "" },
+const getRoutesPages = (t: Function) => [
+  { name: t("nav.pages.home"), url: "/", icon: "" },
   {
-    name: "our works",
+    name: t("nav.pages.aboutUs"),
+    url: "about-us",
+    icon: customIcon.rightArrowFooter,
+  },
+  { name: t("nav.pages.ourServices"), url: "services", icon: "" },
+  {
+    name: t("nav.pages.ourWorks"),
     url: "our-work",
     icon: customIcon.rightArrowFooter,
   },
-  { name: "news", url: "news", icon: customIcon.rightArrowFooter },
+  { name: t("nav.pages.news"), url: "news", icon: customIcon.rightArrowFooter },
 ];
 const className =
   "font-medium lg:text-sm xl:text-xl 2xl:mx-4  flex flex-row items-center lg:mx-2   capitalize hover:text-orange-400 pt-3 transition ";
 
 const NavItems = ({ type = "header" }) => {
+  const { t, i18n } = useTranslation();
+  const routesServiceList = getRoutesServiceList(t);
+  const routes = getRoutesPages(t);
+
   const location = useLocation();
   const linkPages = routes?.map((item, index) => {
     const { url, name, icon } = item;
     if (name === "our services" && type === "header") {
+      const isActive = location.pathname === url;
+
       return (
         <div key={uuidv4()}>
           <Center>
@@ -83,9 +93,9 @@ const NavItems = ({ type = "header" }) => {
                 // _expanded={{ bg: "orange.500" }}
                 _focus={{ boxShadow: "none" }}
               >
-                <span className={`${className} text-white`}>
+                <span className={`${className} ${isActive ? "active" : ""}`}>
                   Service
-                  <ChevronDownIcon color="#ffffff" />
+                  <ChevronDownIcon color="#00000" />
                 </span>
               </MenuButton>
               <MenuList
@@ -131,7 +141,7 @@ const NavItems = ({ type = "header" }) => {
             className={
               className +
               "" +
-              ` text-nowrap relative text-white transition duration-300 ${
+              ` text-nowrap relative  transition duration-300 ${
                 isActive ? "active" : ""
               }`
             }
@@ -155,9 +165,16 @@ const NavItems = ({ type = "header" }) => {
       {linkPages}
       <li className="ms-auto my-auto ">
         <LanguageSwitcher />
-
-        <Button>
-          <Link to="contact-us">contact us</Link>
+        <Button className="flex flex-row items-center  justify-center">
+          <Link
+            to="contact-us"
+            className="inline-block order-1 my-auto text-xl "
+          >
+            {t("components.contactUs")}
+          </Link>
+          <div className="inline-block mx-2  items-center my-auto">
+            {customIcon.arrowsIcon.contactBtn}
+          </div>
         </Button>
       </li>
     </ul>
