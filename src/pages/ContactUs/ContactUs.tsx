@@ -100,6 +100,7 @@ const ContactUs = () => {
         {/* w-[90.4%] lg:w-[50%]  */}
         <div className="lg:p-[10px] mt-6 mx-auto rounded-3xl container ">
           <div className="flex flex-col lg:flex-row items-center   justify-between lg:w-[98.5%] mx-auto mb-[32px] lg:mb-[62px]">
+            {/* <TabButtons types="location"  /> */}
             <Tabs type="location" selectedTabIndex={selectedTabIndex}>
               <TabContent>
                 <>

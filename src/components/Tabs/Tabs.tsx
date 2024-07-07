@@ -10,13 +10,10 @@ interface IProps {
 const location = ["saudi", "egypt"];
 const Tabs = (props: IProps) => {
   const { children, type, selectedTabIndex } = props;
-  
+
   return (
     <>
-      <>
-      
-        {React.Children.toArray(children)[selectedTabIndex]}
-      </>
+      <>{React.Children.toArray(children)[selectedTabIndex]}</>
     </>
   );
 };
