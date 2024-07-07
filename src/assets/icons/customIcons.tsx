@@ -1,4 +1,72 @@
 const customIcon = {
+  navBarSvg: (
+    <svg
+      viewBox="0 0 1440 100"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+      className="w-full h-full"
+    >
+      <g filter="url(#filter0_b_4095_18366)">
+        <path
+          d="M0 0H1440V80C1440 91.0457 1431.05 100 1420 100H814.7C794.155 100 777.5 83.345 777.5 62.8C777.5 31.9825 752.518 7 721.7 7H719.8C688.982 7 664 31.9825 664 62.8C664 83.345 647.345 100 626.8 100H20C8.95431 100 0 91.0457 0 80V0Z"
+          fill="url(#paint0_linear_4095_18366)"
+          fillOpacity="0.6"
+        />
+        <path
+          d="M0.75 0.75H1439.25V80C1439.25 90.6315 1430.63 99.25 1420 99.25H814.7C794.569 99.25 778.25 82.9308 778.25 62.8C778.25 31.5683 752.932 6.25 721.7 6.25H719.8C688.568 6.25 663.25 31.5683 663.25 62.8C663.25 82.9308 646.931 99.25 626.8 99.25H20C9.36853 99.25 0.75 90.6315 0.75 80V0.75Z"
+          stroke="url(#paint1_linear_4095_18366)"
+          strokeWidth="1.5"
+        />
+      </g>
+      <defs>
+        <filter
+          id="filter0_b_4095_18366"
+          x="-100"
+          y="-100"
+          width="1640"
+          height="300"
+          filterUnits="userSpaceOnUse"
+          colorInterpolationFilters="sRGB"
+        >
+          <feFlood floodOpacity="0" result="BackgroundImageFix" />
+          <feGaussianBlur in="BackgroundImageFix" stdDeviation="50" />
+          <feComposite
+            in2="SourceAlpha"
+            operator="in"
+            result="effect1_backgroundBlur_4095_18366"
+          />
+          <feBlend
+            mode="normal"
+            in="SourceGraphic"
+            in2="effect1_backgroundBlur_4095_18366"
+            result="shape"
+          />
+        </filter>
+        <linearGradient
+          id="paint0_linear_4095_18366"
+          x1="1432"
+          y1="-1.74392e-05"
+          x2="9.50001"
+          y2="100"
+          gradientUnits="userSpaceOnUse"
+        >
+          <stop stopColor="#FDF1E3" stopOpacity="0.8" />
+          <stop offset="1" stopColor="#FDF1E3" stopOpacity="0.7" />
+        </linearGradient>
+        <linearGradient
+          id="paint1_linear_4095_18366"
+          x1="1440"
+          y1="100"
+          x2="-3.1458e-07"
+          y2="4.52996e-06"
+          gradientUnits="userSpaceOnUse"
+        >
+          <stop stopColor="#FBE2C6" stopOpacity="0.3" />
+          <stop offset="1" stopColor="#FBE2C6" stopOpacity="0.1" />
+        </linearGradient>
+      </defs>
+    </svg>
+  ),
   rightArrowFooter: (
     <svg
       width="24"
@@ -473,10 +541,10 @@ const customIcon = {
       ),
       crm: (
         <svg viewBox="0 0 90 90" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <g clip-path="url(#clip0_3156_7344)">
+          <g clipPath="url(#clip0_3156_7344)">
             <path
-              fill-rule="evenodd"
-              clip-rule="evenodd"
+              fillRule="evenodd"
+              clipRule="evenodd"
               d="M11.25 18.75C11.25 16.7609 12.0402 14.8532 13.4467 13.4467C14.8532 12.0402 16.7609 11.25 18.75 11.25H30V30H11.25V18.75ZM30 37.5H11.25V71.25C11.25 73.2391 12.0402 75.1468 13.4467 76.5533C14.8532 77.9598 16.7609 78.75 18.75 78.75H30V37.5ZM37.5 78.75H71.25C73.2391 78.75 75.1468 77.9598 76.5533 76.5533C77.9598 75.1468 78.75 73.2391 78.75 71.25V37.5H37.5V78.75ZM37.5 30V11.25H71.25C73.2391 11.25 75.1468 12.0402 76.5533 13.4467C77.9598 14.8532 78.75 16.7609 78.75 18.75V30H37.5Z"
               fill="#EF7D00"
             />

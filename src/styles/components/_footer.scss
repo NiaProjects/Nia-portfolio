@@ -1,0 +1,32 @@
+.footer-container{
+    margin-top: 3rem;
+    margin-bottom: 2rem;
+    column-gap: 20px;
+    row-gap: 8px;
+    .footer-links{
+      
+        @media screen and (max-width:744px) {
+            row-gap: .7rem;
+            grid-column: 1fr;
+            column-gap: 2.25rem;
+        }
+    }
+    // .footer_logo{
+    //     grid-column:1/2;
+    //     background-color: red;
+    // }
+    // .footer-links{
+    //     grid-column:span 9;
+    // }
+    // .footer-btn{
+    //     grid-column: 8/11;
+    // }
+    // @media screen and (min-width:744px) {
+    //     .footer-links{
+    //         grid-column:span 9;
+    //     }
+    //     .footer-btn{
+    //         grid-column: 8/11;
+    //     }  
+    // }
+}

@@ -2,6 +2,7 @@ import { motion } from "framer-motion";
 import { FC } from "react";
 import { logo, navBg } from "../../../../../assets";
 import NavItems from "../../../NavLinks/NavLinks";
+import { customIcon } from "../../../../../assets/icons/customIcons";
 
 interface IProp {
   isVisible: boolean;
@@ -18,11 +19,9 @@ const NavDeskTop: FC<IProp> = ({ isVisible }) => {
           isVisible ? "translate-y-0" : "-translate-y-full"
         }`}
       >
-        <img
-          src={navBg}
-          className="w-full min-h-[80px] max-h-[100px] absolute   "
-          alt=""
-        />
+        <div className="w-full min-h-[80px] max-h-[100px] absolute">
+          {customIcon.navBarSvg}
+        </div>
         <div>
           <NavItems />
 

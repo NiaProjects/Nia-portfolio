@@ -8,7 +8,7 @@ interface IProps {
 }
 const TabButtons = ({
   tabHeader,
-  types,
+  types = "location",
   selectedTabIndex,
   handleOnClick,
 }: IProps) => {

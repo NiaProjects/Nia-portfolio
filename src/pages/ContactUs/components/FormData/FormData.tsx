@@ -51,6 +51,12 @@ const FormContact = ({}: IProps) => {
       const respons = await axios.post(url, enteredValues);
       if (respons.status === 201) {
         alert("Success!");
+        setEnteredValues({
+          fullName: "",
+          email: "",
+          phoneNumber: "",
+          message: "",
+        });
         event.target.reset();
       }
     } catch (error) {
