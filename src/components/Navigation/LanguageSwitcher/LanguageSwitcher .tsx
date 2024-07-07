@@ -16,7 +16,7 @@ const LanguageSwitcher = ({}: IProps) => {
   return (
     <>
       <Button intent={"outline"} onClick={toggleLanguage}>
-        <div className="flex gap-1.5 p-2 ">
+        <div className="flex gap-1.5 p-2 text-dark font-medium">
           <span className="">
             {i18n.language === "en" ? "العربية" : "English"}
           </span>

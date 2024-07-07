@@ -44,7 +44,7 @@ const ServicesCategories = ({ headerText, paragraph, icons }: IProps) => {
             {paragraph}
           </Text>
         </header>
-        <div className="categoriesIconBox pt-6 pb-4 flex justify-center items-center flex-wrap md:flex-nowrap gap-4 md:gap-[2.8125rem] xl:gap-[36px] text-balance whitespace-normal break-normal first:mt-6">
+        <div className="categoriesIconBox pt-6 pb-4 flex justify-center items-center flex-wrap  gap-4 md:gap-[2.8125rem] xl:gap-[36px] text-balance whitespace-normal break-normal first:mt-6">
           {icons?.map((item) => (
             <article key={uuidv4()} className="flex flex-col items-center">
               <figure

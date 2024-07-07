@@ -11,7 +11,9 @@ const MasterLayout = () => {
     <>
       <Header />
       <main
-        className={`overflow-hidden ${i18n.language === "ar" ? "rtl" : "ltr"}`}
+        className={`overflow-hidden ${
+          i18n.language === "ar" ? "rtl" : "ltr"
+        } bg-[#FFFDFB]`}
       >
         <Outlet />
       </main>

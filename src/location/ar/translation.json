@@ -1,7 +1,7 @@
 {
   "components":{"readMore":"أقرأ المزيد","contactUs":"تواصل معنا"},
-
-  "nav":{"pages":{"home":"الصفحة الرئيسية","aboutUs":" من nia","ourServices":"الخدمات","ourWorks":"أعمالنا","news":"الأخبار",
+  "location":{"sa":"السعودية","eg":"مصر"}
+  ,"nav":{"pages":{"home":"الصفحة الرئيسية","aboutUs":" من nia","ourServices":"الخدمات","ourWorks":"أعمالنا","news":"الأخبار",
   "advertising":"الدعايا والإعلان","photography":"التصوير","events":"تنظيم المعارض","marketing":"التسويق الرقمي"
   ,"software":"البرمجة","design":"التصميم"
   }},
@@ -29,6 +29,32 @@
  ,"advertising":"الدعايا والإعلان","marketing":"التسويق الرقمي","design":"التصميم","events":"تنظيم المعارض"
     ,"software":"البرمجة","photography":"التصوير","terms":"الشروط والخدمات","policy":"سياسة الخصوصية"}
 
+},
+"aboutusPage":{
+  "aboutUsHero":{"heder":{"heroText":"من نحن ؟"}}
+  ,"aboutUsIntro":{"heder":{"darkText":"لماذا","orangeHeader":"nia "},"paragraph":"كان عام 1993، بمثابة نقطة تحول في السوق المحلي؛ لأنه تم تأسيس. شركتنا NIA المتخصصة في الدعاية والإعلان، ووجدنا أن السوق متعطشًا للإبداع، فقررنا إشباعه بأفكارنا التي لا تنتهي وصدقنا في وعودنا على مدار أكثر من 30 عاما، وأبدعنا في ظهور الأنشطة.التجارية عبر ابتكار الحلول والتصاميم من قبل نُخبة من أفضل الخبراء في كافة المجالات كما أسهمنا في صناعة وتركيب أكثر من 150000 متر لجميع أنواع. اللافتات الإعلانية ولم نكن لنقدم تِلك الخدمات بالكفاءة المطلوبة لولا أنها كانت من مصانعنا التي أُنْشِئَت في جميع أنحاء المملكة العربية السُّعُودية وصُممت عليَّ. أعلي مستوى من الكفاءة، وزُوِّدَت بأحدث الآلات العالمية، حتى اُبْتُكِر خط إنتاج خاص بنا ."}
+  ,"desc":{
+    "header":{"darkText":"ما هي الخدمات التي ","orangeHeader":"نقدمها "},
+    "descText":"استكشف خدماتنا أدناه لمعرفة كيف يمكننا مساعدتك في تحقيق أهدافك",
+    "descriptionData":{
+      "advertising":"الدعايا والإعلان" ,
+      "software":"البرمجيات" ,
+      "marketing": "التسويق الرقمي",
+      "design":"التصميم",
+      "events":"تنظيم المعارض",
+      "Photography":"التصوير"
+   }
+  },"ourTeam":{"header":{    "darkHeader": "Meet Our",
+  "orangeHeader": "Team"
+},"ourTeamText":"Each member brings unique expertise and a shared commitment to excellence.",
+"teamData":{
+  "teamMember1":{
+    "header":"region manager",
+    "name":"Amed el shekh"
+  }
+}
+
+}
 },
     "softwareService": {
       "name": "البرمجيات",

@@ -20,7 +20,7 @@ const HeroImage = ({ heroImage, headerText }: IProps) => {
         {/* Overlay layer */}
         <div className="absolute inset-0 bg-black bg-opacity-30"></div>{" "}
       </div>
-      <div className="absolute transform container inset-0 flex items-center justify-center md:w-1/2 lg:w-1/3 xl:w-1/4 m-auto pt-[50px] lg:pt-[80px]">
+      <div className="absolute transform container inset-0 flex items-center justify-center md:w-1/2 lg:w-1/3 xl:w-full m-auto pt-[50px] lg:pt-[80px]">
         <div className="opacity-100 p-4 rounded">
           <div className="text-white text-center">
             <header>

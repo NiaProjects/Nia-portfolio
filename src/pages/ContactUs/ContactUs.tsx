@@ -8,7 +8,10 @@ import FormData from "./components/FormData/FormData";
 import { HeadingTitle } from "../../components/text";
 import TabButtons from "../../components/Tabs/components/TabButtons";
 import React from "react";
-import { contactUsImg } from "../../assets";
+import { contactUsImg, heroImg } from "../../assets";
+import HeroImage from "../Services/components/HeroImage";
+import { useTranslation } from "react-i18next";
+import { ToastContainer, toast } from "react-toastify";
 
 interface ContactInfo {
   id: string;
@@ -76,6 +79,7 @@ const contactsData: ContactInfo[] = [
   /*ContactUs component */
 }
 const ContactUs = () => {
+  const { t } = useTranslation();
   const saudiContacts = contactsData.filter(
     (contact) => contact.location === "saudi"
   );
@@ -86,7 +90,7 @@ const ContactUs = () => {
 
   const egpLocation = locations.filter((locate) => locate.zoon === "egp");
   //
-  const location = ["saudi", "egypt"];
+  const location = [t("location.sa"), t("location.eg")];
   const [selectedTabIndex, setSelectedTabIndex] = React.useState<number>(0);
   const handleOnClick = React.useCallback(
     (index: number) => {
@@ -94,12 +98,24 @@ const ContactUs = () => {
     },
     [setSelectedTabIndex]
   );
+  const imgSection = {
+    img: heroImg,
+    alt: "software service",
+    headerText: t("components.contactUs"),
+  };
+  // const notify = () => {
+  //   toast.success("Success Notification!", defaultToastConfig);
+  // };
+
   return (
     <>
+      <HeroImage heroImage={imgSection} headerText={imgSection.headerText} />
+      {/* <ToastContainer /> */}
+
       <section className=" bg-[#FFFDFB]   ">
         {/* w-[90.4%] lg:w-[50%]  */}
         <div className="lg:p-[10px] mt-6 mx-auto rounded-3xl container ">
-          <div className="flex flex-col lg:flex-row items-center   justify-between lg:w-[98.5%] mx-auto mb-[32px] lg:mb-[62px]">
+          <div className="flex flex-col lg:flex-row items-center  justify-between lg:w-[98.5%] mx-auto mb-[32px] lg:mb-[62px]">
             {/* <TabButtons types="location"  /> */}
             <Tabs type="location" selectedTabIndex={selectedTabIndex}>
               <TabContent>
@@ -135,7 +151,17 @@ const ContactUs = () => {
                     ))}
                   </div>
                   <div className="w-[95.2%] md:w-[94%] lg:ms-auto max-md:mx-auto lg:w-[60.4%]  h-[246px] sm:h-[382px] lg:h-[616px] rounded-xl overflow-hidden ">
-                    <AddressLocation locations={soaudiLocation} />
+                    {/* <AddressLocation locations={soaudiLocation} /> */}
+                    <iframe
+                      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d231794.66815599796!2d38.8808213!3d21.4497989!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x15c3d781e8e6e2ad%3A0x340366416b99128c!2sKing%20Abdulaziz%20International%20Airport!5e0!3m2!1sen!2ssa!4v1698765539737!5m2!1sen!2ssa"
+                      width="600"
+                      height="450"
+                      style={{ border: 0 }}
+                      allowFullScreen=""
+                      loading="lazy"
+                      referrerPolicy="no-referrer-when-downgrade"
+                      className="w-full h-full"
+                    ></iframe>
                   </div>
                 </>
               </TabContent>
@@ -171,8 +197,17 @@ const ContactUs = () => {
                       </div>
                     ))}
                   </div>
-                  <div className="w-full md:w-[94%] lg:ms-auto max-md:mx-auto lg:w-[60.4%]  h-[246px] sm:h-[382px] xl:h-[616px] rounded-xl overflow-hidden ">
-                    <AddressLocation locations={egpLocation} />
+                  <div className="md:w-[94%]  w-full lg:ms-auto max-md:mx-auto lg:w-[60.4%]  h-[246px] sm:h-[382px] xl:h-[616px] rounded-xl overflow-hidden ">
+                    {/* <AddressLocation locations={egpLocation} /> */}
+                    <iframe
+                      className="w-full h-full"
+                      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3454.2816259024455!2d31.2110639!3d30.0147202!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x145846e11ac5de1d%3A0x4bd49368639ecfff!2z2LTYsdmD2Kkg2K_YqNmG2KzYqA!5e0!3m2!1sen!2sus!4v1698688011704!5m2!1sen!2sus"
+                      width="600"
+                      height="450"
+                      style={{ border: 0 }}
+                      loading="lazy"
+                      referrerPolicy="no-referrer-when-downgrade"
+                    ></iframe>
                   </div>
                 </>
               </TabContent>
@@ -186,12 +221,28 @@ const ContactUs = () => {
             <div className="max-lg:hidden w-[41.8%] ">
               <img src={contactUsImg} alt="contact us" />
             </div>
-            <div className="w-full md:w-[55%] ">
-              <HeadingTitle
-                headerDark={"Get in "}
-                headerOrang={"touch"}
-                type="services"
-              />
+            <div className="w-full md:w-[55%] relative ">
+              {/* <ToastContainer
+position="top-right"
+autoClose={5000}
+hideProgressBar={false}
+newestOnTop={false}
+closeOnClick
+rtl={false}
+pauseOnFocusLoss
+draggable
+pauseOnHover
+theme="light"
+transition: Bounce,
+/>
+<ToastContainer /> */}
+              <div className="text-center">
+                <HeadingTitle
+                  headerDark={"Get in "}
+                  headerOrang={"touch"}
+                  type="services"
+                />
+              </div>
               <FormData />
             </div>
           </div>

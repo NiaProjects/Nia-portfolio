@@ -1,7 +1,9 @@
 {
   "components":{"readMore":"read more","contactUs":"contact us"},
-  "nav":{"pages":{"home":"home","aboutUs":"about us","ourServices":"our services","ourWorks":"our works","news":"news",
-  "advertising":"advertising","photography":"photography","events":"events","marketing":"Digital marketing"
+  "location":{"sa":"Saudia","eg":"egypt"}
+
+,  "nav":{"pages":{"home":"home","aboutUs":"about us","ourServices":"our services","ourWorks":"our works","news":"news",
+  "advertising":"advertising","photography":"photography","events":"events","marketing":"Digital marketing","design":"design"
   ,"software":"software"
   }},
   "home":{
@@ -34,6 +36,35 @@
 }
 
 },
+"aboutusPage":{
+  "aboutUsHero":{"heder":{"heroText":"about us"}}
+  ,"aboutUsIntro":{"heder":{"darkText":"why","orangeHeader":"nia ?"},"paragraph":"1993 marked a turning point in the local market; Because it was founded. Our company NIA specialized in propaganda and advertising, and we found that the market Hungry for creativity, we decided to satisfy it with our endless ideas and honesty in Our promises have been made for more than 30 years, and we have begun to emerge. Business by innovating solutions and designs by an elite of the best experts in All fields as we have contributed to the industry and installation of more than 150,000 meters for all kinds. Advertising banners and we would not have provided these services with the required efficiency had they not been one of our factories established throughout the Saudi Arabia and designed for me. The highest level of efficiency, supplied with the world's latest machinery, even created our own production line"}
+  ,"desc":{
+    "header":{"darkText":"What services","orangeHeader":"we offer ?"},
+    "descText":"Explore our services below to see how we can help you achieve your goals",
+    "descriptionData":{
+      "advertising":"advertising" ,
+      "software":"software" ,
+      "marketing": "Digital marketing",
+      "design":"design",
+      "events":"events",
+      "Photography":"Photography"
+   }
+  },"ourTeam":{"header":{    "darkHeader": "Meet Our",
+  "orangeHeader": "Team"
+},"ourTeamText":"Each member brings unique expertise and a shared commitment to excellence.",
+"teamData":{
+  "teamMember1":{
+    "header":"region manager",
+    "name":"Amed el shekh"
+  }
+}
+
+}
+},
+
+
+
     "softwareService": {
         "name": "software",
      "intro":{ 

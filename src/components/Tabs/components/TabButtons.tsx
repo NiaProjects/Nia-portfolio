@@ -26,7 +26,7 @@ const TabButtons = ({
                 key={index}
                 className={`${
                   isActive ? "	activeTab " : "custom-cursor"
-                } 	 w-1/2 capitalize`}
+                } 	 w-1/2 capitalize  p-6`}
                 onClick={() => !isActive && handleOnClick(index)}
                 disabled={isActive}
               >
@@ -36,7 +36,7 @@ const TabButtons = ({
           })}
       </div>
       {/* w-[90.66%] lg:w-[86.2%]   */}
-      <div className="container tabsButton max-w-[44rem] m-auto min-w-[481px] mb-[32px] md:mb-[59px] lg:mb-[80px] flex itepscenter  flex-nowrap ms-[18px] md:ms-[xsmall]  lg:ms-[5.25rem] xl:ms-[6.25rem] mt-xsmall md:mt-[3rem] lg:mt-[4.375rem]">
+      <div className="container tabsButton ">
         {types === "news" &&
           tabHeader?.map((locate, index) => {
             const isActive = index === selectedTabIndex;
@@ -44,7 +44,7 @@ const TabButtons = ({
             return (
               <button
                 key={index}
-                className={`min-w-[7.25rem] max-w-[11.625rem]  p-[10px] font-medium  ${
+                className={`min-w-[7.25rem] max-w-[11.625rem]   font-medium  p-6  ${
                   isActive ? "	activeTab " : "custom-cursor"
                 } 	 w-full capitalize`}
                 onClick={() => !isActive && handleOnClick(index)}

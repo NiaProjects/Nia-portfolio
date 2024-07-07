@@ -163,7 +163,7 @@ const NavItems = ({ type = "header" }) => {
       }`}
     >
       {linkPages}
-      <li className="ms-auto my-auto ">
+      <li className="ms-auto my-auto  font-medium">
         <LanguageSwitcher />
         <Button className="flex flex-row items-center  justify-center">
           <Link

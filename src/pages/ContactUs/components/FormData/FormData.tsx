@@ -68,7 +68,7 @@ const FormContact = ({}: IProps) => {
     <>
       <form
         onSubmit={handleFormSubmited}
-        className="flex flex-col justify-center items-center relative w-full h-full lg:w-[59%] mx-auto"
+        className="flex flex-col justify-center items-center relative w-full h-full lg:w-[59%] mx-auto text-lg font-semibold capitalize"
       >
         <Inputs
           id="fullName"

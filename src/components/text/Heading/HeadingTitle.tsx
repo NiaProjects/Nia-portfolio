@@ -26,7 +26,7 @@ const HeadingTitle: FC<ITitleProps> = ({
       className={` inline-flex justify-center items-center mt-xsmall md:mt-medium lg:mt-large text-center ${
         type !== "services"
           ? type === "aboutUsHeader"
-            ? "mb-4 lg:mb-small  "
+            ? "mb-4 lg:mb-small text-center "
             : " mb-2 lg:mb-small  "
           : " mx-auto justify-center "
       }`}

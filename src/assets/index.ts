@@ -75,14 +75,15 @@ import eventDescriptionImg from "./images/services/eventsService/eventDescriptio
 import photographyHeaderImg from "./images/services/photographyService/photographyHeaderImg.png";
 import photographyIntroImg from "./images/services/photographyService/photographyIntroImg.png";
 import photographyDescriptionImg from "./images/services/photographyService/photographyDescriptionImg.png";
-
+// about us 
+import aboutNia from "./images/aboutNia.png"
 // footer logo
 import footerLogo from "./images/footer-logo/footerLogo.png";
 
 export { logo,slider1, slider2,avatarSlider1, facebook, ig,twitter ,homeHart,quoteDown, VectorSlider1,
     VectorSlider2,dotedVector,navBg,navMob,aboutNia1,aboutNia2,aboutNia3,hart,cardServicesCategory,cardServicesCategory2,serviceCard,serviceCardHeaderIcon
 ,NiarightIcone,newsCardImg,ReviewUserImg,partnersLogos,footerLogo,heroImg,contactUsImg,NewsCover,topNews,prevWorksndBigImg
-,whatAchieved,whatAchievedBigSection,partners,newsHeader
+,whatAchieved,whatAchievedBigSection,partners,newsHeader,aboutNia
 };
 
 
