@@ -20,10 +20,14 @@ const AboutSection = () => {
     <>
       <section
         id="about-us"
+        data-aos="fade-up"
+        data-aos-duration="500"
+        data-aos-delay="100"
         className="relative   lg:h-[813px] md:flex  md:pt-medium   pb-6 px-[40px]  sm:px-10  md:px-xsmall  "
       >
         <img
           src={dotedVector}
+          data-aos="fade-right"
           className="w-[3.75rem] md:w-[70px] lg:w-[5rem]  absolute max-md:right-0  md:left-0  top-[10%] md:top-[9%]   transform translate-x-6  md:-translate-x-4  "
         />
         <img

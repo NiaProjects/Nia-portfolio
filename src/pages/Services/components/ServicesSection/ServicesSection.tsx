@@ -33,7 +33,6 @@ const ServicesSection = ({ srcImg, alt, headerText, paragraph }: IProps) => {
             <span className="text-[#EF7D00] capitalize ms-2  inline-block">
               {headerText.orangeHeader}
             </span>
-            .{" "}
           </h1>
           <Text
             fontSize={{ base: "1rem", lg: "1.25rem", "2xl": "1.75rem" }}

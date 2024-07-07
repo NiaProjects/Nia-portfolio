@@ -85,6 +85,8 @@ const OurServicesSection = () => {
       <section
         id="our-services"
         className="   md:pb-medium lg:pb-large   overflow-hidden"
+        data-aos="fade-up"
+        data-aos-duration="500"
       >
         <div className="max-w-[330px] min-w-[184px] mx-auto text-center">
           <HeadingTitle

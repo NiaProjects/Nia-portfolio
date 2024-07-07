@@ -50,9 +50,11 @@
       "events":"events",
       "Photography":"Photography"
    }
-  },"ourTeam":{"header":{    "darkHeader": "Meet Our",
+  },
+  "ourTeam":{"header":{    "darkHeader": "Meet Our",
   "orangeHeader": "Team"
-},"ourTeamText":"Each member brings unique expertise and a shared commitment to excellence.",
+},
+"ourTeamText":"Each member brings unique expertise and a shared commitment to excellence.",
 "teamData":{
   "teamMember1":{
     "header":"region manager",
@@ -85,16 +87,16 @@
        "mobile": "mobile",
        "website": "website",
        "crm": "crm system",
-       "dashboard": "Advertising"
+       "dashboard": "dashboard"
 
     }
  }
    , "desc":{     
       "descriptionData":{
-         "mobile": {"name": "mobile", "description": "Viverra tristique vitae rutrum dui aliquet sed at nunc convallis. Tellus facilisis adipiscing cras est."},
-         "website": {"name": "mobile", "description": "Viverra tristique vitae rutrum dui aliquet sed at nunc convallis. Tellus facilisis adipiscing cras est."},
-         "crm": {"name": "mobile", "description": "Viverra tristique vitae rutrum dui aliquet sed at nunc convallis. Tellus facilisis adipiscing cras est."},
-         "dashboard":{"name": "mobile", "description": "Viverra tristique vitae rutrum dui aliquet sed at nunc convallis. Tellus facilisis adipiscing cras est."}
+         "mobile": {"name": "mobile app", "description": "Viverra tristique vitae rutrum dui aliquet sed at nunc convallis. Tellus facilisis adipiscing cras est."},
+         "website": {"name": "website", "description": "Viverra tristique vitae rutrum dui aliquet sed at nunc convallis. Tellus facilisis adipiscing cras est."},
+         "crm": {"name": "crm system", "description": "Viverra tristique vitae rutrum dui aliquet sed at nunc convallis. Tellus facilisis adipiscing cras est."},
+         "dashboard":{"name": "dashboard", "description": "Viverra tristique vitae rutrum dui aliquet sed at nunc convallis. Tellus facilisis adipiscing cras est."}
       }
    }
   

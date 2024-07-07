@@ -80,10 +80,12 @@ import aboutNia from "./images/aboutNia.png"
 // footer logo
 import footerLogo from "./images/footer-logo/footerLogo.png";
 
+//  nav img
+import navImg from "./images/navImg.png"
 export { logo,slider1, slider2,avatarSlider1, facebook, ig,twitter ,homeHart,quoteDown, VectorSlider1,
     VectorSlider2,dotedVector,navBg,navMob,aboutNia1,aboutNia2,aboutNia3,hart,cardServicesCategory,cardServicesCategory2,serviceCard,serviceCardHeaderIcon
 ,NiarightIcone,newsCardImg,ReviewUserImg,partnersLogos,footerLogo,heroImg,contactUsImg,NewsCover,topNews,prevWorksndBigImg
-,whatAchieved,whatAchievedBigSection,partners,newsHeader,aboutNia
+,whatAchieved,whatAchievedBigSection,partners,newsHeader,aboutNia,navImg
 };
 
 

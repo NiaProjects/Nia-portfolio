@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import { FC } from "react";
-import { logo, navBg } from "../../../../../assets";
+import { logo, navBg, navImg } from "../../../../../assets";
 import NavItems from "../../../NavLinks/NavLinks";
 import { customIcon } from "../../../../../assets/icons/customIcons";
 import { useTranslation } from "react-i18next";
@@ -21,8 +21,12 @@ const NavDeskTop: FC<IProp> = ({ isVisible }) => {
           isVisible ? "translate-y-0" : "-translate-y-full"
         } ${i18n.language === "ar" ? "rtl" : "ltr"}`}
       >
-        <div className="w-full min-h-[80px] max-h-[100px] absolute ">
-          {customIcon.navBarSvg}
+        <div className=" ">
+          <img
+            src={navImg}
+            alt=""
+            className="w-full min-h-[80px] max-h-[100px] absolute"
+          />
         </div>
         <div className="">
           <NavItems />

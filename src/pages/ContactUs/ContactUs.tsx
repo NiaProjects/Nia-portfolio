@@ -103,9 +103,6 @@ const ContactUs = () => {
     alt: "software service",
     headerText: t("components.contactUs"),
   };
-  // const notify = () => {
-  //   toast.success("Success Notification!", defaultToastConfig);
-  // };
 
   return (
     <>

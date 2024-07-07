@@ -42,7 +42,9 @@ const ServicesDescription = ({ srcImg, alt, descriptionData }: IProps) => {
                   >
                     <Icon
                       name="MoveRight"
-                      classes="w-[1.875rem] h-[1.875rem] xl:w-[3.125rem] xl:h-[1.875rem] rotate-180	"
+                      classes={`w-[1.875rem] h-[1.875rem] xl:w-[3.125rem] xl:h-[1.875rem] ${
+                        i18n.language === "ar" && "rotate-180"
+                      }`}
                       color="#EF7D00"
                     />
                   </div>

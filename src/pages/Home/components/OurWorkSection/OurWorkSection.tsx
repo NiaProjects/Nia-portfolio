@@ -12,9 +12,12 @@ import { useTranslation } from "react-i18next";
 const OurWorkSection = () => {
   const { t, i18n } = useTranslation();
   return (
-    <section id="our-works" className="mx-auto py-8 ">
+    <section id="our-works" className="mx-auto py-8 " data-aos="fade-up">
       {/* container flex  justify-center w-[30%] md:w-[40%] lg:w-[10%] xl:w-[30%] mx-auto" */}
-      <div className="max-w-[330px] min-w-[184px] mx-auto text-center">
+      <div
+        className="max-w-[330px] min-w-[184px] mx-auto text-center"
+        data-aos="fade-up"
+      >
         <div className="text-center m-auto  max-w-[20.625rem]">
           <HeadingTitle
             headerDark={t("home.ourWorks.header.darkText")}
@@ -24,13 +27,14 @@ const OurWorkSection = () => {
         </div>
       </div>
       <Text
+        data-aos="fade-up"
         fontSize={{ base: "16px", md: "18px" }}
         marginBottom={{ base: "32px", md: "64px", lg: "100px" }}
         textAlign="center"
       >
         {t("home.ourWorks.description")}
       </Text>
-      <div className="max-md:bg-[#FAD4AA] bg-sky-600 relative">
+      <div className="max-md:bg-[#FAD4AA]  relative" data-aos="fade-up">
         <div className=" container w-[90.4%] ">
           <div
             className={`backgroundLayer absolute -left-10 md:bg-[#FAD4AA] w-screen max-md:top-0 max-md:bottom-0 max-md:left-0 max-md:right-0 z-1 md:h-[261px] lg:h-[400px]
