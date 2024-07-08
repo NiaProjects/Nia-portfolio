@@ -69,14 +69,14 @@ const className =
   "font-medium lg:text-sm xl:text-xl 2xl:mx-4  flex flex-row items-center lg:mx-2   capitalize hover:text-orange-400 pt-3 transition ";
 
 const NavItems = ({ type = "header" }) => {
-  const { t, i18n } = useTranslation();
+  const { t } = useTranslation();
   const routesServiceList = getRoutesServiceList(t);
   const routes = getRoutesPages(t);
 
   const location = useLocation();
   const linkPages = routes?.map((item, index) => {
     const { url, name, icon } = item;
-    if (name === "our services" && type === "header") {
+    if ((name === "our services" || name === "الخدمات") && type === "header") {
       const isActive = location.pathname === url;
 
       return (
@@ -94,7 +94,7 @@ const NavItems = ({ type = "header" }) => {
                 _focus={{ boxShadow: "none" }}
               >
                 <span className={`${className} ${isActive ? "active" : ""}`}>
-                  Service
+                  {t("nav.pages.ourServices")}
                   <ChevronDownIcon color="#00000" />
                 </span>
               </MenuButton>
@@ -131,7 +131,7 @@ const NavItems = ({ type = "header" }) => {
       name !== "our services" && (
         <li
           key={uuidv4()}
-          className={`text-start  my-auto ${
+          className={`text-start  my-auto   ${
             type === "footer" && "flex items-center first:pb-[22px]"
           }`}
         >
@@ -156,19 +156,19 @@ const NavItems = ({ type = "header" }) => {
   return (
     <ul
       key={uuidv4()}
-      className={`flex ${
+      className={`flex items-center  ${
         type === "header"
-          ? "mx-auto lg:translate-y-[30%] w-[86.2%] items-center "
+          ? "mx-auto  w-[86.2%] items-center transform translate-y-[50%]  max-h-[150px] "
           : "flex-col text-base"
       }`}
     >
       {linkPages}
-      <li className="ms-auto my-auto  font-medium">
-        <LanguageSwitcher />
+      <li className="ms-auto my-auto  font-medium ">
+        <LanguageSwitcher classes="text-dark" />
         <Button className="flex flex-row items-center  justify-center">
           <Link
             to="contact-us"
-            className="inline-block order-1 my-auto text-xl "
+            className="inline-block order-1 my-auto text-xl capitalize"
           >
             {t("components.contactUs")}
           </Link>

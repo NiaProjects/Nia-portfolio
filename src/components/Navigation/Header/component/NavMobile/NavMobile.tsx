@@ -18,6 +18,7 @@ import Button from "../../../../Button";
 import { Box, ChevronDownIcon } from "lucide-react";
 import { Link } from "react-router-dom";
 import { v4 as uuidv4 } from "uuid";
+import LanguageSwitcher from "../../../LanguageSwitcher/LanguageSwitcher ";
 
 interface NavMobileProps {
   isVisible: boolean;
@@ -100,7 +101,7 @@ const NavMobile: FC<NavMobileProps> = ({ isVisible, setOpen, isOpen }) => {
             <motion.div
               ref={sidebarRef}
               initial={{ width: 0 }}
-              animate={{ width: "203px" }}
+              animate={{ width: "280px" }}
               exit={{ width: 0 }}
               className="bg-[#0E0D0D] flex flex-col justify-between text-white h-screen absolute top-0 right-0 shadow-lg overflow-hidden"
             >
@@ -166,6 +167,8 @@ const NavMobile: FC<NavMobileProps> = ({ isVisible, setOpen, isOpen }) => {
                 </ul>
               </div>
               <div className=" text-white mb-[50px] m-auto">
+                <LanguageSwitcher />
+
                 <Button className="capitalize">
                   <Link to={"contact-us"}>contact us</Link>
                 </Button>

@@ -17,10 +17,10 @@
   "mainServices":{
     "ads":"Advertising","marketing":"Digital marketing","design":"Design","events":"Events","software":"software","Photography":"Photography"
   }}
-  ,"partners":{"header":{"darkText":"our","orangeHeader":"partners"},"description":"lorem ibsum donetlorem ibsum donet lorem ibsum donetlorem ibsum donet donet lorem ibsum donetlorem ibsum donet"}
-  ,"ourWorks":{"header":{"darkText":"What we have","orangeHeader":"achieved"},"description":"Lorem ipsum dolor sit amet consectetur. Volutpat condimentum nibh eget eu aliquet quam lacus."},
-  "reviews":{"header":{"darkText":"reviews"},"description":"Lorem ipsum dolor sit amet consectetur. Volutpat condimentum nibh eget eu aliquet quam lacus."},
-  "news":{"header":{"darkText":"news"},"description":"Lorem ipsum dolor sit amet consectetur. Volutpat condimentum nibh eget eu aliquet quam lacus."
+  ,"partners":{"header":{"darkText":"our","orangeHeader":"partners"},"description":"We always strive to improve our business by using its methodological methods"}
+  ,"ourWorks":{"header":{"darkText":"What we have","orangeHeader":"achieved"},"description":"Our creativity speaks"},
+  "reviews":{"header":{"darkText":"reviews"},"description":"We offer real experiences and honest opinions to help you make informed decisions"},
+  "news":{"header":{"darkText":"news"},"description":"Another step in our series of successes"
     ,"newsCard":{"header":"Lorem ipsum dolor sit amet ","body":"Lorem ipsum dolor sit amet consectetur. Natoque lobortis adipiscing id dignissim malesuada pretium mattis ut."
     ,"footer":{"date":"jun"}
   }
@@ -29,7 +29,7 @@
   
 },
 "footer":{
-  "footerLinksHeader":{"home":"home","ourServices":"our services","get help":"get help"},
+  "footerLinksHeader":{"home":"home","ourServices":"our services","getHelp":"get help"},
   "footerLinks":{"aboutUs":" about us " ,"clients":"our clients","works":"our works","news":"news"
     ,"advertising":"advertising","marketing":"digital marketing","design":"design","events":"events"
     ,"software":"software","photography":"photography","terms":"terms and services","policy":"privacy policy"
@@ -93,10 +93,10 @@
  }
    , "desc":{     
       "descriptionData":{
-         "mobile": {"name": "mobile app", "description": "Viverra tristique vitae rutrum dui aliquet sed at nunc convallis. Tellus facilisis adipiscing cras est."},
-         "website": {"name": "website", "description": "Viverra tristique vitae rutrum dui aliquet sed at nunc convallis. Tellus facilisis adipiscing cras est."},
-         "crm": {"name": "crm system", "description": "Viverra tristique vitae rutrum dui aliquet sed at nunc convallis. Tellus facilisis adipiscing cras est."},
-         "dashboard":{"name": "dashboard", "description": "Viverra tristique vitae rutrum dui aliquet sed at nunc convallis. Tellus facilisis adipiscing cras est."}
+         "mobile": {"name": "mobile app", "description": "A vital tool for communication and creativity, we provide easy access to services and information with a simple touch."},
+         "website": {"name": "website", "description": "We offer innovative and effective website design and development services, which ensure a strong and attractive digital presence, and help you achieve your business goals by providing a unique and easy to browse user experience ."},
+         "crm": {"name": "crm system", "description": "This program provides a lot of time. It helps to stay connected and helps you track potential clients in addition to making deals from start to finish without devising strategies to help manage workers' relationships."},
+         "dashboard":{"name": "dashboard", "description": "The main control panel of the site with many choices and settings from (article - media - pages - comments) and many specialized tools in modifying the site."}
       }
    }
   
@@ -106,32 +106,32 @@
       "name": "Digital marketing",
       "intro":{
       "introductionHeader": {
-       "darkHeader": "Lorem ipsum dolor sit amet",
-       "orangeHeader": " consectetur. "},
+       "darkHeader": "Digital Marketing and",
+       "orangeHeader": " Results Online. "},
        "introductionText": "Lorem ipsum dolor sit amet consectetur. Viverra tristique vitae rutrum dui aliquet sed at nunc convallis. Tellus facilisis adipiscing cras est Lorem ipsum dolor sit amet consectetur. Viverra tristique vitae rutrum dui aliquet sed at nunc convallis. Tellus facilisis adipiscing cras est Lorem ipsum dolor sit amet consectetur. Viverra tristique vitae rutrum dui aliquet sed at nunc convallis. Tellus facilisis adipiscing cras est Lorem ipsum dolor sit amet consectetur. Viverra tristique vitae rutrum dui aliquet sed at nunc convallis. Tellus facilisis adipiscing cras est."
      },
      "categories":{
       "header":{
-         "darkHeader": " design",
+         "darkHeader": " digital marketing",
       "orangeHeader": "services"
       },
 "categoriesText":"Tellus facilisis adipiscing cras est Lorem ipsum dolor sit amet consectetur. Viverra tristique vitae rutrum dui aliquet sed at nunc convallis. Tellus facilisis adipiscing cras est Lorem ipsum dolor sit amet consectetur. Viverra tristique vitae rutrum dui aliquet sed at nunc convallis. Tellus facilisis adipiscing cras est."
 
 ,   "categoriesData":{
-  "content":  "create content",
-  "analysis":"analysis and reports",
+  "content":  "social media marketing",
+  "analysis":"marketing strategy",
   "seo": "seo ",
-  "marketing": "marketing strategy"
-  ,"mediaMarketing":"social media marketing"
+  "marketing": "analysis and reports"
+  ,"mediaMarketing":"create content"
 } 
 
 }, "desc":{     
       "descriptionData":{
-         "content": {"name": "create content", "description": "Viverra tristique vitae rutrum dui aliquet sed at nunc convallis. Tellus facilisis adipiscing cras est.software responsive social media e-commerce utility app"},
+         "content": {"name": "social media marketing", "description": "We are interested in managing your social network, following customer feedback, responding to their queries and informing them of the latest developments, so as to improve the user experience and increase brand loyalty."},
          "analysis": {"name": "marketing strategy", "description": "Viverra tristique vitae rutrum dui aliquet sed at nunc convallis. Tellus facilisis adipiscing cras est."},
-         "seo": {"name": "seo", "description": "Viverra tristique vitae rutrum dui aliquet sed at nunc convallis. Tellus facilisis adipiscing cras est."},
-         "marketing":{"name": "analysis and reports", "description": "Viverra tristique vitae rutrum dui aliquet sed at nunc convallis. Tellus facilisis adipiscing cras est."}
-         ,"mediaMarketing":{"name": "create content", "description": "Viverra tristique vitae rutrum dui aliquet sed at nunc convallis. Tellus facilisis adipiscing cras est."}
+         "seo": {"name": "seo", "description": "Thousands frequent the Google search engine daily, and we are distinguished in writing articles that correspond to the engines with carefully studied titles, to achieve the goals of website owners in increasing the number of visitors and headlining."},
+         "marketing":{"name": "analysis and reports", "description": "Through it, data is transformed into an innovative strategic vision that paves the way for smart decision-making and concrete results."}
+         ,"mediaMarketing":{"name": "create content", "description": "This is the gate from which the client is drawn into your own world. Here is our team's ingenuity in choosing words that increase excitement and excitement to read the full text, so that the reader can accommodate marketing messages directed between the lines."}
 
         }
    }
@@ -212,7 +212,7 @@
       "descriptionHeader": {
       "darkHeader": "events ",
       "orangeHeader": "services"
-    },"descriptionText":"Tellus facilisis adipiscing cras est Lorem ipsum dolor sit amet consectetur. Viverra tristique vitae rutrum dui aliquet sed at nunc convallis. Tellus facilisis adipiscing cras est Lorem ipsum dolor "
+    },"descriptionText":"We are unique in providing software in an innovative way that includes developing and designing services that meets your business needs accurately, so that you can achieve your technical goals through our professional team whose efforts are centred on increasing your production. "
    }
     },
     "photography": {

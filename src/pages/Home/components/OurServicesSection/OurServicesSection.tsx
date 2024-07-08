@@ -104,7 +104,7 @@ const OurServicesSection = () => {
             {t("home.ourServices.header.description")}
           </Text>
         </div>
-        <div className=" ourServicesCardsContainer  mt-8  max-md:w-[14.8125rem] md:w-[94.64%] lg:w-[87.15rem]  container ">
+        <div className=" ourServicesCardsContainer  mt-8  max-md:w-[14.8125rem] md:w-[94.64%] lg:w-[87.15rem]  container my-10 ">
           <div className="  ServiceCard  grid gap-6 grid-cols-1  w-full  md:grid-cols-3 lg:grid-cols-3 justify-center items-center  ">
             {cardsData?.map((cardData) => {
               const { icon, header, url, id, path } = cardData;

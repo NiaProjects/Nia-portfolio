@@ -93,7 +93,7 @@ const Footer = ({}: IProps) => {
                     <Link
                       key={subIndex}
                       to={"our-services/" + service.path}
-                      className="text-nowrap relative text-white transition duration-300 flex "
+                      className="text-nowrap relative text-white transition duration-300 flex capitalize"
                     >
                       <span
                         className={`inline-block ${
@@ -110,7 +110,7 @@ const Footer = ({}: IProps) => {
             </ul>
           </div>
           <div className="our-service-links 0 text-capitalize text-white">
-            <h3 className="text-lg md:text-xl md:text-[22px] font-medium mb-10">
+            <h3 className="text-lg md:text-xl md:text-[22px] font-medium mb-10 capitalize">
               {t("footer.footerLinksHeader.ourServices")}
             </h3>
             <ul className="bg-stone-950">
@@ -120,7 +120,7 @@ const Footer = ({}: IProps) => {
                     <Link
                       key={subIndex}
                       to={"our-services/" + service.path}
-                      className="text-nowrap relative text-white transition duration-300 flex my-2 "
+                      className="text-nowrap relative text-white transition duration-300 flex my-2 capitalize"
                     >
                       <span
                         className={`inline-block ${
@@ -138,8 +138,8 @@ const Footer = ({}: IProps) => {
           </div>
           <div className="get-help-links  text-capitalize text-white ">
             {" "}
-            <h3 className="text-lg md:text-xl md:text-[22px] font-medium mb-10">
-              {t("footer.footerLinksHeader.ourServices")}
+            <h3 className="text-lg md:text-xl md:text-[22px] font-medium mb-10 capitalize">
+              {t("footer.footerLinksHeader.getHelp")}
             </h3>
             <ul className="">
               {footerLinks.support.map((serviceGroup, index) =>
@@ -148,7 +148,7 @@ const Footer = ({}: IProps) => {
                     <Link
                       key={subIndex}
                       to={"our-services/" + service.path}
-                      className="text-nowrap relative text-white transition duration-300 flex "
+                      className="text-nowrap relative text-white transition duration-300 flex capitalize"
                     >
                       <span
                         className={`inline-block ${
@@ -167,7 +167,15 @@ const Footer = ({}: IProps) => {
         </div>
         <div className="footer-btn   md:col-[8/10] lg:col-span-2 my-4  mx-auto max-md:mt-[4rem] mb-[1.8rem]">
           <div className="contact-us_btn grid-rows-1 mx-auto">
-            <Button>contact us</Button>
+            <Button>
+              {" "}
+              <Link
+                to="contact-us"
+                className="inline-block order-1 my-auto text-xl capitalize"
+              >
+                {t("components.contactUs")}
+              </Link>
+            </Button>
           </div>
         </div>
       </div>

@@ -19,12 +19,7 @@ const newsCardData = {
   date: "10 Jun. 2024",
 };
 
-const tabHeaders = [
-  "latest news",
-  "software",
-  "advertising",
-  "digital marketing",
-];
+const tabHeaders = ["latest news", "software", "advertising"];
 
 interface NewsProps {}
 
@@ -72,14 +67,6 @@ const News: FC<NewsProps> = () => {
                 handleOnClick={handleOnClick}
               />
             )}
-
-            {/* //   {tabHeaders.map((header, index) => (
-        //     <SwiperSlide key={index}>
-        //       <div onClick={() => handleOnClick(index)}>{header}</div>
-        //       {selectedTabIndex === index && renderContent(index)}
-        //     </SwiperSlide>
-        //   ))}
-           */}
 
             {header === "latest news" ? (
               <LastNews />

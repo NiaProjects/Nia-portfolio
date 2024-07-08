@@ -46,7 +46,7 @@ const Header = () => {
         variants={headerAnimation}
         initial="initial"
         animate="animate"
-        className="text-center max-w-screen  "
+        className="text-center max-w-screen  relative"
       >
         <NavDeskTop isVisible={isVisible} />
 

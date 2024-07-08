@@ -3,9 +3,11 @@ import { customIcon } from "../../../assets/icons/customIcons";
 import { useTranslation } from "react-i18next";
 import Button from "../../Button";
 
-interface IProps {}
+interface IProps {
+  classes: string;
+}
 
-const LanguageSwitcher = ({}: IProps) => {
+const LanguageSwitcher = ({ classes }: IProps) => {
   const { i18n } = useTranslation();
 
   const toggleLanguage = () => {
@@ -16,7 +18,7 @@ const LanguageSwitcher = ({}: IProps) => {
   return (
     <>
       <Button intent={"outline"} onClick={toggleLanguage}>
-        <div className="flex gap-1.5 p-2 text-dark font-medium">
+        <div className={`flex gap-1.5 p-2  font-medium ${classes}`}>
           <span className="">
             {i18n.language === "en" ? "العربية" : "English"}
           </span>

@@ -18,7 +18,7 @@ const LastNews = ({}: IProps) => {
     <>
       <section
         id="top-stories"
-        className="container w-[90.66%] lg:w-[86.2%]  mb-[32px] md:mb-[59px] lg:mb-[80px] "
+        className="container w-[90.66%] lg:w-[86.2%]  mb-[32px] md:mb-[59px] lg:mb-[80px] mt-10 "
       >
         <header className="text-[30px]  font-bold  mb-6 md:mb-[32px] lg:mb-[40px]">
           <h2 className="capitalize">latest news</h2>

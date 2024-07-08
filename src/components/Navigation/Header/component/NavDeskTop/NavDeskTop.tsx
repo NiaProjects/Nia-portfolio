@@ -25,13 +25,18 @@ const NavDeskTop: FC<IProp> = ({ isVisible }) => {
           <img
             src={navImg}
             alt=""
-            className="w-full min-h-[80px] max-h-[100px] absolute"
+            className="w-full min-h-[80px] max-h-[150px]  absolute"
           />
         </div>
         <div className="">
           <NavItems />
-
-          <div className="absolute w-[7%] h-auto  translate-x-[-50%] 2xl:translate-x-[-40%]  translate-y-[13px]  left-1/2 	top-2">
+          <div
+            className={`absolute w-[7%] h-auto left-1/2 right-1/2 ${
+              i18n.language !== "ar"
+                ? "transform -translate-x-[50%] translate-y-[10%]	2xl:translate-y-[30%] 2xl:-translate-x-[35%]	 top-2"
+                : "transform translate-x-[50%] translate-y-[10%]	2xl:translate-y-[30%] 2xl:translate-x-[35%]	 top-2"
+            } `}
+          >
             <img src={logo} className="2xl:w-[70%] h-auto" alt="" />
           </div>
         </div>
