@@ -51,25 +51,6 @@ const NewsSection = ({}: IProps) => {
                 >
                   10 {t("home.news.newsCard.footer.date")}.2024
                 </Text>
-                <div className="flex justify-center  items-center  gap-2">
-                  <span>
-                    {" "}
-                    <Text
-                      fontSize={{ base: "12px", lg: "16px" }}
-                      fontWeight={{ base: "500" }}
-                      className="readMore capitalize"
-                    >
-                      {t("components.readMore")}
-                    </Text>
-                  </span>
-                  <span>
-                    {i18n.language !== "ar" ? (
-                      <FaArrowAltCircleRight size={20} color="#EF7D00" />
-                    ) : (
-                      <FaArrowAltCircleLeft size={20} color="#EF7D00" />
-                    )}
-                  </span>
-                </div>
               </div>
             </div>
           </div>

@@ -81,7 +81,6 @@ const SliderImages = () => {
             <p className="text-[24px] md:text-[36px] lg:text-[48px] font-bold">
               {images[currentImageIndex].text}
               <span className="text-primary inline-block ms-2 text-[24px] md:text-[32px] lg:text-[48px] font-bold">
-                {/* {` ${images[currentImageIndex].text.split(" ").slice(-1)}`}{" "} */}
                 {images[currentImageIndex].subText}
               </span>
             </p>
@@ -91,9 +90,12 @@ const SliderImages = () => {
         <>
           <div className="absolute z-10 top-[45%] md:top-[45%] lg:top-[45%] w-[240px] md:w-[352px] lg:w-[517px] text-white capitalize ms-[18px] md:ms-[40px] lg:ms-[100px] text-start h-auto whitespace-pre-wrap">
             <p className="text-[24px] md:text-[36px] lg:text-[48px] font-bold">
-              {images[currentImageIndex].text.split(" ").slice(0, -1).join(" ")}
+              {images[currentImageIndex].text
+                ?.split(" ")
+                .slice(0, -1)
+                .join(" ")}
               <span className="text-primary text-[24px] md:text-[32px] lg:text-[48px] font-bold">
-                {` ${images[currentImageIndex].text.split(" ").slice(-1)}`}{" "}
+                {` ${images[currentImageIndex].text?.split(" ").slice(-1)}`}{" "}
               </span>
             </p>
           </div>

@@ -59,12 +59,12 @@
   
   header a.active,
   .header a.active {
-    color: white!important;
     position: relative;
     transition: 0.5s all ease-in-out;
   }
   
   .header a {
+    
     width: 100% !important;
     display: block;
     padding: 10px 0;

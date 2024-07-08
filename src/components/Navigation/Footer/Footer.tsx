@@ -79,7 +79,7 @@ const Footer = ({}: IProps) => {
     >
       <div className="footer-container container grid grid-cols-1 md:grid-cols-10   ">
         <div className="footer_logo  md:col-span-2 mx-auto">
-          <img src={footerLogo} alt="nia company logo" width={80} height={80} />
+          <img src={footerLogo} alt="nia company logo " width={150} />
         </div>
         <div className="footer-links mx-3 md:col-span-8 lg:col-span-6   grid grid-cols-2 md:grid-cols-3  justify-items-stretch">
           <div className="home-links gap-y-5  text-capitalize text-white">

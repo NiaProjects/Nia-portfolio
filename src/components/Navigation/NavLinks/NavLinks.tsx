@@ -60,10 +60,10 @@ const getRoutesPages = (t: Function) => [
   { name: t("nav.pages.ourServices"), url: "services", icon: "" },
   {
     name: t("nav.pages.ourWorks"),
-    url: "our-work",
+    url: "/",
     icon: customIcon.rightArrowFooter,
   },
-  { name: t("nav.pages.news"), url: "news", icon: customIcon.rightArrowFooter },
+  { name: t("nav.pages.news"), url: "/", icon: customIcon.rightArrowFooter },
 ];
 const className =
   "font-medium lg:text-sm xl:text-xl 2xl:mx-4  flex flex-row items-center lg:mx-2   capitalize hover:text-orange-400 pt-3 transition ";
@@ -158,7 +158,7 @@ const NavItems = ({ type = "header" }) => {
       key={uuidv4()}
       className={`flex items-center  ${
         type === "header"
-          ? "mx-auto  w-[86.2%] items-center transform translate-y-[50%]  max-h-[150px] "
+          ? "mx-auto  w-[86.2%] items-center transform translate-y-[50%]  md:translate-y-[40%]  max-h-[150px] "
           : "flex-col text-base"
       }`}
     >
@@ -168,7 +168,7 @@ const NavItems = ({ type = "header" }) => {
         <Button className="flex flex-row items-center  justify-center">
           <Link
             to="contact-us"
-            className="inline-block order-1 my-auto text-xl capitalize"
+            className="inline-block order-1 my-auto text-xl capitalize "
           >
             {t("components.contactUs")}
           </Link>
