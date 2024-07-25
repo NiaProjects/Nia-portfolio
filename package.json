@@ -1,9 +1,9 @@
 {
+  "homepage": "https://NiaProjects.github.io/Nia-portfolio",
   "name": "vite-project",
   "private": true,
   "version": "0.0.0",
   "type": "module",
-  "homepage": "https://NiaProjects.github.io/Nia-portfolio",
   "scripts": {
     "dev": "vite",
     "predeploy": "npm run build",
